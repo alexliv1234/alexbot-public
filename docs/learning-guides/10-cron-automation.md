@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: "⏰ Cron Automation Guide"
 ---
 # ⏰ Cron Automation Guide

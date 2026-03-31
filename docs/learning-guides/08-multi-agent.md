@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: "🤖 Multi-Agent System Guide"
 ---
 # 🤖 Multi-Agent System Guide

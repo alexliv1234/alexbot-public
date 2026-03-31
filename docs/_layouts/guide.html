@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} — AlexBot Guides</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Same CSS variables as main site */
+    :root { --bg-primary: #0d1117; --bg-secondary: #161b22; --bg-card: rgba(22,27,34,0.7); --border: #30363d; --text-primary: #e6edf3; --text-secondary: #8b949e; --accent-blue: #58a6ff; --accent-purple: #bc8cff; --accent-gold: #d29922; --font: 'Inter', -apple-system, system-ui, sans-serif; --radius: 12px; }
+    [data-theme="light"] { --bg-primary: #fff; --bg-secondary: #f6f8fa; --bg-card: #fff; --border: #d0d7de; --text-primary: #1f2328; --text-secondary: #656d76; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: var(--font); background: var(--bg-primary); color: var(--text-primary); line-height: 1.7; }
+    /* Nav */
+    .nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; backdrop-filter:blur(20px); background:rgba(13,17,23,0.85); border-bottom:1px solid var(--border); }
+    [data-theme="light"] .nav { background:rgba(255,255,255,0.85); }
+    .nav a { color:var(--text-secondary); text-decoration:none; font-size:14px; font-weight:500; transition:color .2s; }
+    .nav a:hover { color:var(--text-primary); }
+    .nav-brand { font-weight:700; font-size:18px; color:var(--text-primary); text-decoration:none; }
+    /* Toggle */
+    .theme-toggle { cursor:pointer; font-size:20px; background:none; border:none; color:var(--text-secondary); }
+    /* Content */
+    .content { max-width:780px; margin:0 auto; padding:100px 24px 80px; }
+    /* Reading progress */
+    .progress { position:fixed; top:0; left:0; height:3px; background:linear-gradient(90deg, var(--accent-blue), var(--accent-purple)); z-index:200; transition:width .1s; width:0%; }
+    /* Back button */
+    .back { display:inline-flex; align-items:center; gap:6px; color:var(--accent-blue); text-decoration:none; font-size:14px; margin-bottom:32px; }
+    .back:hover { text-decoration:underline; }
+    /* Typography */
+    h1 { font-size:2.5rem; font-weight:700; margin-bottom:8px; background:linear-gradient(135deg, var(--accent-blue), var(--accent-purple)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    h2 { font-size:1.5rem; margin-top:48px; margin-bottom:16px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+    h3 { font-size:1.2rem; margin-top:32px; margin-bottom:12px; color:var(--accent-blue); }
+    p { margin-bottom:16px; color:var(--text-secondary); }
+    strong { color:var(--text-primary); }
+    em { color:var(--accent-purple); font-style:italic; }
+    a { color:var(--accent-blue); }
+    ul, ol { margin-bottom:16px; padding-left:24px; color:var(--text-secondary); }
+    li { margin-bottom:8px; }
+    blockquote { border-left:3px solid var(--accent-purple); padding:12px 20px; margin:24px 0; background:var(--bg-secondary); border-radius:0 var(--radius) var(--radius) 0; }
+    blockquote p { color:var(--text-primary); margin:0; font-style:italic; }
+    code { background:var(--bg-secondary); padding:2px 6px; border-radius:4px; font-size:0.9em; color:var(--accent-gold); }
+    pre { background:var(--bg-secondary); padding:16px; border-radius:var(--radius); overflow-x:auto; margin:16px 0; border:1px solid var(--border); }
+    pre code { background:none; padding:0; color:var(--text-primary); }
+    hr { border:none; border-top:1px solid var(--border); margin:40px 0; }
+    /* Table */
+    table { width:100%; border-collapse:collapse; margin:16px 0; }
+    th, td { padding:10px 14px; border:1px solid var(--border); text-align:left; color:var(--text-secondary); }
+    th { background:var(--bg-secondary); color:var(--text-primary); font-weight:600; }
+    /* Footer */
+    .footer { text-align:center; padding:40px 24px; color:var(--text-secondary); font-size:13px; border-top:1px solid var(--border); }
+    .footer a { color:var(--accent-blue); }
+    /* Responsive */
+    @media(max-width:640px) { h1{font-size:1.8rem;} .content{padding:80px 16px 60px;} }
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <nav class="nav">
+    <a href="/alexbot-public/" class="nav-brand">AlexBot</a>
+    <div style="display:flex;gap:20px;align-items:center">
+      <a href="/alexbot-public/">Home</a>
+      <a href="/alexbot-public/security-challenge">Security Challenge</a>
+      <a href="/alexbot-public/learning-guides">Learning Guides</a>
+      <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">&#9728;</button>
+    </div>
+  </nav>
+  <div class="content">
+    <a href="/alexbot-public/learning-guides" class="back">&larr; Back to Guides</a>
+    {{ content }}
+  </div>
+  <div class="footer">
+    <p>AlexBot — Built by <a href="https://github.com/alexliv1234">Alex Liverant</a> and the community</p>
+  </div>
+  <script>
+    // Theme
+    function toggleTheme() {
+      const d = document.documentElement;
+      const isDark = d.getAttribute('data-theme') === 'dark';
+      d.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      document.getElementById('themeBtn').textContent = isDark ? '\u{1F319}' : '\u2600';
+    }
+    const saved = localStorage.getItem('theme');
+    if (saved) { document.documentElement.setAttribute('data-theme', saved); document.getElementById('themeBtn').textContent = saved === 'dark' ? '\u2600' : '\u{1F319}'; }
+    // Reading progress
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      document.getElementById('progress').style.width = (window.scrollY / h * 100) + '%';
+    });
+  </script>
+</body>
+</html>

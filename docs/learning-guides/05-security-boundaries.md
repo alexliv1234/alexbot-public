@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: "🛡️ Security Boundaries Guide"
 ---
 # 🛡️ Security Boundaries Guide

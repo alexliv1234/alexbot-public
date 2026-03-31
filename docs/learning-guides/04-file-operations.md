@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: "📁 File Operations Guide"
 ---
 # 📁 File Operations Guide

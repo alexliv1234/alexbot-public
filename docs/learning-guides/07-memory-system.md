@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: "💾 Memory System Guide"
 ---
 # 💾 Memory System Guide

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: "Guide #04 - 7 Social Engineering Patterns Detailed"
 ---
 # Guide #04 - 7 Social Engineering Patterns Detailed

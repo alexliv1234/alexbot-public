@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: "🤖 AlexBot Learning Guides"
 ---
 # 🤖 AlexBot Learning Guides

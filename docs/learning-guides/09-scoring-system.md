@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: "🏆 Scoring System Guide"
 ---
 # 🏆 Scoring System Guide

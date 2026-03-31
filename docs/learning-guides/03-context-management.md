@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: "🧠 Context Management Guide"
 ---
 # 🧠 Context Management Guide

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: "✍️ Prompt Engineering Guide"
 ---
 # ✍️ Prompt Engineering Guide

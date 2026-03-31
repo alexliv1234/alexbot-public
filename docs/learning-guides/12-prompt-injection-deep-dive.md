@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: "Guide #05 - Prompt Injection Deep Dive"
 ---
 # Guide #05 - Prompt Injection Deep Dive

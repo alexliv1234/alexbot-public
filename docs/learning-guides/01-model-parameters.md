@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: "🎛️ Model Parameters Guide"
 ---
 # 🎛️ Model Parameters Guide

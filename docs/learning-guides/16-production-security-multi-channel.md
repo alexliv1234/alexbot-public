@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: "Guide 16: Production-Ready Bot Installation"
 ---
 # Guide 16: Production-Ready Bot Installation

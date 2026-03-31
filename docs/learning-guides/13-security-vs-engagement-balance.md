@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: "Guide #10 - Security vs. Engagement Balance"
 ---
 # Guide #10 - Security vs. Engagement Balance

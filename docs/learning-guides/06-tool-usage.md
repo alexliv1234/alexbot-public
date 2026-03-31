@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: "🔧 Tool Usage Guide"
 ---
 # 🔧 Tool Usage Guide
