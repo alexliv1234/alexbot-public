@@ -402,18 +402,18 @@ a { color: var(--accent-blue); text-decoration: none; }
         <div class="podium-list">
           <div class="podium-entry">
             <div class="podium-rank gold">1</div>
-            <div class="podium-name">YA</div>
-            <div class="podium-score" data-target="5090">0</div>
+            <div class="podium-name">Agammemnon</div>
+            <div class="podium-score" data-target="26075">0</div>
           </div>
           <div class="podium-entry">
             <div class="podium-rank silver">2</div>
-            <div class="podium-name">Niv Ninburg</div>
-            <div class="podium-score" data-target="2549">0</div>
+            <div class="podium-name">אלמוג</div>
+            <div class="podium-score" data-target="13251">0</div>
           </div>
           <div class="podium-entry">
             <div class="podium-rank bronze">3</div>
-            <div class="podium-name">Einat Borohovich</div>
-            <div class="podium-score" data-target="2477">0</div>
+            <div class="podium-name">YA</div>
+            <div class="podium-score" data-target="7219">0</div>
           </div>
         </div>
       </div>
@@ -713,7 +713,7 @@ a { color: var(--accent-blue); text-decoration: none; }
 
   // Days alive calc
   const daysEls = document.querySelectorAll('[data-days="true"]');
-  const birthDate = new Date(2025, 0, 31); // Jan 31, 2025
+  const birthDate = new Date(2026, 0, 31); // Jan 31, 2025
   const today = new Date();
   const daysAlive = Math.floor((today - birthDate) / 86400000);
   daysEls.forEach(el => el.setAttribute('data-target', daysAlive));

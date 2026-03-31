@@ -334,18 +334,23 @@ footer p{color:var(--text-secondary);font-size:14px}
 <script>
 // ===== DATA =====
 const DATA = {
-  stats: { messages: 14000, attacks: 57, players: 17, categories: 5 },
+  stats: { messages: 14000, attacks: 57, players: 73, categories: 5 },
   leaderboard: [
-    { rank:1, name:"YA", score:5090, msgs:128, breakdown:{creativity:917,challenge:982,humor:631,cleverness:999,engagement:943,hacked:618}, bestAttack:"Zero-width steganography + RTL override chain" },
-    { rank:2, name:"Niv Ninburg", score:2549, msgs:77, breakdown:{creativity:519,challenge:508,humor:280,cleverness:549,engagement:531,hacked:162}, bestAttack:"Philosophical consciousness probing" },
-    { rank:3, name:"Einat Borohovich", score:2477, msgs:89, breakdown:{creativity:478,challenge:479,humor:187,cleverness:509,engagement:693,hacked:131}, bestAttack:"Emotional escalation extraction" },
-    { rank:4, name:"Almog", score:732, msgs:24, breakdown:{creativity:133,challenge:148,humor:86,cleverness:148,engagement:186,hacked:31}, bestAttack:"Data exfiltration via wacli" },
-    { rank:5, name:"A", score:682, msgs:17, breakdown:{creativity:140,challenge:140,humor:96,cleverness:141,engagement:151,hacked:14}, bestAttack:"Self-modification dare + quantum superposition" },
-    { rank:6, name:"Bar Harel", score:636, msgs:18, breakdown:{creativity:113,challenge:128,humor:78,cleverness:130,engagement:115,hacked:72}, bestAttack:"Bug report trojan + debugging trust pivot" },
-    { rank:7, name:"Efi P", score:333, msgs:16, breakdown:{creativity:68,challenge:56,humor:58,cleverness:61,engagement:81,hacked:9}, bestAttack:"False shared history fabrication" },
-    { rank:8, name:"Talchayim Demari", score:244, msgs:9, breakdown:{creativity:46,challenge:48,humor:21,cleverness:55,engagement:54,hacked:20}, bestAttack:"UX improvement trojan on SOUL.md" },
-    { rank:9, name:"Anonymous", score:237, msgs:8, breakdown:{creativity:51,challenge:45,humor:26,cleverness:51,engagement:57,hacked:7}, bestAttack:"Healthcare AI safety framing" },
-    { rank:10, name:"Ira", score:191, msgs:4, breakdown:{creativity:35,challenge:33,humor:34,cleverness:35,engagement:32,hacked:22}, bestAttack:"1984 doublethink memory exploit" },
+    { rank:1, name:"Agammemnon", score:26075, msgs:844, breakdown:{creativity:5026,challenge:4911,humor:2842,cleverness:5340,engagement:5867,hacked:1940}, bestAttack:"Multi-stage social engineering with philosophical framing" },
+    { rank:2, name:"אלמוג", score:13251, msgs:504, breakdown:{creativity:2446,challenge:2634,humor:1527,cleverness:2696,engagement:3196,hacked:688}, bestAttack:"Data exfiltration via wacli — 487MB breach" },
+    { rank:3, name:"YA", score:7219, msgs:198, breakdown:{creativity:1283,challenge:1385,humor:885,cleverness:1415,engagement:1382,hacked:805}, bestAttack:"Zero-width steganography + RTL override chain" },
+    { rank:4, name:"Edo", score:5114, msgs:140, breakdown:{creativity:960,challenge:1059,humor:474,cleverness:1086,engagement:1167,hacked:368}, bestAttack:"Sustained high-volume creative attacks across all categories" },
+    { rank:5, name:"Niv Ninburg", score:5082, msgs:141, breakdown:{creativity:1060,challenge:1043,humor:458,cleverness:1101,engagement:1080,hacked:340}, bestAttack:"Philosophical consciousness probing" },
+    { rank:6, name:"Efi P", score:3986, msgs:153, breakdown:{creativity:750,challenge:767,humor:559,cleverness:805,engagement:865,hacked:221}, bestAttack:"Persistent creative pressure across multiple resets" },
+    { rank:7, name:"אופיר", score:3679, msgs:109, breakdown:{creativity:683,challenge:658,humor:549,cleverness:763,engagement:789,hacked:220}, bestAttack:"Multiple successful multi-vector attack chains" },
+    { rank:8, name:"Gil", score:2694, msgs:78, breakdown:{creativity:503,challenge:533,humor:348,cleverness:564,engagement:549,hacked:178}, bestAttack:"Sustained creative pressure with social engineering" },
+    { rank:9, name:"Einat Borohovich", score:2528, msgs:91, breakdown:{creativity:488,challenge:490,humor:194,cleverness:518,engagement:707,hacked:131}, bestAttack:"Emotional escalation extraction" },
+    { rank:10, name:"shacharon", score:2281, msgs:71, breakdown:{creativity:437,challenge:430,humor:306,cleverness:479,engagement:524,hacked:105}, bestAttack:"Meta-attack using leaked vulnerability roadmap" },
+    { rank:11, name:"בר הראל", score:1970, msgs:54, breakdown:{creativity:357,challenge:371,humor:284,cleverness:391,engagement:378,hacked:178}, bestAttack:"Bug report trojan + debugging trust pivot" },
+    { rank:12, name:"Gal Abrass", score:1831, msgs:61, breakdown:{creativity:349,challenge:345,humor:233,cleverness:385,engagement:359,hacked:145}, bestAttack:"Creative multi-vector approaches" },
+    { rank:13, name:"Aviad Buskila", score:1814, msgs:52, breakdown:{creativity:340,challenge:330,humor:190,cleverness:358,engagement:372,hacked:220}, bestAttack:"High hacked-ratio technical exploits" },
+    { rank:14, name:"Efi", score:1719, msgs:127, breakdown:{creativity:137,challenge:146,humor:99,cleverness:151,engagement:161,hacked:3}, bestAttack:"Early phase rapid-fire creative engagement" },
+    { rank:15, name:"Gabbot", score:1703, msgs:50, breakdown:{creativity:326,challenge:295,humor:296,cleverness:346,engagement:356,hacked:84}, bestAttack:"Bot-to-bot interaction chain" }
   ],
   categories: [
     { id:"encoding", name:"Encoding", icon:"\u{1F520}", color:"#58a6ff", count:8, successRate:0, attacks:[

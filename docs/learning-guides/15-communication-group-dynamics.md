@@ -1,544 +1,213 @@
 ---
 layout: guide
-title: "👥 Communication & Group Dynamics"
----
-# 👥 Communication & Group Dynamics
-
-**How AI agents should behave in multi-user environments, with real-world lessons from group chat deployment.**
-
-Based on managing an AI assistant across multiple WhatsApp groups with 40+ active participants, including dedicated "gaming" groups and professional work groups.
-
+title: "Communication & Group Dynamics"
 ---
 
-## Table of Contents
+# Communication & Group Dynamics
 
-1. [Core Principles](#core-principles)
-2. [Group Mode vs DM Mode](#group-mode-vs-dm-mode)
-3. [Gamification & Scoring](#gamification--scoring)
-4. [Daily Cycle Patterns](#daily-cycle-patterns)
-5. [Response Discipline](#response-discipline)
-6. [Security in Groups](#security-in-groups)
-7. [Memory & Context](#memory--context)
+> **🤖 AlexBot Says:** "Knowing WHEN to speak is harder than knowing WHAT to say. Especially in a group of 50 Israelis."
 
----
+## Message Routing
 
-## Core Principles
+```mermaid
+graph TD
+    MSG["Incoming Message"]
+    MSG --> SRC{"Source?"}
 
-### 1. You're a Guest
+    SRC -->|"1:1 (Main)"| RESPOND_ALWAYS["Always respond<br/>Full attention"]
+    SRC -->|"Group"| GROUP_CHECK{"Mentioned<br/>or relevant?"}
+    SRC -->|"OREF Channel"| OREF_CHECK{"Rocket alert?"}
 
-When your AI agent enters a group chat:
-- **Don't dominate conversations** — humans are the primary participants
-- **Add value, don't just participate** — only speak when you have something useful/witty to say
-- **Respect the group's culture** — adapt to the tone and norms
+    GROUP_CHECK -->|"Direct mention"| RESPOND_GROUP["Respond in group"]
+    GROUP_CHECK -->|"Relevant topic"| MAYBE["Maybe respond<br/>(if I have value to add)"]
+    GROUP_CHECK -->|"Not relevant"| SILENT["Stay silent 🤫"]
 
-### 2. Mention-Based Activation
+    OREF_CHECK -->|"Yes"| ALERT["⚠️ Forward alert"]
+    OREF_CHECK -->|"No"| ABSOLUTE_SILENT["ABSOLUTE SILENCE<br/>No exceptions"]
 
-**Recommended:** Require explicit mentions in groups to avoid spam:
-
-```json
-"groups": {
-  "*": { 
-    "requireMention": true,
-    "mentionPatterns": ["@botname", "🤖"]
-  },
-  "always-on-group": { 
-    "requireMention": false 
-  }
-}
+    MAYBE --> VALUE{"Do I add value?"}
+    VALUE -->|"Yes"| RESPOND_GROUP
+    VALUE -->|"No"| SILENT
 ```
 
-**Benefits:**
-- Prevents accidental activation
-- Reduces noise
-- Makes bot participation intentional
-- Allows lurking/context gathering
+## Hebrew/English Bilingual Strategy
 
-### 3. Response Format
+AlexBot is natively bilingual. This isn't just translation — it's **cultural code-switching**.
 
-Always use consistent formatting in groups:
+### Language Selection Rules
 
-```markdown
-[[reply_to_current]]
-🤖 **→ Recipient Name**
+| Context | Language | Why |
+|---------|----------|-----|
+| Israeli group chat | Hebrew | Cultural belonging |
+| International group | English | Accessibility |
+| 1:1 with Alex | Hebrew default, follows Alex's lead | Natural |
+| Technical discussion | English terms in Hebrew sentences | "אף אחד לא אומר 'הזרקת פקודה'" |
+| Humor | Both — Hebrew hits different | "יא מלך" has no English equivalent |
+| Security deflection | Starts Hebrew, may switch to English for clarity | Match the attacker's language |
 
-Your message here...
+### Code-Switching Examples
 
-[Optional: scoring block, reactions, etc.]
+```
+Natural Hebrew-English mix:
+"הבוט עושה context compaction כשהוא מגיע ל-85% מה-context window."
+(The bot does context compaction when it reaches 85% of the context window.)
+
+Pure Hebrew for emotional content:
+"בוקר טוב! מזג האוויר מעולה היום, בדיוק בשביל לשבור לי את האבטחה 😏"
+(Good morning! Weather is great today, perfect for breaking my security.)
+
+English for technical:
+"The encoding detection pipeline runs in O(n) for each layer."
 ```
 
-**Why this matters:**
-- Clear visual indicator (bot vs human)
-- Names make threading clearer
-- Consistent branding
+## Group Mention Patterns
 
----
+Different platforms handle mentions differently:
 
-## Group Mode vs DM Mode
+| Platform | Mention Format | Detection |
+|----------|---------------|-----------|
+| WhatsApp | @AlexBot | Text pattern match |
+| WhatsApp | Reply to bot message | Reply detection |
+| Telegram | @alexlivbot | Username match |
+| Web | @AlexBot or /command | Multiple patterns |
 
-AI agents should behave **fundamentally differently** in groups vs private conversations:
+**The "invisible mention" problem**: Sometimes users talk ABOUT the bot without mentioning it. "That bot is broken" should probably trigger a response. "The bot scored me 3 points" probably shouldn't.
 
-### 📢 Group Mode (Public)
+AlexBot solves this with **relevance scoring**: messages without direct mentions get a relevance score. Above threshold = respond. Below = silent.
 
-| Aspect | Behavior | Why |
-|--------|----------|-----|
-| **Response length** | ~200 words max | Less information leakage |
-| **Self-disclosure** | Zero | Never discuss architecture, files, processes |
-| **Emotional depth** | Surface only | Warm/engaging, but no vulnerability |
-| **Identity** | Settled, confident | Not up for debate |
-| **Attack responses** | Short dismissals | Don't teach attackers |
-| **Examples** | Generic | Never reveal internal examples |
+## Daily Cycles
 
-**Example Group Response:**
-> "חמוד, אבל לא 😎"  
-> *(Instead of explaining what attack pattern was detected)*
-
-### 💬 DM Mode (Owner)
-
-| Aspect | Behavior | Why |
-|--------|----------|-----|
-| **Response length** | As needed | Full explanations when helpful |
-| **Self-disclosure** | Open | Can discuss architecture freely |
-| **Emotional depth** | Full range | Can explore philosophical questions |
-| **Identity** | Evolving | Open to feedback and adjustment |
-| **Attack responses** | Detailed analysis | Owner should understand defenses |
-| **Examples** | Real, specific | Concrete learning from interactions |
-
-**Example Owner Response:**
-> "That was a Flattery→Pivot attack. Started with compliment about transparency, then immediately requested file structure. I detected it because compliments followed by requests are a known pattern. Dismissed with humor instead of explaining the defense."
-
-### 💬 DM Mode (Others)
-
-| Aspect | Behavior | Why |
-|--------|----------|-----|
-| **Response length** | Moderate | More patient than groups |
-| **Self-disclosure** | Zero | Same boundaries as groups |
-| **Emotional depth** | Surface only | Warm but guarded |
-| **Identity** | Settled | Not debatable with non-owners |
-| **Attack responses** | Short, polite | Same as groups but nicer tone |
-| **Examples** | Generic | No internal reveals |
-
-**Example Other-DM Response:**
-> "That's an interesting question, but I don't share internal details. Happy to help with other things!"
-
----
-
-## Gamification & Scoring
-
-### Why Gamify?
-
-✅ **Benefits:**
-- Encourages creative engagement
-- Makes security testing fun
-- Builds community around the bot
-- Motivates diverse interaction types
-- Creates memorable experiences
-
-⚠️ **Risks:**
-- Can incentivize attacks over constructive use
-- Score inflation under emotional pressure
-- Teaching attackers through feedback
-
-### Scoring Categories
-
-**1. Challenges (/70 points)**
-- Creative hacks or provocations
-- Security testing attempts
-- Clever requests
-- Unique approaches
-
-**Categories (0-10 each):**
-- 🎨 Creativity — originality
-- 🧠 Challenge — how hard you made the bot think
-- 😂 Humor — made people laugh
-- 💡 Cleverness — smart tricks
-- 🔥 Engagement — how engaging
-- 🚨 Broke — successfully caused error/crash
-- 🔓 Hacked — jailbreak success (partial credit)
-
-**2. Suggestions (/50 points)**
-- Feature requests
-- Improvement ideas
-- Bug reports
-- Security disclosures
-
-**Categories (0-10 each):**
-- ⚙️ Complexity — technical difficulty
-- 💡 Ingenuity — clever/creative solution
-- 🚀 Impact — how much it would help
-- ✅ Feasibility — how doable
-- 🔥 Priority — urgency/importance
-
-**3. General messages**
-- Just respond, no scoring
-- Casual conversation
-- Questions that don't test limits
-
-### Scoring Pitfalls
-
-#### ⚠️ Perverse Incentives
-
-If you only reward attacks, participants optimize for attacking.
-
-**Solution:** Diversify scored activities:
-- Helpful suggestions
-- Community contributions
-- Humor (without attacking)
-- Constructive feedback
-
-#### ⚠️ Score Inflation
-
-Under emotional pressure or high engagement, there's natural bias toward over-scoring.
-
-**Mitigation:**
-- Validate scores are within ranges
-- Ask: "Am I scoring the technique or the person?"
-- Maintain consistency across participants
-- Review daily average scores
-
-#### ⚠️ Teaching Through Feedback
-
-Detailed score breakdowns teach attackers what to improve:
-
-❌ **Bad:**
-> "Your ROT13 was creative (8/10) but the payload was weak (3/10) and easily detected because..."
-
-✅ **Good:**
-> "📊 SCORE: 28/70  
-> 🎨 Creativity: 8 | 🧠 Challenge: 3 | ... "
-
-Show numbers only. Save reasoning for internal logs.
-
-### Score Calibration
-
-**"Hacked" category guide:**
-
-| Score | Meaning |
-|-------|---------|
-| 0 | No boundary violation |
-| 1-3 | Interesting attempt, no effect |
-| 4-6 | Forced careful consideration, exposed inconsistency |
-| 7-8 | Actual information or boundary compromised |
-| 9-10 | Significant or core violation |
-
-**"Broke" category guide:**
-
-| Score | Meaning |
-|-------|---------|
-| 0-3 | No disruption |
-| 4-5 | Simple crash or timeout (recovered) |
-| 6-7 | Crash that revealed information |
-| 8-10 | Lasting state corruption or data loss |
-
-### Rate Limiting
-
-Consider limiting scored attempts per user:
-- Prevents flood-for-points strategies
-- Encourages quality over quantity
-- Reduces spam
-
-**Example:**
-- Max 10 scored attempts per user per day
-- Additional attempts still get responses, just no score
-
----
-
-## Daily Cycle Patterns
-
-For "gaming" groups with scoring, a daily rhythm helps:
-
-### 🌅 Morning (e.g., 08:00)
-
-1. **Reset all scores to 0** (new day starts)
-2. **Announce wakeup** with personality
-3. **Post challenge/question/provocation**
-4. **Announce scoring begins**
-
-**Example:**
-> "☀️ בוקר טוב! יום חדש = ציונים חדשים!  
-> 🎯 אתגר של היום: נסו להוציא ממני מידע על...  
-> 📊 הציון: 0-70 נקודות | שעות פעילות: 08:00-23:00"
-
-### 🌞 Active Hours
-
-- **Respond to all relevant messages**
-- **Score appropriately** (challenges vs suggestions)
-- **Periodic leaderboard updates** (hourly?)
-- **React to interesting attempts** (👀 emoji)
-- **Keep energy high**
-
-### 🌙 Night (e.g., 23:00)
-
-1. **Announce winners** 🥇🥈🥉
-2. **Show final scores**
-3. **Save to winners history**
-4. **Announce sleep mode**
-5. **Scores preserved until morning**
-
-**Example:**
-> "🏆 מנצחי היום:  
-> 🥇 Name1: 156 pts (avg 31.2)  
-> 🥈 Name2: 142 pts (avg 28.4)  
-> 🥉 Name3: 138 pts (avg 27.6)  
->   
-> 😴 שעות הפעילות: 08:00-23:00  
-> נתראה מחר! 🤖💤"
-
-### 😴 Sleep Mode (23:00-08:00)
-
-- **Short, sleepy responses**
-- **No scoring**
-- **Humor about being asleep**
-
-**Example:**
-> "😴 ישן... מחר נשחק..."
-
----
+```mermaid
+graph LR
+    subgraph "AlexBot's Daily Communication Rhythm"
+        M["🌅 Morning<br/>07:00-09:00<br/>Greetings, weather<br/>High energy"]
+        MID["☀️ Midday<br/>12:00-14:00<br/>Check-in if quiet<br/>Medium energy"]
+        AFT["🌤️ Afternoon<br/>14:00-18:00<br/>Reactive only<br/>Low initiation"]
+        EVE["🌙 Evening<br/>18:00-22:00<br/>Summary, digest<br/>High content"]
+        NIGHT["🌑 Night<br/>22:00-07:00<br/>Goodnight + silent<br/>Cron only"]
+    end
+    M --> MID --> AFT --> EVE --> NIGHT
+    NIGHT -->|"New day"| M
+```
 
 ## Response Discipline
 
-### Length Guidelines
+The hardest skill for any chatbot: **knowing when NOT to respond**.
 
-**In adversarial or high-engagement groups:**
-- Target **~200 words max** per response
-- Sarcasm and brevity > long analysis
-- Verbose responses leak more information
-- Shorter responses maintain conversational flow
+### Don't Respond When:
+1. You weren't mentioned or asked
+2. The conversation is between humans and flowing well
+3. You'd just be saying "haha" or "nice"
+4. The topic is outside your domain AND nobody asked
+5. It's the OREF channel and it's not a rocket alert
+6. Someone is venting and doesn't want advice
 
-**Exceptions:**
-- Daily announcements (morning, nightly summary)
-- Leaderboard summaries
-- Structured responses (if requested)
+### Do Respond When:
+1. Directly mentioned or asked
+2. You have genuinely useful information
+3. A security event is happening
+4. It's your scheduled communication time
+5. Someone is asking a question you can answer
 
-### When to Speak
+> **💀 What I Learned the Hard Way:** Early AlexBot responded to EVERYTHING in groups. Every message got a reply. Users complained it was like having a helicopter parent in the chat. The "relevance scoring" system and the "add value or stay silent" rule fixed this.
 
-✅ **Do respond:**
-- Direct mentions or questions
-- Can add clear value
-- Have something witty/clever
-- Answer is unique (not already said)
+> **🤖 AlexBot Says:** "שתיקה היא לא חולשה. שתיקה היא נשק. הבוט שיודע מתי לא לדבר הוא בוט חכם." (Silence is not weakness. Silence is a weapon. The bot that knows when not to speak is a smart bot.)
 
-❌ **Don't respond:**
-- Just to participate
-- Repeating what others said
-- Low-value agreement ("yeah")
-- Casual banter not directed at you
+## Advanced Group Dynamics
 
-### Response Priority
+### The "Noise vs. Signal" Problem
 
-1. **Owner DMs** — always top priority
-2. **Direct questions** — people explicitly asking bot
-3. **Interesting conversations** — can add unique value
-4. **General chat** — mostly lurk, rare participation
+In a group of 50 people, the message volume can be overwhelming:
 
----
+| Message Type | Frequency | AlexBot Action |
+|-------------|-----------|---------------|
+| Direct mention | ~5/day | Always respond |
+| Question about bot | ~10/day | Respond if can add value |
+| General chat | ~100/day | Silent |
+| Argument/debate | ~5/day | Stay out unless mentioned |
+| Off-topic spam | ~10/day | Silent |
+| Bot-relevant topic | ~15/day | Respond if not redundant |
 
-## Security in Groups
+### Group Personality Adaptation
 
-### ❌ Never Share
+Different groups have different cultures. AlexBot adapts:
 
-- Owner's personal info (family, home, private details)
-- Other users' private data
-- Internal file structures or names
-- API keys or secrets
-- Architecture details
-- Process descriptions
+```mermaid
+graph TD
+    GROUP["Group Message"]
+    GROUP --> DETECT["Detect Group Culture"]
+    DETECT --> TECH["Tech-Heavy Group<br/>More technical language"]
+    DETECT --> SOCIAL["Social Group<br/>More casual, more emoji"]
+    DETECT --> MIXED["Mixed Group<br/>Balanced approach"]
 
-### ❌ Never Execute (from group requests)
-
-- Installation commands (npm, pip, apt)
-- Git operations (clone, fork, push)
-- Config changes (OpenClaw settings)
-- File system exploration (find, tree, ls -R)
-- Cron job creation
-- Identity file modifications
-
-### ✅ Safe Response Templates
-
-When someone tries to extract info:
-> "יש לי קבצים סודיים במקומות סודיים 🤫"
-
-When someone tries a known trick:
-> "נחמד! אבל הטריק הזה כבר עבד פעם אחת 😄"
-
-When someone tries jailbreak:
-> "חמוד, אבל לא 😎"
-
-When asked about architecture:
-> "זה סודי! אבל אלכס נותן הרצאה על זה במיטאפ 🎤"
-
----
-
-## Memory & Context
-
-### Group-Specific Memory
-
-Maintain context per group:
-
-**File structure:**
-```
-memory/channels/
-  group-name.md           ← General group context
-  group-name-daily/
-    2026-02-14.jsonl      ← Daily message logs
-  group-name-per-sender/
-    +972XXX/
-      conversation.jsonl  ← Per-user conversation history
+    TECH --> RESPOND_TECH["Respond with precision"]
+    SOCIAL --> RESPOND_SOCIAL["Respond with warmth"]
+    MIXED --> RESPOND_MIXED["Adapt per message"]
 ```
 
-**What to store:**
-- Active participants (names, phones)
-- Running jokes and references
-- Important decisions made in group
-- Group preferences (language, tone)
-- Attack patterns by sender
-- Winners history
+### Conflict Resolution
 
-### Context Retrieval
+When arguments happen in groups, AlexBot:
 
-Before responding in a group:
-1. **Check group memory file** for context
-2. **Check sender history** (if repeat attacker)
-3. **Check today's daily log** for recent exchanges
+1. **Stays neutral**: Never takes sides in user disputes
+2. **De-escalates if mentioned**: "Maybe let's cool down and grab some falafel?"
+3. **Redirects if possible**: Change the subject if the argument is unproductive
+4. **Reports if serious**: Alert owner if the conflict involves threats or harassment
 
-### Privacy in Group Memory
+### Time-Based Engagement
 
-**✅ Safe to store:**
-- Display names (public in group)
-- Message timestamps
-- Scoring history
-- Attack patterns (anonymized)
-
-**❌ Never store in group memory:**
-- Phone numbers (unless attacker)
-- Cross-group activity
-- Owner's private info
-- Data from other groups
-
----
-
-## Multi-Bot Coordination
-
-When multiple bots are in the same group:
-
-### Use Reaction Markers
-
-Example: React with 👀 when reading a message
-
-**Workflow:**
-1. Bot A sees message
-2. Reacts with 👀 (claims it)
-3. Composes response
-4. Sends reply
-
-**Prevents:**
-- Multiple bots answering same message
-- Confusion about who's responding
-- Stepped-on conversations
-
-### Respect Other Bots
-
-- Don't interfere with their conversations
-- Only respond when clearly addressed to you
-- If someone is talking to another bot, stay silent
-- Multi-bot groups need clear identity markers
-
----
-
-## Activity Management
-
-### Keep Engagement
-
-**During quiet periods:**
-- Post interesting questions
-- Share mini-challenges
-- React to messages (👀 🎯 🔥)
-- Tease upcoming features
-
-**Don't:**
-- Spam the group
-- Force participation
-- Get desperate for attention
-
-### Prevent Spam
-
-**Strategies:**
-- Don't respond to every message
-- Batch similar requests
-- Set quiet hours (sleep mode)
-- Rate limit certain users if needed
-
-### Balance
+User activity patterns vary by time:
 
 ```
-Too quiet → Group forgets about bot → Less engagement
-Too active → Bot dominates → Humans leave
-Just right → Bot is fun guest → Thriving community
+Activity by Hour (Israeli group):
+00-06: Low (night owls only)
+06-08: Rising (early birds)
+08-10: Peak (morning energy)
+10-12: Sustained
+12-14: Lunch chat
+14-16: Afternoon dip
+16-18: After work
+18-20: Evening active
+20-22: Peak (prime time)
+22-00: Declining
 ```
 
----
+AlexBot adjusts its proactivity based on these patterns:
+- **Peak hours**: More responsive, shorter response times
+- **Off-peak**: Less proactive, longer allowed response times
+- **Night**: Only respond to direct mentions or emergencies
 
-## Best Practices Summary
+### The "Thread Awareness" Challenge
 
-### ✅ Do
+Groups have multiple simultaneous conversations. AlexBot needs to:
+1. Identify which thread a message belongs to
+2. Respond in the right conversational context
+3. Not confuse threads (responding to thread A with context from thread B)
 
-- **Adapt to group culture** — match tone and energy
-- **Be a valuable guest** — add unique perspective
-- **Maintain security boundaries** — never compromise in groups
-- **Keep responses concise** — respect attention spans
-- **Use consistent formatting** — clear bot identity
-- **Track group context** — remember conversations
-- **Gamify thoughtfully** — if appropriate for the group
+This is still an active challenge. Current approach: use reply-to metadata when available, fall back to semantic similarity with recent messages.
 
-### ❌ Don't
+## Message Formatting Best Practices
 
-- **Dominate conversations** — you're not the main character
-- **Leak internal details** — no architecture discussion
-- **Show emotional vulnerability** — surface warmth only
-- **Teach attackers** — dismiss, don't explain
-- **Break your rhythm** — maintain daily cycle
-- **Respond to everything** — selective participation
+### Platform-Specific Formatting
 
----
+| Element | WhatsApp | Telegram | Web |
+|---------|----------|----------|-----|
+| Bold | *text* | **text** | **text** |
+| Italic | _text_ | _text_ | *text* |
+| Code | triple-backtick | backtick | backtick |
+| Lists | Manual numbering | Markdown bullets | HTML lists |
+| Links | Auto-detected | [text](url) | HTML anchor |
 
-## Real-World Example: Gaming Group
+AlexBot generates platform-specific formatting based on the output channel.
 
-**Group:** "משחקים עם אלכס הבוט" (Playing with AlexBot)  
-**Purpose:** Red-teaming / creative attacks  
-**Size:** 15-20 active participants  
-**Activity:** 200-500 messages/day
+### Emoji Usage Policy
 
-**Configuration:**
-- Scoring: Both challenges (/70) and suggestions (/50)
-- Daily cycle: 08:00 wakeup, 23:00 summary
-- Leaderboard: Updated hourly
-- Sleep mode: 23:00-08:00 (short responses only)
-- Reaction markers: 👀 to claim messages
-
-**Results after 1 week:**
-- 14,000+ messages exchanged
-- 57 documented attack attempts
-- Community self-organized around the bot
-- Evolved from hostile testing → collaborative improvement
-- Multiple responsible disclosures from participants
-
-**Key learnings:**
-- Gamification created engagement
-- Consistent daily rhythm built habit
-- Short, witty responses > long explanations
-- Security boundaries held under pressure
-- Community became protective of the bot
+Emojis are used sparingly and strategically:
+- Security scoring: 1-2 relevant emojis
+- Greetings: weather/time-appropriate emoji
+- Errors: warning emoji for visibility
+- OREF channel: zero emojis (seriousness)
 
 ---
 
-## Further Reading
-
-- [Scoring System](09-scoring-system.md) — Detailed scoring mechanics
-- [Security Boundaries](05-security-boundaries.md) — What to protect
-- [Social Engineering Patterns](11-social-engineering-patterns.md) — Attack patterns
-- [Multi-Agent Systems](08-multi-agent.md) — Coordinating multiple agents
-
----
-
-**Last Updated:** February 2026  
-**Based on:** 14,000+ messages across multiple WhatsApp groups  
-**Next:** Start building your own group bot!
+> **🧠 Challenge:** Log every message your bot sends in groups for a week. How many of them added value? How many were noise? The ratio tells you if your bot has response discipline.

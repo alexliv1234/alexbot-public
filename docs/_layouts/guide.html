@@ -49,6 +49,12 @@
     /* Footer */
     .footer { text-align:center; padding:40px 24px; color:var(--text-secondary); font-size:13px; border-top:1px solid var(--border); }
     .footer a { color:var(--accent-blue); }
+    
+    .mermaid { background: var(--bg-secondary); border-radius: var(--radius); padding: 16px; margin: 24px 0; border: 1px solid var(--border); overflow-x: auto; }
+    .callout { background: var(--bg-secondary); border-left: 3px solid var(--accent-gold); padding: 12px 20px; margin: 24px 0; border-radius: 0 var(--radius) var(--radius) 0; }
+    .callout-title { font-weight: 600; color: var(--accent-gold); margin-bottom: 4px; }
+    .callout p { margin: 0; }
+    
     /* Responsive */
     @media(max-width:640px) { h1{font-size:1.8rem;} .content{padding:80px 16px 60px;} }
   </style>
@@ -87,6 +93,32 @@
       const h = document.documentElement.scrollHeight - window.innerHeight;
       document.getElementById('progress').style.width = (window.scrollY / h * 100) + '%';
     });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+  <script>
+    const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: isDark ? 'dark' : 'default',
+      themeVariables: isDark ? {
+        primaryColor: '#1c2128',
+        primaryBorderColor: '#58a6ff',
+        primaryTextColor: '#e6edf3',
+        lineColor: '#58a6ff',
+        secondaryColor: '#161b22',
+        tertiaryColor: '#0d1117',
+        noteTextColor: '#e6edf3',
+        noteBkgColor: '#1c2128',
+        noteBorderColor: '#30363d',
+      } : {}
+    });
+    // Re-init on theme change
+    const origToggle = window.toggleTheme;
+    window.toggleTheme = function() {
+      origToggle();
+      setTimeout(() => location.reload(), 100);
+    };
   </script>
 </body>
 </html>
