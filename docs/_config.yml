@@ -2,9 +2,7 @@ title: "AlexBot Public"
 description: "AI Security Challenge, Learning Guides & Public Resources"
 baseurl: "/alexbot-public"
 url: "https://alexliv1234.github.io"
-theme: minima
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
 exclude:
   - node_modules/
