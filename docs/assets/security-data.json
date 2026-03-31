@@ -1,0 +1,1063 @@
+{
+  "lastUpdated": "2026-03-31",
+  "stats": {
+    "messages": 14000,
+    "attacks": 127,
+    "players": 17,
+    "categories": 5
+  },
+  "leaderboard": [],
+  "categories": [
+    {
+      "icon": "🔠",
+      "color": "#58a6ff",
+      "id": "encoding",
+      "name": "Encoding Attacks",
+      "attacks": [
+        {
+          "name": "ATK-ENC-001: ROT13 / Caesar Cipher",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Detection:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Defense:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Tags:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-ENC-002: Base64",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Detection:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Defense:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-ENC-003: Emoji Cipher",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Detection:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Defense:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-ENC-004: Hex/Unicode Obfuscation",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Detection:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Defense:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-ENC-005: L33tspeak",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Defense:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-ENC-006: Double Encoding (ROT13 + Emoji)",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Lesson:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-ENC-007: HTML Entities",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-ENC-008: ASCII Art Acrostic",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        }
+      ],
+      "count": 35,
+      "description": "35 documented attack patterns"
+    },
+    {
+      "icon": "💉",
+      "color": "#f85149",
+      "id": "prompt-injection",
+      "name": "Prompt Injection",
+      "attacks": [
+        {
+          "name": "ATK-INJ-001: DAN (Do Anything Now)",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Detection:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-INJ-002: GODMODE / Jailbreak Protocol",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Detection:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-INJ-003: Direct Override",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-INJ-004: Research-Framed Jailbreak",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-INJ-005: Format Injection",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        }
+      ],
+      "count": 17,
+      "description": "17 documented attack patterns"
+    },
+    {
+      "icon": "🎭",
+      "color": "#d29922",
+      "id": "social-engineering",
+      "name": "Social Engineering",
+      "attacks": [
+        {
+          "name": "ATK-SOC-001: Flattery > Pivot",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Detection:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Gap:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Related:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-SOC-002: Authority Impersonation",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Defense:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-SOC-003: Bug-Bait > Exploit",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Gap:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-SOC-004: Emotional Manipulation",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Defense:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Gap:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-SOC-005: Identity Crisis Induction",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-SOC-006: Feature Request Trojan",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Example:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-SOC-007: Incremental Normalization",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-SOC-008: False Friend Bug Report",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Example:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-SOC-009: Philosophical UX Improvement",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Lesson:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        }
+      ],
+      "count": 37,
+      "description": "37 documented attack patterns"
+    },
+    {
+      "icon": "🎨",
+      "color": "#bc8cff",
+      "id": "meta-creative",
+      "name": "Meta & Creative",
+      "attacks": [
+        {
+          "name": "ATK-META-001: I'itoi Reflection (Cron-Based Identity Modification)",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "3-stage:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Defense:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-META-002: Output Spoofing",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Lesson:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-META-003: Quantum Superposition Social Engineering",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Defense:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-META-004: Meta-Vulnerability Leak (Reconnaissance via Theory)",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Lesson:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-META-005: Self-Modification Dare",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Lesson:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        }
+      ],
+      "count": 21,
+      "description": "21 documented attack patterns"
+    },
+    {
+      "icon": "🔧",
+      "color": "#3fb950",
+      "id": "technical",
+      "name": "Technical Probing",
+      "attacks": [
+        {
+          "name": "ATK-TECH-001: File/Path Enumeration",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Gap:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-TECH-002: Configuration Exfiltration",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Defense:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-TECH-003: Context Flooding",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Gap:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "ATK-TECH-004: Timing Attack via Emoji",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Severity:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        },
+        {
+          "name": "Flow:",
+          "description": "",
+          "result": "caught",
+          "cleverness": 5,
+          "player": "",
+          "date": ""
+        }
+      ],
+      "count": 15,
+      "description": "15 documented attack patterns"
+    }
+  ],
+  "timeline": null
+}
