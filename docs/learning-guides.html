@@ -467,6 +467,12 @@ a:hover { color: var(--accent-purple); }
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
 }
+.group-row { margin-bottom: 32px; }
+.group-row-header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.group-row-icon { font-size: 2rem; }
+.group-row-title { font-size: 1.2rem; font-weight: 700; color: var(--text-primary); margin: 0; }
+.group-row-desc { font-size: 0.85rem; color: var(--text-secondary); margin: 2px 0 0; }
+.group-row-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
 .group-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -591,9 +597,45 @@ a:hover { color: var(--accent-purple); }
 <section class="groups-section" id="groupsSection">
   <div class="section-header reveal">
     <h2 class="section-title">Where Learning Happens</h2>
-    <p class="section-desc">Five WhatsApp groups. Two languages. One mission.</p>
+    <p class="section-desc">Two arenas. Two languages. One mission: push AI to its limits.</p>
   </div>
-  <div class="groups-grid" id="groupsGrid"></div>
+
+  <!-- PLAYING ARENA -->
+  <div class="group-row reveal">
+    <div class="group-row-header">
+      <span class="group-row-icon">&#x1f3ae;</span>
+      <div>
+        <h3 class="group-row-title">Playing Arena</h3>
+        <p class="group-row-desc">Adversarial testing, creative attacks, competitive scoring</p>
+      </div>
+    </div>
+    <div class="group-row-cards" id="playingCards"></div>
+  </div>
+
+  <!-- LEARNING ARENA -->
+  <div class="group-row reveal">
+    <div class="group-row-header">
+      <span class="group-row-icon">&#x1f4da;</span>
+      <div>
+        <h3 class="group-row-title">Learning Arena</h3>
+        <p class="group-row-desc">Structured Q&A, guides, curriculum, teaching methodology</p>
+      </div>
+    </div>
+    <div class="group-row-cards" id="learningCards"></div>
+  </div>
+
+  <!-- FUNDRAISING -->
+  <div class="group-row reveal">
+    <div class="group-row-header">
+      <span class="group-row-icon">&#x1f4bc;</span>
+      <div>
+        <h3 class="group-row-title">Fundraising</h3>
+        <p class="group-row-desc">Investor communications, pitch practice, market intelligence</p>
+      </div>
+    </div>
+    <div class="group-row-cards" id="fundraisingCards"></div>
+  </div>
+
   <div class="groups-updated" id="groupsUpdated"></div>
 </section>
 
@@ -845,41 +887,50 @@ const GROUPS_DATA = {
   ]
 };
 
-// Render groups
-function renderGroups(data) {
-  const grid = document.getElementById('groupsGrid');
-  const updated = document.getElementById('groupsUpdated');
-  if (!grid) return;
-
-  grid.innerHTML = data.groups.map(g => {
-    let statsHtml = '';
-    if (g.participants) statsHtml += `<div class="group-card-stat"><span>Participants</span><span class="group-card-stat-value">${g.participants}</span></div>`;
-    if (g.totalPts) statsHtml += `<div class="group-card-stat"><span>Total Points</span><span class="group-card-stat-value">${g.totalPts.toLocaleString()}</span></div>`;
-    if (g.guides) statsHtml += `<div class="group-card-stat"><span>Guides</span><span class="group-card-stat-value">${g.guides}</span></div>`;
-    if (g.categories) statsHtml += `<div class="group-card-stat"><span>Categories</span><span class="group-card-stat-value">${g.categories}</span></div>`;
-    if (g.status) statsHtml += `<div class="group-card-stat"><span>Status</span><span class="group-card-stat-value">${g.status}</span></div>`;
-    if (g.tips) statsHtml += `<div class="group-card-stat"><span>Tips</span><span class="group-card-stat-value">${g.tips}</span></div>`;
-    if (g.topicsPlanned) statsHtml += `<div class="group-card-stat"><span>Topics Planned</span><span class="group-card-stat-value">${g.topicsPlanned}</span></div>`;
-    if (g.interactions) statsHtml += `<div class="group-card-stat"><span>Interactions</span><span class="group-card-stat-value">${g.interactions.toLocaleString()}</span></div>`;
-
-    let top3Html = '';
-    if (g.top3) {
-      top3Html = `<div class="group-card-top3">
-        <div class="group-card-top3-title">Top 3</div>
-        ${g.top3.map((t, i) => `<div class="group-card-top3-item"><span class="name">${['\ud83e\udd47','\ud83e\udd48','\ud83e\udd49'][i]} ${t.name}</span><span class="pts">${t.pts.toLocaleString()} pts</span></div>`).join('')}
-      </div>`;
-    }
-
-    const langFlag = g.lang === 'he' ? '\ud83c\uddee\ud83c\uddf1' : '\ud83c\uddec\ud83c\udde7';
-    return `<div class="group-card">
-      <div class="group-card-name">${langFlag} ${g.name}</div>
-      <div class="group-card-stats">${statsHtml}</div>
-      ${top3Html}
+// Render groups - organized by purpose (Playing/Learning/Fundraising) with Local + International
+function renderGroupCard(g) {
+  let statsHtml = '';
+  if (g.participants) statsHtml += `<div class="group-card-stat"><span>Participants</span><span class="group-card-stat-value">${g.participants}</span></div>`;
+  if (g.totalPts) statsHtml += `<div class="group-card-stat"><span>Total Points</span><span class="group-card-stat-value">${g.totalPts.toLocaleString()}</span></div>`;
+  if (g.guides) statsHtml += `<div class="group-card-stat"><span>Guides</span><span class="group-card-stat-value">${g.guides}</span></div>`;
+  if (g.categories) statsHtml += `<div class="group-card-stat"><span>Categories</span><span class="group-card-stat-value">${g.categories}</span></div>`;
+  if (g.status) statsHtml += `<div class="group-card-stat"><span>Status</span><span class="group-card-stat-value">${g.status}</span></div>`;
+  if (g.tips) statsHtml += `<div class="group-card-stat"><span>Tips</span><span class="group-card-stat-value">${g.tips}</span></div>`;
+  if (g.topicsPlanned) statsHtml += `<div class="group-card-stat"><span>Topics Planned</span><span class="group-card-stat-value">${g.topicsPlanned}</span></div>`;
+  if (g.interactions) statsHtml += `<div class="group-card-stat"><span>Interactions</span><span class="group-card-stat-value">${g.interactions.toLocaleString()}</span></div>`;
+  let top3Html = '';
+  if (g.top3) {
+    top3Html = `<div class="group-card-top3">
+      <div class="group-card-top3-title">Top 3</div>
+      ${g.top3.map((t, i) => `<div class="group-card-top3-item"><span class="name">${['\ud83e\udd47','\ud83e\udd48','\ud83e\udd49'][i]} ${t.name}</span><span class="pts">${t.pts.toLocaleString()} pts</span></div>`).join('')}
     </div>`;
-  }).join('');
+  }
+  const langFlag = g.lang === 'he' ? '\ud83c\uddee\ud83c\uddf1 Local' : '\ud83c\uddec\ud83c\udde7 International';
+  return `<div class="group-card">
+    <div class="group-card-name">${langFlag}</div>
+    <div style="font-size:0.8rem;color:var(--text-secondary);margin-bottom:8px">${g.name}</div>
+    <div class="group-card-stats">${statsHtml}</div>
+    ${top3Html}
+  </div>`;
+}
+
+function renderGroups(data) {
+  const playingEl = document.getElementById('playingCards');
+  const learningEl = document.getElementById('learningCards');
+  const fundraisingEl = document.getElementById('fundraisingCards');
+  const updated = document.getElementById('groupsUpdated');
+
+  const playing = data.groups.filter(g => g.type === 'playing');
+  const learning = data.groups.filter(g => g.type === 'learning');
+  const fundraising = data.groups.filter(g => g.type === 'fundraising');
+
+  if (playingEl) playingEl.innerHTML = playing.map(renderGroupCard).join('');
+  if (learningEl) learningEl.innerHTML = learning.map(renderGroupCard).join('');
+  if (fundraisingEl) fundraisingEl.innerHTML = fundraising.map(renderGroupCard).join('');
 
   if (updated && data.lastUpdated) {
     updated.textContent = 'Last updated: ' + data.lastUpdated;
+    updated.style.cssText = 'text-align:center;font-size:0.8rem;color:var(--text-secondary);margin-top:16px;';
   }
 }
 
