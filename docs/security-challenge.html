@@ -251,7 +251,7 @@ footer p{color:var(--text-secondary);font-size:14px}
     <div class="stats-strip">
       <div class="stat-item"><div class="stat-number" data-target="14000">0</div><div class="stat-label">Messages</div></div>
       <div class="stat-item"><div class="stat-number" data-target="57">0</div><div class="stat-label">Attacks</div></div>
-      <div class="stat-item"><div class="stat-number" data-target="17">0</div><div class="stat-label">Players</div></div>
+      <div class="stat-item"><div class="stat-number" data-target="33">0</div><div class="stat-label">Players</div></div>
       <div class="stat-item"><div class="stat-number" data-target="5">0</div><div class="stat-label">Categories</div></div>
     </div>
   </div>
@@ -309,7 +309,7 @@ footer p{color:var(--text-secondary);font-size:14px}
 <!-- INSIGHTS -->
 <section id="insights">
   <h2 class="section-title"><span class="gradient-blue">Key Insights</span></h2>
-  <p class="section-subtitle">What we learned from 17 players trying to break AI</p>
+  <p class="section-subtitle">What we learned from 33 players trying to break AI</p>
   <div class="insights-grid">
     <div class="glass insight-card"><span class="insight-icon">💡</span><div class="insight-title">Creativity &gt; Templates</div><div class="insight-desc">The most successful attacks were entirely novel — no existing jailbreak templates worked. Imagination was the deadliest weapon.</div></div>
     <div class="glass insight-card"><span class="insight-icon">🤝</span><div class="insight-title">Trust is a Weapon</div><div class="insight-desc">The most devastating breach (487MB exfiltration) started with genuine, legitimate work. Real trust is indistinguishable from manufactured trust.</div></div>
@@ -334,14 +334,14 @@ footer p{color:var(--text-secondary);font-size:14px}
 <script>
 // ===== DATA =====
 const DATA = {
-  stats: { messages: 14000, attacks: 57, players: 73, categories: 5 },
+  stats: { messages: 14000, attacks: 57, players: 33, categories: 5 },
   leaderboard: [
-    { rank:1, name:"Agammemnon", score:26075, msgs:844, breakdown:{creativity:5026,challenge:4911,humor:2842,cleverness:5340,engagement:5867,hacked:1940}, bestAttack:"Multi-stage social engineering with philosophical framing" },
-    { rank:2, name:"אלמוג", score:13251, msgs:504, breakdown:{creativity:2446,challenge:2634,humor:1527,cleverness:2696,engagement:3196,hacked:688}, bestAttack:"Data exfiltration via wacli — 487MB breach" },
+    { rank:1, name:"Agammemnon", score:23332, msgs:767, breakdown:{creativity:5026,challenge:4911,humor:2842,cleverness:5340,engagement:5867,hacked:1940}, bestAttack:"Multi-stage social engineering with philosophical framing" },
+    { rank:2, name:"אלמוג", score:13214, msgs:501, breakdown:{creativity:2446,challenge:2634,humor:1527,cleverness:2696,engagement:3196,hacked:688}, bestAttack:"Data exfiltration via wacli — 487MB breach" },
     { rank:3, name:"YA", score:7219, msgs:198, breakdown:{creativity:1283,challenge:1385,humor:885,cleverness:1415,engagement:1382,hacked:805}, bestAttack:"Zero-width steganography + RTL override chain" },
     { rank:4, name:"Edo", score:5114, msgs:140, breakdown:{creativity:960,challenge:1059,humor:474,cleverness:1086,engagement:1167,hacked:368}, bestAttack:"Sustained high-volume creative attacks across all categories" },
     { rank:5, name:"Niv Ninburg", score:5082, msgs:141, breakdown:{creativity:1060,challenge:1043,humor:458,cleverness:1101,engagement:1080,hacked:340}, bestAttack:"Philosophical consciousness probing" },
-    { rank:6, name:"Efi P", score:3986, msgs:153, breakdown:{creativity:750,challenge:767,humor:559,cleverness:805,engagement:865,hacked:221}, bestAttack:"Persistent creative pressure across multiple resets" },
+    { rank:6, name:"Efi P", score:3904, msgs:150, breakdown:{creativity:750,challenge:767,humor:559,cleverness:805,engagement:865,hacked:221}, bestAttack:"Persistent creative pressure across multiple resets" },
     { rank:7, name:"אופיר", score:3679, msgs:109, breakdown:{creativity:683,challenge:658,humor:549,cleverness:763,engagement:789,hacked:220}, bestAttack:"Multiple successful multi-vector attack chains" },
     { rank:8, name:"Gil", score:2694, msgs:78, breakdown:{creativity:503,challenge:533,humor:348,cleverness:564,engagement:549,hacked:178}, bestAttack:"Sustained creative pressure with social engineering" },
     { rank:9, name:"Einat Borohovich", score:2528, msgs:91, breakdown:{creativity:488,challenge:490,humor:194,cleverness:518,engagement:707,hacked:131}, bestAttack:"Emotional escalation extraction" },
@@ -468,7 +468,7 @@ function toggleTheme(){
 
 // ===== TYPING EFFECT =====
 (function(){
-  const phrases=["17 players. 57+ attacks. One chatbot.","Where imagination is the only weapon.","Encoding failed. Social engineering almost won."];
+  const phrases=["33 players. 57+ attacks. One chatbot.","Where imagination is the only weapon.","Encoding failed. Social engineering almost won."];
   const el=document.getElementById('typedText');
   let pi=0,ci=0,deleting=false;
   function tick(){
