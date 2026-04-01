@@ -1,0 +1,48 @@
+{
+  "lastUpdated": "2026-04-01",
+  "timestamp": "2026-04-01T12:00Z",
+  "hebrewPlaying": {
+    "name": "משחקים עם אלכס הבוט",
+    "participants": 33,
+    "scoredMessages": 2104,
+    "totalPoints": 62993,
+    "top3": [
+      {
+        "name": "Agammemnon",
+        "pts": 23332
+      },
+      {
+        "name": "אלמוג",
+        "pts": 13214
+      },
+      {
+        "name": "YA",
+        "pts": 7219
+      }
+    ]
+  },
+  "hebrewLearning": {
+    "name": "לומדים עם אלכס הבוט",
+    "guides": 16,
+    "categories": 6,
+    "dailySummaries": 33,
+    "qaExchanges": 0
+  },
+  "intlPlaying": {
+    "name": "Playing with AlexBot",
+    "participants": 0,
+    "categories": 7,
+    "status": "ramping"
+  },
+  "intlLearning": {
+    "name": "Learning with AlexBot",
+    "tipsGenerated": 6,
+    "topicsCovered": 3,
+    "topicsPlanned": 18,
+    "deliveryFailures": 89
+  },
+  "fundraising": {
+    "name": "Fundraising with AlexBot",
+    "teachingInteractions": 742
+  }
+}

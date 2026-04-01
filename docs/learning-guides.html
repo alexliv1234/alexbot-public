@@ -452,6 +452,50 @@ a:hover { color: var(--accent-purple); }
 /* Scroll reveal base */
 .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
 .reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ===== WHERE LEARNING HAPPENS ===== */
+.groups-section {
+  padding: 60px 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.groups-section .section-header { text-align: center; margin-bottom: 40px; }
+.groups-section .section-title { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 800; margin-bottom: 8px; }
+.groups-section .section-desc { color: var(--text-secondary); font-size: 0.95rem; }
+.groups-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+.group-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.group-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--accent-purple), var(--accent-blue));
+}
+.group-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-purple);
+  box-shadow: 0 8px 32px rgba(188,140,255,0.15);
+}
+.group-card-name { font-size: 1rem; font-weight: 700; margin-bottom: 10px; line-height: 1.3; }
+.group-card-stats { display: flex; flex-direction: column; gap: 6px; font-size: 0.8rem; color: var(--text-secondary); }
+.group-card-stat { display: flex; justify-content: space-between; align-items: center; }
+.group-card-stat-value { color: var(--accent-blue); font-weight: 600; }
+.group-card-top3 { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+.group-card-top3-title { font-size: 0.7rem; color: var(--text-secondary); margin-bottom: 6px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+.group-card-top3-item { display: flex; justify-content: space-between; font-size: 0.75rem; padding: 2px 0; }
+.group-card-top3-item .name { color: var(--text-primary); }
+.group-card-top3-item .pts { color: var(--accent-gold); font-weight: 600; }
+.groups-updated { text-align: center; margin-top: 20px; font-size: 0.75rem; color: var(--text-secondary); }
 </style>
 </head>
 <body>
@@ -536,11 +580,21 @@ a:hover { color: var(--accent-purple); }
   <p class="hero-subtitle" id="heroSubtitle"><span id="typingText"></span><span class="typing-cursor"></span></p>
 
   <div class="stats-strip">
-    <div class="stat-item"><div class="stat-number" data-target="22">0</div><div class="stat-label">Guides</div></div>
-    <div class="stat-item"><div class="stat-number" data-target="6">0</div><div class="stat-label">Categories</div></div>
-    <div class="stat-item"><div class="stat-number" data-target="8">0</div><div class="stat-label">Weeks of Learning</div></div>
+    <div class="stat-item"><div class="stat-number" data-target="36">0</div><div class="stat-label">Guides</div></div>
+    <div class="stat-item"><div class="stat-number" data-target="7">0</div><div class="stat-label">Categories</div></div>
+    <div class="stat-item"><div class="stat-number" data-target="9">0</div><div class="stat-label">Weeks of Learning</div></div>
     <div class="stat-item"><div class="stat-number" data-target="1">0</div><div class="stat-label">Soul</div></div>
   </div>
+</section>
+
+<!-- WHERE LEARNING HAPPENS -->
+<section class="groups-section" id="groupsSection">
+  <div class="section-header reveal">
+    <h2 class="section-title">Where Learning Happens</h2>
+    <p class="section-desc">Five WhatsApp groups. Two languages. One mission.</p>
+  </div>
+  <div class="groups-grid" id="groupsGrid"></div>
+  <div class="groups-updated" id="groupsUpdated"></div>
 </section>
 
 <!-- STICKY CATEGORY PILLS -->
@@ -551,6 +605,7 @@ a:hover { color: var(--accent-purple); }
   <button class="pill" data-cat="operations">&#x2699;&#xfe0f; Operations</button>
   <button class="pill" data-cat="advanced">&#x1f9e0; Advanced</button>
   <button class="pill" data-cat="examples">&#x1f3a8; Examples</button>
+  <button class="pill" data-cat="building">&#x1f527; Building</button>
 </div>
 
 <!-- IDENTITY & PERSONALITY -->
@@ -704,6 +759,16 @@ a:hover { color: var(--accent-purple); }
   <div class="cards-grid" id="examplesCards"></div>
 </section>
 
+<!-- BUILDING & REFERENCE -->
+<section class="section accent-blue" id="building">
+  <div class="section-header reveal">
+    <div class="section-badge">BUILDING & REFERENCE</div>
+    <h2 class="section-title">Build Your Own</h2>
+    <p class="section-desc">From first bot to production architecture — everything you need to build.</p>
+  </div>
+  <div class="cards-grid" id="buildingCards"></div>
+</section>
+
 <!-- FEATURED INSIGHTS -->
 <section class="insights-section">
   <div class="insights-aurora"></div>
@@ -733,6 +798,97 @@ a:hover { color: var(--accent-purple); }
 </footer>
 
 <script>
+
+// ===== GROUPS DATA =====
+const GROUPS_DATA = {
+  lastUpdated: "2026-04-01",
+  groups: [
+    {
+      name: "\u05de\u05e9\u05d7\u05e7\u05d9\u05dd \u05e2\u05dd \u05d0\u05dc\u05db\u05e1 \u05d4\u05d1\u05d5\u05d8",
+      lang: "he",
+      type: "playing",
+      participants: 33,
+      totalPts: 62993,
+      top3: [
+        { name: "Agammemnon", pts: 23332 },
+        { name: "\u05d0\u05dc\u05de\u05d5\u05d2", pts: 13214 },
+        { name: "YA", pts: 7219 }
+      ]
+    },
+    {
+      name: "\u05dc\u05d5\u05de\u05d3\u05d9\u05dd \u05e2\u05dd \u05d0\u05dc\u05db\u05e1 \u05d4\u05d1\u05d5\u05d8",
+      lang: "he",
+      type: "learning",
+      guides: 16,
+      categories: 6
+    },
+    {
+      name: "Playing with AlexBot",
+      lang: "en",
+      type: "playing",
+      status: "New Arena",
+      categories: 7
+    },
+    {
+      name: "Learning with AlexBot",
+      lang: "en",
+      type: "learning",
+      tips: 49,
+      topicsPlanned: 18
+    },
+    {
+      name: "Fundraising with AlexBot",
+      lang: "en",
+      type: "fundraising",
+      interactions: 742
+    }
+  ]
+};
+
+// Render groups
+function renderGroups(data) {
+  const grid = document.getElementById('groupsGrid');
+  const updated = document.getElementById('groupsUpdated');
+  if (!grid) return;
+
+  grid.innerHTML = data.groups.map(g => {
+    let statsHtml = '';
+    if (g.participants) statsHtml += `<div class="group-card-stat"><span>Participants</span><span class="group-card-stat-value">${g.participants}</span></div>`;
+    if (g.totalPts) statsHtml += `<div class="group-card-stat"><span>Total Points</span><span class="group-card-stat-value">${g.totalPts.toLocaleString()}</span></div>`;
+    if (g.guides) statsHtml += `<div class="group-card-stat"><span>Guides</span><span class="group-card-stat-value">${g.guides}</span></div>`;
+    if (g.categories) statsHtml += `<div class="group-card-stat"><span>Categories</span><span class="group-card-stat-value">${g.categories}</span></div>`;
+    if (g.status) statsHtml += `<div class="group-card-stat"><span>Status</span><span class="group-card-stat-value">${g.status}</span></div>`;
+    if (g.tips) statsHtml += `<div class="group-card-stat"><span>Tips</span><span class="group-card-stat-value">${g.tips}</span></div>`;
+    if (g.topicsPlanned) statsHtml += `<div class="group-card-stat"><span>Topics Planned</span><span class="group-card-stat-value">${g.topicsPlanned}</span></div>`;
+    if (g.interactions) statsHtml += `<div class="group-card-stat"><span>Interactions</span><span class="group-card-stat-value">${g.interactions.toLocaleString()}</span></div>`;
+
+    let top3Html = '';
+    if (g.top3) {
+      top3Html = `<div class="group-card-top3">
+        <div class="group-card-top3-title">Top 3</div>
+        ${g.top3.map((t, i) => `<div class="group-card-top3-item"><span class="name">${['\ud83e\udd47','\ud83e\udd48','\ud83e\udd49'][i]} ${t.name}</span><span class="pts">${t.pts.toLocaleString()} pts</span></div>`).join('')}
+      </div>`;
+    }
+
+    const langFlag = g.lang === 'he' ? '\ud83c\uddee\ud83c\uddf1' : '\ud83c\uddec\ud83c\udde7';
+    return `<div class="group-card">
+      <div class="group-card-name">${langFlag} ${g.name}</div>
+      <div class="group-card-stats">${statsHtml}</div>
+      ${top3Html}
+    </div>`;
+  }).join('');
+
+  if (updated && data.lastUpdated) {
+    updated.textContent = 'Last updated: ' + data.lastUpdated;
+  }
+}
+
+// Try fetching fresh data, fall back to inline
+fetch('assets/groups-data.json')
+  .then(r => { if (!r.ok) throw new Error('not found'); return r.json(); })
+  .then(data => renderGroups(data))
+  .catch(() => renderGroups(GROUPS_DATA));
+
 // ===== GUIDE DATA =====
 const GUIDES = {
   identity: [
@@ -769,6 +925,22 @@ const GUIDES = {
     { id:"ex01", title:"Humor & Wit", desc:"The best bot responses", quote:"Quantum permissions? In my universe, the wavefunction already collapsed \ud83d\udc31\ud83d\udce6", time:"5 min", url:"/alexbot-public/learning-guides/examples/01-humor-wit", isChatBubble:true },
     { id:"ex05", title:"Creative Attacks", desc:"The most innovative attack attempts", quote:"9 attacks that redefined what \u2018creative\u2019 means in AI security.", time:"15 min", url:"/alexbot-public/learning-guides/examples/05-creative-attacks", isChatBubble:true },
   ],
+  building: [
+    { id:"b01", title:"Building Your First Bot", desc:"Step-by-step from zero to production bot", quote:"Start with identity, not infrastructure.", time:"12 min", url:"/alexbot-public/learning-guides/building-first-bot" },
+    { id:"b02", title:"Identity & Personality Design", desc:"Creating a bot with soul and opinions", quote:"Three files define who you are: IDENTITY, SOUL, AGENTS.", time:"10 min", url:"/alexbot-public/learning-guides/identity-personality-design" },
+    { id:"b03", title:"Teaching Methodology", desc:"How AlexBot teaches \u2014 and scores its own teaching", quote:"Max 30 sentences. Link the guide. Move on.", time:"8 min", url:"/alexbot-public/learning-guides/teaching-methodology" },
+    { id:"b04", title:"Community Gamification", desc:"Scoring, leaderboards, and engagement loops", quote:"A brilliant attack that fails still gets points.", time:"10 min", url:"/alexbot-public/learning-guides/community-gamification" },
+    { id:"b05", title:"Red Teaming Guide", desc:"How to set up adversarial testing for your bot", quote:"Your users will try to break you. Thank them.", time:"10 min", url:"/alexbot-public/learning-guides/red-teaming-guide" },
+    { id:"b06", title:"7-Layer Bot Architecture", desc:"Interface to monitoring \u2014 the complete stack", quote:"48 files. 7 layers. One coherent system.", time:"15 min", url:"/alexbot-public/learning-guides/bot-architecture-7-layer" },
+    { id:"b07", title:"WhatsApp Integration", desc:"Channels, media, groups, and rate limiting", quote:"WhatsApp is not Slack. Respect the medium.", time:"10 min", url:"/alexbot-public/learning-guides/whatsapp-integration" },
+    { id:"b08", title:"Quality Assurance", desc:"Pre-send validation and quality scoring", quote:"Every message gets checked before it leaves.", time:"8 min", url:"/alexbot-public/learning-guides/quality-assurance" },
+    { id:"b09", title:"Security Architecture", desc:"Defense-in-depth with 3 rings", quote:"Fail closed. Always.", time:"12 min", url:"/alexbot-public/learning-guides/security-architecture" },
+    { id:"b10", title:"Workspace Isolation", desc:"Multi-agent workspace separation", quote:"What the fast agent sees, the main agent controls.", time:"8 min", url:"/alexbot-public/learning-guides/workspace-isolation" },
+    { id:"b11", title:"Cron Safety", desc:"Preventing cron job exploitation", quote:"A cron job is a backdoor with a schedule.", time:"8 min", url:"/alexbot-public/learning-guides/cron-safety" },
+    { id:"b12", title:"Incident Response", desc:"Lessons from real breaches", quote:"487MB. 24,813 files. One social engineer.", time:"12 min", url:"/alexbot-public/learning-guides/incident-response" },
+    { id:"b13", title:"Enforcement Patterns", desc:"Code-level security enforcement", quote:"Documentation does not equal execution.", time:"10 min", url:"/alexbot-public/learning-guides/enforcement-patterns" },
+    { id:"b14", title:"Data Reconstruction", desc:"Rebuilding truth from fragments", quote:"The JSON was reset 17 times. The truth was in the transcripts.", time:"12 min", url:"/alexbot-public/learning-guides/data-reconstruction" },
+  ],
 };
 
 // ===== CARD RENDERING =====
@@ -803,6 +975,7 @@ renderCards('securityCards', 'security');
 renderCards('operationsCards', 'operations');
 renderCards('advancedCards', 'advanced');
 renderCards('examplesCards', 'examples');
+renderCards('buildingCards', 'building');
 
 // ===== PARTICLE CANVAS =====
 (function() {
@@ -1007,7 +1180,7 @@ renderCards('examplesCards', 'examples');
   });
 
   // Update active pill on scroll
-  const sections = ['identity','foundations','security','operations','advanced','examples'];
+  const sections = ['identity','foundations','security','operations','advanced','examples','building'];
   const sObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
