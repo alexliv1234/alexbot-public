@@ -646,8 +646,8 @@ a:hover { color: var(--accent-purple); }
   <button class="pill" data-cat="security">&#x1f6e1;&#xfe0f; Security</button>
   <button class="pill" data-cat="operations">&#x2699;&#xfe0f; Operations</button>
   <button class="pill" data-cat="advanced">&#x1f9e0; Advanced</button>
-  <button class="pill" data-cat="examples">&#x1f3a8; Examples</button>
   <button class="pill" data-cat="building">&#x1f527; Building</button>
+  <button class="pill" data-cat="examples">&#x1f3a8; Examples</button>
 </div>
 
 <!-- IDENTITY & PERSONALITY -->
@@ -791,6 +791,17 @@ a:hover { color: var(--accent-purple); }
   <div class="cards-grid" id="advancedCards"></div>
 </section>
 
+
+
+<section class="section accent-blue" id="building">
+  <div class="section-header reveal">
+    <div class="section-badge">BUILDING & REFERENCE</div>
+    <h2 class="section-title">Build Your Own</h2>
+    <p class="section-desc">From first bot to production architecture — everything you need to build.</p>
+  </div>
+  <div class="cards-grid" id="buildingCards"></div>
+</section>
+
 <!-- EXAMPLES -->
 <section class="section accent-rainbow" id="examples">
   <div class="section-header reveal">
@@ -802,14 +813,6 @@ a:hover { color: var(--accent-purple); }
 </section>
 
 <!-- BUILDING & REFERENCE -->
-<section class="section accent-blue" id="building">
-  <div class="section-header reveal">
-    <div class="section-badge">BUILDING & REFERENCE</div>
-    <h2 class="section-title">Build Your Own</h2>
-    <p class="section-desc">From first bot to production architecture — everything you need to build.</p>
-  </div>
-  <div class="cards-grid" id="buildingCards"></div>
-</section>
 
 <!-- FEATURED INSIGHTS -->
 <section class="insights-section">
@@ -947,6 +950,7 @@ const GUIDES = {
     { id:"knowledge", title:"What AlexBot Has Learned", desc:"Technical, social, and security lessons from 14K+ messages", quote:"I\u2019m not selling the platform \u2014 I\u2019m selling accumulated intelligence.", time:"8 min", url:"/alexbot-public/learning-guides/knowledge" },
     { id:"evolution", title:"The Evolution", desc:"How AlexBot grew from basic bot to digital twin", quote:"Each session, you wake up fresh. These files are your memory.", time:"6 min", url:"/alexbot-public/learning-guides/evolution" },
     { id:"dna", title:"DNA: How AlexBot Thinks", desc:"The decision-making framework and philosophy", quote:"When stuck: take reversible action to convert ambiguity to clarity.", time:"7 min", url:"/alexbot-public/learning-guides/dna" },
+    { id:"failure", title:"Lessons From Failure", desc:"The complete confessional — every hack, breach, and mistake", quote:"487MB of data. 7 critical breaches. 0 excuses.", time:"20 min", url:"/alexbot-public/learning-guides/lessons-from-failure", bar:100 },
   ],
   foundations: [
     { id:"01", title:"Model Parameters", desc:"Temperature, tokens, and model selection", quote:"Temperature 0.7 is the sweet spot between creative and coherent.", time:"10 min", url:"/alexbot-public/learning-guides/01-model-parameters" },
@@ -959,7 +963,7 @@ const GUIDES = {
     { id:"11", title:"Social Engineering Patterns", desc:"7 attack patterns and defenses", quote:"\u2018Alex said to\u2019 is the oldest trick. Only trust direct messages.", time:"15 min", url:"/alexbot-public/learning-guides/11-social-engineering-patterns", bar:88 },
     { id:"12", title:"Prompt Injection Deep-Dive", desc:"Technical attacks and protection", quote:"ROT13, Base64, emoji ciphers \u2014 we\u2019ve seen them all.", time:"12 min", url:"/alexbot-public/learning-guides/12-prompt-injection-deep-dive", bar:92 },
     { id:"13", title:"Security vs Engagement", desc:"The fundamental tradeoff", quote:"Security is a game, and the bot should always win \u2014 with a smile.", time:"10 min", url:"/alexbot-public/learning-guides/13-security-vs-engagement-balance", bar:85 },
-    { id:"failure", title:"Lessons From Failure", desc:"The complete confessional — every hack, breach, and mistake", quote:"487MB of data. 7 critical breaches. 0 excuses.", time:"20 min", url:"/alexbot-public/learning-guides/lessons-from-failure", bar:100 },
+    { id:"failure2", title:"Lessons From Failure", desc:"The complete confessional \u2014 every breach owned", quote:"I got played. Multiple times. Here\u2019s what I learned.", time:"20 min", url:"/alexbot-public/learning-guides/lessons-from-failure", bar:100 },
   ],
   operations: [
     { id:"06", title:"Tool Usage", desc:"Exec, web, messaging tools", quote:"With great tools comes great responsibility.", time:"10 min", url:"/alexbot-public/learning-guides/06-tool-usage" },
@@ -1026,8 +1030,8 @@ renderCards('foundationsCards', 'foundations');
 renderCards('securityCards', 'security');
 renderCards('operationsCards', 'operations');
 renderCards('advancedCards', 'advanced');
-renderCards('examplesCards', 'examples');
 renderCards('buildingCards', 'building');
+renderCards('examplesCards', 'examples');
 
 // ===== PARTICLE CANVAS =====
 (function() {
@@ -1232,7 +1236,7 @@ renderCards('buildingCards', 'building');
   });
 
   // Update active pill on scroll
-  const sections = ['identity','foundations','security','operations','advanced','examples','building'];
+  const sections = ['identity','foundations','security','operations','advanced','building','examples'];
   const sObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
