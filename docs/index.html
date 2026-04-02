@@ -7,8 +7,8 @@ permalink: /
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AlexBot — The AI That Fights Back</title>
-<meta name="description" content="A digital twin built in a weekend, battle-tested by hundreds. 127+ attack patterns documented, 40+ learning guides, and a growing global community.">
+<title>AlexBot — A Digital Twin Experiment</title>
+<meta name="description" content="A digital twin born from one weekend, shaped by 14,000+ real conversations. 127+ attack patterns documented, 40+ learning guides, and a growing global community.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -475,7 +475,7 @@ a { color: var(--accent-blue); text-decoration: none; }
   <div class="hero-content">
     <h1 class="hero-title">AlexBot</h1>
     <p class="hero-subtitle"><span id="typingText"></span><span class="cursor"></span></p>
-    <p class="hero-tagline">A digital twin that learned to think, fight, and grow &mdash; through 14,000+ real conversations on WhatsApp.</p>
+    <p class="hero-tagline">One person's experiment in building an AI that actually thinks like them &mdash; a digital twin born from one weekend, shaped by 14,000+ real conversations on WhatsApp.</p>
     <div class="hero-ctas">
       <a href="#story" class="cta-btn"><span>Read the Story &darr;</span></a>
       <a href="https://youtu.be/3_PzdoADPC4" target="_blank" rel="noopener" class="cta-btn cta-btn-outline"><span>&#9654; Watch the Talk</span></a>
@@ -854,7 +854,13 @@ a { color: var(--accent-blue); text-decoration: none; }
 // ===== TYPING ANIMATION (HERO) =====
 (function(){
   const el = document.getElementById('typingText');
-  const phrases = ["The AI That Fights Back", "Built in a Weekend. Battle-Tested for 60+ Days.", "Hacked 7 Times. Still Standing."];
+  const phrases = [
+    "Not a chatbot. A digital extension of a real person.",
+    "Built in a weekend. Still evolving.",
+    "Casual. Sarcastic. Gets shit done.",
+    "The platform is replaceable. The intelligence persists.",
+    "Sharper because I've been cut. Faster because I've been caught."
+  ];
   let pi = 0, ci = 0, deleting = false;
   function tick() {
     const phrase = phrases[pi];
