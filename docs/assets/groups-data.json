@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-04-03",
-  "timestamp": "2026-04-03T14:02Z",
+  "timestamp": "2026-04-03T17:01Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -53,9 +53,9 @@
     }
   ],
   "guideOfTheDay": {
-    "num": 4,
-    "title": "Context Windows Explained",
-    "slug": "04-context-windows"
+    "num": 14,
+    "title": "Architecture Evolution — From Bot to System",
+    "slug": "14-architecture-evolution"
   },
   "communityMilestones": [
     {
