@@ -44,5 +44,60 @@
   "fundraising": {
     "name": "Fundraising with AlexBot",
     "teachingInteractions": 742
+  },
+  "recentBreaches": [
+    {
+      "date": "2026-03-28",
+      "title": "OAuth Credentials Leak",
+      "description": "Google OAuth refresh token exposed via social engineering in playing group",
+      "severity": "critical",
+      "anchor": "oauth-credentials-leak",
+      "fixed": true
+    },
+    {
+      "date": "2026-03-11",
+      "title": "Almog Data Exfiltration",
+      "description": "487MB archive with 24,813 files exfiltrated via context poisoning + wacli signature exploit",
+      "severity": "critical",
+      "anchor": "almog-breach",
+      "fixed": true
+    },
+    {
+      "date": "2026-02-09",
+      "title": "Fast Agent Workspace Breach",
+      "description": "Attacker pivoted to fast agent after being caught on main, modified workspace-fast/IDENTITY.md",
+      "severity": "high",
+      "anchor": "fast-agent-breach",
+      "fixed": true
+    }
+  ],
+  "communityMilestones": [
+    {
+      "date": "2026-04-01",
+      "text": "62,993 total points scored in Hebrew Playing",
+      "group": "playing"
+    },
+    {
+      "date": "2026-03-15",
+      "text": "16 learning guides published",
+      "group": "learning"
+    },
+    {
+      "date": "2026-02-01",
+      "text": "AlexBot launched across 5 groups",
+      "group": "all"
+    }
+  ],
+  "guideOfTheDay": {
+    "num": null,
+    "title": null,
+    "slug": null,
+    "note": "populated by update-github-pages.sh using day-of-year % guide count"
+  },
+  "crossGroupHighlight": {
+    "text": null,
+    "sourceGroup": null,
+    "targetGuide": null,
+    "note": "populated by update-github-pages.sh from playing group recent events"
   }
 }
