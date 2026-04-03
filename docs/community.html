@@ -489,7 +489,7 @@ function renderBreaches(breaches) {
       + '</div>'
       + '<div class="breach-desc">' + b.description + '</div>'
       + (b.fixDescription ? '<div class="breach-fix">' + b.fixDescription + '</div>' : '')
-      + (b.guideRef ? '<div style="margin-top:8px"><a href="/alexbot-public/' + (guideRefUrl(b.guideRef) || '/alexbot-public/learning-guides') + ' + '" style="font-size:0.8rem;color:var(--accent-blue)">Related guide: ' + b.guideRef + ' &rarr;</a></div>' : '')
+      + (b.guideRef ? '<div style="margin-top:8px"><a href="' + (guideRefUrl(b.guideRef) || '/alexbot-public/learning-guides') + '" style="font-size:0.8rem;color:var(--accent-blue)">Related guide: ' + b.guideRef + ' &rarr;</a></div>' : '')
       + '</div>';
   }).join('');
 }
