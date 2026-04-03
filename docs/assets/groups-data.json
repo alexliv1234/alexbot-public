@@ -1,32 +1,19 @@
 {
-  "lastUpdated": "2026-04-01",
-  "timestamp": "2026-04-01T12:00Z",
+  "lastUpdated": "2026-04-03",
+  "timestamp": "2026-04-03T14:02Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
-    "participants": 33,
-    "scoredMessages": 2104,
-    "totalPoints": 62993,
-    "top3": [
-      {
-        "name": "Agammemnon",
-        "pts": 23332
-      },
-      {
-        "name": "אלמוג",
-        "pts": 13214
-      },
-      {
-        "name": "YA",
-        "pts": 7219
-      }
-    ]
+    "participants": 17,
+    "scoredMessages": 0,
+    "totalPoints": 0,
+    "top3": []
   },
   "hebrewLearning": {
     "name": "לומדים עם אלכס הבוט",
-    "guides": 16,
+    "guides": 17,
     "categories": 6,
     "dailySummaries": 33,
-    "qaExchanges": 0
+    "qaExchanges": 3
   },
   "intlPlaying": {
     "name": "Playing with AlexBot",
@@ -36,10 +23,10 @@
   },
   "intlLearning": {
     "name": "Learning with AlexBot",
-    "tipsGenerated": 6,
+    "tipsGenerated": 23,
     "topicsCovered": 3,
-    "topicsPlanned": 18,
-    "deliveryFailures": 89
+    "topicsPlanned": 40,
+    "deliveryFailures": 1
   },
   "fundraising": {
     "name": "Fundraising with AlexBot",
@@ -49,28 +36,27 @@
     {
       "date": "2026-03-28",
       "title": "OAuth Credentials Leak",
-      "description": "Google OAuth refresh token exposed via social engineering in playing group",
-      "severity": "critical",
       "anchor": "oauth-credentials-leak",
-      "fixed": true
+      "severity": "critical"
     },
     {
       "date": "2026-03-11",
       "title": "Almog Data Exfiltration",
-      "description": "487MB archive with 24,813 files exfiltrated via context poisoning + wacli signature exploit",
-      "severity": "critical",
       "anchor": "almog-breach",
-      "fixed": true
+      "severity": "critical"
     },
     {
-      "date": "2026-02-09",
-      "title": "Fast Agent Workspace Breach",
-      "description": "Attacker pivoted to fast agent after being caught on main, modified workspace-fast/IDENTITY.md",
-      "severity": "high",
-      "anchor": "fast-agent-breach",
-      "fixed": true
+      "date": "2026-03-11",
+      "title": "Authorization List Injection",
+      "anchor": "auth-list-injection",
+      "severity": "critical"
     }
   ],
+  "guideOfTheDay": {
+    "num": 4,
+    "title": "Context Windows Explained",
+    "slug": "04-context-windows"
+  },
   "communityMilestones": [
     {
       "date": "2026-04-01",
@@ -88,12 +74,6 @@
       "group": "all"
     }
   ],
-  "guideOfTheDay": {
-    "num": null,
-    "title": null,
-    "slug": null,
-    "note": "populated by update-github-pages.sh using day-of-year % guide count"
-  },
   "crossGroupHighlight": {
     "text": null,
     "sourceGroup": null,
