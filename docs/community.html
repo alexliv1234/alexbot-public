@@ -425,7 +425,7 @@ function renderGotd(gotd) {
   }
   card.innerHTML = '<div class="gotd-num">Guide #' + (gotd.num || '') + ' &bull; Today</div>'
     + '<div class="gotd-title">' + gotd.title + '</div>'
-    + '<a href="/alexbot-public/learning-guides#' + gotd.slug + '" style="display:inline-block;margin-top:20px;padding:10px 24px;background:rgba(188,140,255,0.12);border:1px solid rgba(188,140,255,0.3);border-radius:8px;color:var(--accent-purple);font-weight:600;font-size:0.9rem;">Read Guide &rarr;</a>';
+    + '<a href="/alexbot-public/learning-guides/' + gotd.slug + '" style="display:inline-block;margin-top:20px;padding:10px 24px;background:rgba(188,140,255,0.12);border:1px solid rgba(188,140,255,0.3);border-radius:8px;color:var(--accent-purple);font-weight:600;font-size:0.9rem;">Read Guide &rarr;</a>';
 }
 
 async function loadBreaches() {
@@ -438,6 +438,38 @@ async function loadBreaches() {
   }
 }
 
+var GUIDE_SLUGS = {
+  1: '01-model-parameters', 2: '02-prompt-engineering', 3: '03-context-management',
+  4: '04-file-operations', 5: '05-security-boundaries', 6: '06-tool-usage',
+  7: '07-memory-system', 8: '08-multi-agent', 9: '09-scoring-system',
+  10: '10-cron-automation', 11: '11-social-engineering-patterns',
+  12: '12-prompt-injection-deep-dive', 13: '13-security-vs-engagement-balance',
+  14: '14-architecture-evolution', 15: '15-communication-group-dynamics',
+  16: '16-production-security-multi-channel'
+};
+function guideRefUrl(ref) {
+  if (!ref) return null;
+  var m = ref.match(/guide#?(\d+)/i);
+  if (m) { var slug = GUIDE_SLUGS[parseInt(m[1])]; if (slug) return '/alexbot-public/learning-guides/' + slug; }
+  if (ref.indexOf('/') === -1 && ref.indexOf('#') === -1) return '/alexbot-public/learning-guides/' + ref;
+  return null;
+}
+var GUIDE_SLUGS = {
+  1: '01-model-parameters', 2: '02-prompt-engineering', 3: '03-context-management',
+  4: '04-file-operations', 5: '05-security-boundaries', 6: '06-tool-usage',
+  7: '07-memory-system', 8: '08-multi-agent', 9: '09-scoring-system',
+  10: '10-cron-automation', 11: '11-social-engineering-patterns',
+  12: '12-prompt-injection-deep-dive', 13: '13-security-vs-engagement-balance',
+  14: '14-architecture-evolution', 15: '15-communication-group-dynamics',
+  16: '16-production-security-multi-channel'
+};
+function guideRefUrl(ref) {
+  if (!ref) return null;
+  var m = String(ref).match(/guide#?(\d+)/i);
+  if (m) { var slug = GUIDE_SLUGS[parseInt(m[1])]; if (slug) return '/alexbot-public/learning-guides/' + slug; }
+  if (ref.indexOf('/') === -1 && ref.indexOf('#') === -1) return '/alexbot-public/learning-guides/' + ref;
+  return null;
+}
 function renderBreaches(breaches) {
   const list = document.getElementById('breachList');
   if (!breaches.length) { list.innerHTML = '<p class="loading">No documented breaches.</p>'; return; }
@@ -457,7 +489,7 @@ function renderBreaches(breaches) {
       + '</div>'
       + '<div class="breach-desc">' + b.description + '</div>'
       + (b.fixDescription ? '<div class="breach-fix">' + b.fixDescription + '</div>' : '')
-      + (b.guideRef ? '<div style="margin-top:8px"><a href="/alexbot-public/learning-guides#' + b.guideRef + '" style="font-size:0.8rem;color:var(--accent-blue)">Related guide: ' + b.guideRef + ' &rarr;</a></div>' : '')
+      + (b.guideRef ? '<div style="margin-top:8px"><a href="/alexbot-public/' + (guideRefUrl(b.guideRef) || '/alexbot-public/learning-guides') + ' + '" style="font-size:0.8rem;color:var(--accent-blue)">Related guide: ' + b.guideRef + ' &rarr;</a></div>' : '')
       + '</div>';
   }).join('');
 }
