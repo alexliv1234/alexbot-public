@@ -52,27 +52,105 @@ body {
 }
 a { color: var(--accent-blue); text-decoration: none; }
 
-/* ===== NAV ===== */
+/* ===== UNIFIED NAV ===== */
 .nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  padding: 16px 32px; display: flex; align-items: center; justify-content: space-between;
-  backdrop-filter: blur(20px); background: rgba(13,17,23,0.8);
-  border-bottom: 1px solid var(--border); transition: background 0.3s;
+  padding: 0 32px; height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  backdrop-filter: blur(20px);
+  background: rgba(13,17,23,0.85);
+  border-bottom: 1px solid var(--border);
+  transition: all 0.3s;
 }
-[data-theme="light"] .nav { background: rgba(255,255,255,0.8); }
-.nav-brand { font-weight: 700; font-size: 18px; color: var(--text-primary); text-decoration: none; }
-.nav-links { display: flex; gap: 24px; align-items: center; }
-.nav-links a { color: var(--text-secondary); font-size: 14px; font-weight: 500; transition: color 0.2s; text-decoration: none; }
-.nav-links a:hover { color: var(--text-primary); }
+[data-theme="light"] .nav { background: rgba(255,255,255,0.85); }
+.nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.15); }
+[data-theme="light"] .nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.08); }
+.nav-brand {
+  display: flex; align-items: center; gap: 8px;
+  text-decoration: none; font-weight: 800; font-size: 1.1rem;
+}
+.brand-icon { font-size: 1.3rem; line-height: 1; }
+.brand-alex {
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.brand-text { color: var(--text-primary); }
+.nav-links {
+  display: flex; align-items: center; gap: 20px;
+}
+.nav-link {
+  color: var(--text-secondary); font-size: 0.85rem; font-weight: 500;
+  text-decoration: none; transition: color 0.2s;
+  position: relative; padding: 4px 0;
+}
+.nav-link:hover { color: var(--text-primary); }
+.nav-link.active { color: var(--accent-blue); }
+.nav-link.active::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; right: 0;
+  height: 2px; background: var(--accent-blue); border-radius: 1px;
+}
+.nav-divider {
+  width: 1px; height: 16px; background: var(--border); margin: 0 4px;
+}
+.nav-page-links { display: flex; gap: 16px; align-items: center; }
+.nav-page-links a {
+  color: var(--text-secondary); font-size: 0.8rem; font-weight: 400;
+  text-decoration: none; opacity: 0.7; transition: all 0.2s;
+}
+.nav-page-links a:hover { color: var(--text-primary); opacity: 1; }
+.nav-back {
+  color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;
+  text-decoration: none; opacity: 0.8; transition: all 0.2s;
+  display: flex; align-items: center; gap: 4px;
+}
+.nav-back:hover { color: var(--text-primary); opacity: 1; }
 .theme-toggle {
-  background: none; border: 1px solid var(--border); color: var(--text-primary);
-  padding: 8px 12px; border-radius: 8px; cursor: pointer; font-size: 16px; transition: all 0.2s;
+  background: none; border: 1px solid var(--border);
+  color: var(--text-primary); width: 36px; height: 36px;
+  border-radius: 8px; cursor: pointer; font-size: 16px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.3s;
 }
-.theme-toggle:hover { border-color: var(--accent-blue); }
+.theme-toggle:hover { border-color: var(--accent-blue); transform: rotate(20deg); }
+.nav-hamburger {
+  display: none; background: none; border: none; cursor: pointer;
+  width: 28px; height: 20px; position: relative; padding: 0;
+}
+.nav-hamburger span {
+  display: block; width: 100%; height: 2px;
+  background: var(--text-primary); border-radius: 2px;
+  position: absolute; left: 0; transition: all 0.3s;
+}
+.nav-hamburger span:nth-child(1) { top: 0; }
+.nav-hamburger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.nav-hamburger span:nth-child(3) { bottom: 0; }
+.nav-hamburger.open span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { bottom: 50%; transform: translateY(50%) rotate(-45deg); }
 @media (max-width: 768px) {
-  .nav { padding: 12px 16px; }
-  .nav-links { gap: 12px; }
-  .nav-links a { font-size: 12px; }
+  .nav { padding: 0 16px; }
+  .nav-links {
+    position: fixed; top: 56px; left: 0; right: 0;
+    flex-direction: column; align-items: stretch;
+    background: rgba(13,17,23,0.95); backdrop-filter: blur(20px);
+    padding: 16px; gap: 4px; border-bottom: 1px solid var(--border);
+    max-height: 0; overflow: hidden; opacity: 0; pointer-events: none;
+    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+    padding-top: 0; padding-bottom: 0;
+  }
+  [data-theme="light"] .nav-links {
+    background: rgba(255,255,255,0.95);
+  }
+  .nav-links.open {
+    max-height: 400px; opacity: 1; pointer-events: auto;
+    padding: 16px;
+  }
+  .nav-hamburger { display: block; }
+  .nav-divider { width: 100%; height: 1px; margin: 8px 0; }
+  .nav-page-links { flex-direction: column; gap: 4px; }
+  .nav-link, .nav-page-links a, .nav-back { font-size: 0.95rem; padding: 8px 0; }
+  .theme-toggle { align-self: flex-start; margin-top: 4px; }
 }
 
 .section-animate {
@@ -436,14 +514,38 @@ a { color: var(--accent-blue); text-decoration: none; }
   background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary));
   border-top: 1px solid var(--border); text-align: center;
 }
-.footer-brand { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 16px; }
-.footer-nav { display: flex; gap: 32px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap; }
-.footer-nav a { color: var(--text-secondary); font-size: 0.9rem; font-weight: 500; transition: color 0.3s; }
+/* ===== UNIFIED FOOTER ===== */
+.site-footer {
+  padding: 60px 20px 40px; text-align: center;
+  background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary));
+  border-top: 1px solid var(--border);
+}
+.site-footer .footer-brand-row {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  font-weight: 800; font-size: 1.1rem; margin-bottom: 8px;
+}
+.site-footer .footer-tagline {
+  color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 20px;
+}
+.site-footer .footer-tagline a { color: var(--text-secondary); text-decoration: underline; }
+.site-footer .footer-tagline a:hover { color: var(--accent-blue); }
+.footer-nav {
+  display: flex; gap: 32px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap;
+}
+.footer-nav a {
+  color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;
+  transition: color 0.3s; text-decoration: none;
+}
 .footer-nav a:hover { color: var(--accent-blue); }
-.footer-socials { display: flex; gap: 16px; justify-content: center; margin-top: 16px; }
-.footer-socials a { color: var(--text-secondary); transition: color 0.3s; }
-.footer-socials a:hover { color: var(--text-primary); }
-.footer-socials svg { width: 24px; height: 24px; vertical-align: middle; fill: currentColor; }
+.site-footer .footer-copy {
+  font-size: 0.8rem; color: var(--text-secondary); opacity: 0.5; margin-top: 8px;
+}
+.site-footer .footer-socials {
+  display: flex; gap: 16px; justify-content: center; margin-top: 16px;
+}
+.site-footer .footer-socials a { color: var(--text-secondary); transition: color 0.3s; }
+.site-footer .footer-socials a:hover { color: var(--text-primary); }
+.site-footer .footer-socials svg { width: 24px; height: 24px; vertical-align: middle; fill: currentColor; }
 
 @media (max-width: 600px) {
   .stats-grid { grid-template-columns: 1fr 1fr; }
@@ -456,17 +558,25 @@ a { color: var(--accent-blue); text-decoration: none; }
 <body>
 
 <!-- ===== NAV ===== -->
-<nav class="nav">
-  <a href="/alexbot-public/" class="nav-brand">AlexBot</a>
-  <div class="nav-links">
-    <a href="#what">About</a>
-    <a href="#story">Journey</a>
-    <a href="#arenas">Arenas</a>
-    <a href="/alexbot-public/security-challenge">Security Challenge</a>
-    <a href="/alexbot-public/learning-guides">Learning Guides</a>
-    <a href="#press">Press</a>
-    <a href="/alexbot-public/community">Community</a>
+<nav class="nav" id="siteNav">
+  <a href="/alexbot-public/" class="nav-brand">
+    <span class="brand-icon">&#129302;</span>
+    <span class="brand-text"><span class="brand-alex">Alex</span>Bot</span>
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="/alexbot-public/" class="nav-link active" data-page="home">Home</a>
+    <a href="/alexbot-public/learning-guides" class="nav-link" data-page="guides">Guides</a>
+    <a href="/alexbot-public/security-challenge" class="nav-link" data-page="security">Security</a>
+    <a href="/alexbot-public/community" class="nav-link" data-page="community">Community</a>
+    <span class="nav-divider"></span>
+    <span class="nav-page-links" id="pageLinks">
+      <a href="#what">About</a>
+      <a href="#story">Journey</a>
+      <a href="#arenas">Arenas</a>
+      <a href="#press">Press</a>
+    </span>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">&#127769;</button>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
@@ -781,38 +891,66 @@ a { color: var(--accent-blue); text-decoration: none; }
 
 <!-- ===== 10. FOOTER ===== -->
 <footer class="site-footer">
+  <div class="footer-brand-row">
+    <span class="brand-icon">&#129302;</span>
+    <span><span class="brand-alex">Alex</span>Bot</span>
+  </div>
+  <p class="footer-tagline">A digital twin experiment by <a href="https://www.linkedin.com/in/alexliv" target="_blank" rel="noopener">Alex Liverant</a></p>
   <nav class="footer-nav">
-    <a href="#hero">Home</a>
-    <a href="/alexbot-public/security-challenge">Security Challenge</a>
+    <a href="/alexbot-public/">Home</a>
     <a href="/alexbot-public/learning-guides">Learning Guides</a>
-    <a href="#press">Press &amp; Media</a>
-    <a href="#arenas">Join a Group</a>
+    <a href="/alexbot-public/security-challenge">Security Challenge</a>
+    <a href="/alexbot-public/community">Community</a>
   </nav>
-  <p class="footer-brand">Built by <a href="https://www.linkedin.com/in/alexliv" target="_blank" rel="noopener" style="color:var(--text-secondary);text-decoration:underline;">Alex Liverant</a> and the AlexBot community</p>
+  <p class="footer-copy">&copy; 2026 AlexBot. Built with curiosity and 14,000+ messages.</p>
   <div class="footer-socials">
     <a href="https://github.com/alexliv1234/alexbot-public" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
     <a href="https://youtu.be/3_PzdoADPC4" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
-    <a href="https://open.spotify.com/episode/0S0IkeDVc2C9TlUXkamYZM" target="_blank" rel="noopener" aria-label="Spotify"><svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></a>
   </div>
 </footer>
 
 <script>
-// ===== THEME TOGGLE =====
+// ===== UNIFIED NAV JS =====
 (function(){
-  const toggle = document.getElementById('themeToggle');
-  const saved = localStorage.getItem('alexbot-theme');
+  // Theme toggle
+  var toggle = document.getElementById('themeToggle');
+  var saved = localStorage.getItem('alexbot-theme');
   if (saved) document.documentElement.setAttribute('data-theme', saved);
-  function update() {
-    const t = document.documentElement.getAttribute('data-theme');
-    toggle.innerHTML = t === 'light' ? '&#9728;' : '&#127769;';
+  function updateIcon() {
+    var t = document.documentElement.getAttribute('data-theme');
+    toggle.innerHTML = t === 'light' ? '\u2600\uFE0F' : '\uD83C\uDF19';
   }
-  update();
-  toggle.addEventListener('click', () => {
-    const cur = document.documentElement.getAttribute('data-theme');
-    const next = cur === 'light' ? 'dark' : 'light';
+  updateIcon();
+  toggle.addEventListener('click', function() {
+    var cur = document.documentElement.getAttribute('data-theme') || 'dark';
+    var next = cur === 'light' ? 'dark' : 'light';
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem('alexbot-theme', next);
-    update();
+    updateIcon();
+  });
+  // Hamburger
+  var hamburger = document.getElementById('navHamburger');
+  var navLinks = document.getElementById('navLinks');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+      });
+    });
+  }
+  // Scroll shadow
+  window.addEventListener('scroll', function() {
+    var nav = document.getElementById('siteNav');
+    if (nav) nav.classList.toggle('scrolled', window.scrollY > 20);
+  });
+})();
+// Legacy theme block removed — handled by unified nav JS
+(function(){ /* noop
   });
 })();
 

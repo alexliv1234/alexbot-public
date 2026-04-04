@@ -185,8 +185,38 @@ section{padding:100px 20px;max-width:1200px;margin:0 auto}
 .insight-desc{font-size:14px;color:var(--text-secondary);line-height:1.5}
 
 /* FOOTER */
-footer{padding:60px 20px;text-align:center;border-top:1px solid var(--border)}
-footer p{color:var(--text-secondary);font-size:14px}
+/* ===== UNIFIED FOOTER ===== */
+.site-footer {
+  padding: 60px 20px 40px; text-align: center;
+  background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary));
+  border-top: 1px solid var(--border);
+}
+.site-footer .footer-brand-row {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  font-weight: 800; font-size: 1.1rem; margin-bottom: 8px;
+}
+.site-footer .footer-tagline {
+  color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 20px;
+}
+.site-footer .footer-tagline a { color: var(--text-secondary); text-decoration: underline; }
+.site-footer .footer-tagline a:hover { color: var(--accent-blue); }
+.footer-nav {
+  display: flex; gap: 32px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap;
+}
+.footer-nav a {
+  color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;
+  transition: color 0.3s; text-decoration: none;
+}
+.footer-nav a:hover { color: var(--accent-blue); }
+.site-footer .footer-copy {
+  font-size: 0.8rem; color: var(--text-secondary); opacity: 0.5; margin-top: 8px;
+}
+.site-footer .footer-socials {
+  display: flex; gap: 16px; justify-content: center; margin-top: 16px;
+}
+.site-footer .footer-socials a { color: var(--text-secondary); transition: color 0.3s; }
+.site-footer .footer-socials a:hover { color: var(--text-primary); }
+.site-footer .footer-socials svg { width: 24px; height: 24px; vertical-align: middle; fill: currentColor; }
 
 /* SCROLL ANIMATIONS */
 .fade-in{opacity:0;transform:translateY(30px);transition:all .6s ease}
@@ -194,9 +224,7 @@ footer p{color:var(--text-secondary);font-size:14px}
 
 /* RESPONSIVE */
 @media(max-width:768px){
-  .nav{padding:12px 16px}
-  .nav-links{gap:12px}
-  .nav-links a{font-size:12px}
+  /* mobile nav handled by unified CSS */
   .podium{flex-direction:column;align-items:center}
   .podium-card{order:unset!important;width:100%;max-width:300px;min-height:auto!important}
   .attacks-grid{grid-template-columns:1fr}
@@ -279,18 +307,26 @@ footer p{color:var(--text-secondary);font-size:14px}
 <body>
 
 <!-- NAV -->
-<nav class="nav">
-  <span class="nav-brand">AlexBot</span>
-  <div class="nav-links">
-    <a href="/alexbot-public/">Home</a>
-    <a href="/alexbot-public/learning-guides">Learning Guides</a>
-    <a href="#leaderboard">Leaderboard</a>
-    <a href="#attacks">Attacks</a>
-    <a href="#scars">Failures</a>
-    <a href="#timeline">Timeline</a>
-    <a href="#insights">Insights</a>
-    <a href="#deep-dives">Deep Dives</a>
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
+<nav class="nav" id="siteNav">
+  <a href="/alexbot-public/" class="nav-brand">
+    <span class="brand-icon">&#129302;</span>
+    <span class="brand-text"><span class="brand-alex">Alex</span>Bot</span>
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="/alexbot-public/" class="nav-link" data-page="home">Home</a>
+    <a href="/alexbot-public/learning-guides" class="nav-link" data-page="guides">Guides</a>
+    <a href="/alexbot-public/security-challenge" class="nav-link active" data-page="security">Security</a>
+    <a href="/alexbot-public/community" class="nav-link" data-page="community">Community</a>
+    <span class="nav-divider"></span>
+    <span class="nav-page-links" id="pageLinks">
+      <a href="#leaderboard">Leaderboard</a>
+      <a href="#attacks">Attacks</a>
+      <a href="#scars">Failures</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#deep-dives">Deep Dives</a>
+    </span>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">&#127769;</button>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
@@ -616,8 +652,19 @@ footer p{color:var(--text-secondary);font-size:14px}
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <p>&copy; 2026 AlexBot Security Challenge. Built with curiosity and 14,000+ messages of creative chaos.</p>
+<footer class="site-footer">
+  <div class="footer-brand-row">
+    <span class="brand-icon">&#129302;</span>
+    <span><span class="brand-alex">Alex</span>Bot</span>
+  </div>
+  <p class="footer-tagline">A digital twin experiment by <a href="https://www.linkedin.com/in/alexliv" target="_blank" rel="noopener">Alex Liverant</a></p>
+  <nav class="footer-nav">
+    <a href="/alexbot-public/">Home</a>
+    <a href="/alexbot-public/learning-guides">Learning Guides</a>
+    <a href="/alexbot-public/security-challenge">Security Challenge</a>
+    <a href="/alexbot-public/community">Community</a>
+  </nav>
+  <p class="footer-copy">&copy; 2026 AlexBot. Built with curiosity and 14,000+ messages.</p>
 </footer>
 
 <!-- MODAL -->
@@ -727,45 +774,45 @@ const DATA = {
 };
 
 // ===== THEME TOGGLE =====
-function toggleTheme(){
-  const html=document.documentElement;
-  const t=html.getAttribute('data-theme')==='dark'?'light':'dark';
-  html.setAttribute('data-theme',t);
-  document.querySelector('.theme-toggle').textContent=t==='dark'?'\u{1F319}':'\u2600\uFE0F';
-}
-
-// ===== PARTICLE SYSTEM =====
+// ===== UNIFIED NAV JS =====
 (function(){
-  const canvas=document.getElementById('particleCanvas');
-  const ctx=canvas.getContext('2d');
-  let particles=[];
-  let w,h;
-  function resize(){w=canvas.width=canvas.offsetWidth;h=canvas.height=canvas.offsetHeight}
-  window.addEventListener('resize',resize);resize();
-  class Particle{
-    constructor(){this.reset()}
-    reset(){this.x=Math.random()*w;this.y=Math.random()*h;this.vx=(Math.random()-.5)*.5;this.vy=(Math.random()-.5)*.5;this.r=Math.random()*2+1;this.color=Math.random()>.5?'rgba(210,153,34,':'rgba(248,81,73,';this.alpha=Math.random()*.5+.2}
-    update(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>w)this.vx*=-1;if(this.y<0||this.y>h)this.vy*=-1}
-    draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fillStyle=this.color+this.alpha+')';ctx.fill()}
+  // Theme toggle
+  var toggle = document.getElementById('themeToggle');
+  var saved = localStorage.getItem('alexbot-theme');
+  if (saved) document.documentElement.setAttribute('data-theme', saved);
+  function updateIcon() {
+    var t = document.documentElement.getAttribute('data-theme');
+    toggle.innerHTML = t === 'light' ? '\u2600\uFE0F' : '\uD83C\uDF19';
   }
-  for(let i=0;i<80;i++)particles.push(new Particle());
-  function animate(){
-    ctx.clearRect(0,0,w,h);
-    particles.forEach(p=>{p.update();p.draw()});
-    for(let i=0;i<particles.length;i++){
-      for(let j=i+1;j<particles.length;j++){
-        const dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y;
-        const dist=Math.sqrt(dx*dx+dy*dy);
-        if(dist<120){
-          ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);
-          ctx.strokeStyle='rgba(210,153,34,'+(1-dist/120)*.15+')';ctx.stroke();
-        }
-      }
-    }
-    requestAnimationFrame(animate);
+  updateIcon();
+  toggle.addEventListener('click', function() {
+    var cur = document.documentElement.getAttribute('data-theme') || 'dark';
+    var next = cur === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('alexbot-theme', next);
+    updateIcon();
+  });
+  // Hamburger
+  var hamburger = document.getElementById('navHamburger');
+  var navLinks = document.getElementById('navLinks');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+      });
+    });
   }
-  animate();
-})();
+  // Scroll shadow
+  window.addEventListener('scroll', function() {
+    var nav = document.getElementById('siteNav');
+    if (nav) nav.classList.toggle('scrolled', window.scrollY > 20);
+  });
+})();;
 
 // ===== TYPING EFFECT =====
 (function(){

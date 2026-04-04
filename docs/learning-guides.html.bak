@@ -424,38 +424,16 @@ a:hover { color: var(--accent-purple); }
 .insight-quote::before { content: '\201C'; font-size: 2rem; color: var(--accent-purple); line-height: 0; vertical-align: -0.3em; margin-right: 4px; }
 
 /* ===== FOOTER ===== */
-/* ===== UNIFIED FOOTER ===== */
-.site-footer {
+.footer {
   padding: 60px 20px 40px; text-align: center;
-  background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary));
   border-top: 1px solid var(--border);
 }
-.site-footer .footer-brand-row {
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  font-weight: 800; font-size: 1.1rem; margin-bottom: 8px;
-}
-.site-footer .footer-tagline {
-  color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 20px;
-}
-.site-footer .footer-tagline a { color: var(--text-secondary); text-decoration: underline; }
-.site-footer .footer-tagline a:hover { color: var(--accent-blue); }
-.footer-nav {
-  display: flex; gap: 32px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap;
-}
-.footer-nav a {
-  color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;
-  transition: color 0.3s; text-decoration: none;
-}
-.footer-nav a:hover { color: var(--accent-blue); }
-.site-footer .footer-copy {
-  font-size: 0.8rem; color: var(--text-secondary); opacity: 0.5; margin-top: 8px;
-}
-.site-footer .footer-socials {
-  display: flex; gap: 16px; justify-content: center; margin-top: 16px;
-}
-.site-footer .footer-socials a { color: var(--text-secondary); transition: color 0.3s; }
-.site-footer .footer-socials a:hover { color: var(--text-primary); }
-.site-footer .footer-socials svg { width: 24px; height: 24px; vertical-align: middle; fill: currentColor; }
+.footer-brand { font-size: 1.4rem; font-weight: 800; margin-bottom: 8px; }
+.footer-brand span { background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.footer-text { color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 20px; }
+.footer-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
+.footer-links a { color: var(--text-secondary); font-size: 0.85rem; }
+.footer-links a:hover { color: var(--accent-purple); }
 
 /* ===== RESPONSIVE ===== */
 @media(max-width: 768px) {
@@ -466,7 +444,7 @@ a:hover { color: var(--accent-purple); }
   .cards-grid { grid-template-columns: 1fr; }
 }
 @media(max-width: 500px) {
-  /* handled by unified nav */
+  .nav-links a { font-size: 0.8rem; }
   .stats-strip { gap: 16px; }
   .stat-number { font-size: 1.6rem; }
 }
@@ -529,18 +507,13 @@ a:hover { color: var(--accent-purple); }
 <body>
 
 <!-- NAV -->
-<nav class="nav" id="siteNav">
-  <a href="/alexbot-public/" class="nav-brand">
-    <span class="brand-icon">&#129302;</span>
-    <span class="brand-text"><span class="brand-alex">Alex</span>Bot</span>
-  </a>
-  <div class="nav-links" id="navLinks">
-    <a href="/alexbot-public/" class="nav-link" data-page="home">Home</a>
-    <a href="/alexbot-public/learning-guides" class="nav-link active" data-page="guides">Guides</a>
-    <a href="/alexbot-public/security-challenge" class="nav-link" data-page="security">Security</a>
-    <a href="/alexbot-public/community" class="nav-link" data-page="community">Community</a>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">&#127769;</button>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+<nav class="nav">
+  <div class="nav-brand"><span>Alex</span>Bot</div>
+  <div class="nav-links">
+    <a href="/alexbot-public/">Home</a>
+    <a href="/alexbot-public/security-challenge">Security Challenge</a>
+    <a href="/alexbot-public/learning-guides" class="active">Learning Guides</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">&#9790;</button>
   </div>
 </nav>
 
@@ -620,7 +593,62 @@ a:hover { color: var(--accent-purple); }
   </div>
 </section>
 
+<!-- WHERE LEARNING HAPPENS -->
+<section class="groups-section" id="groupsSection">
+  <div class="section-header reveal">
+    <h2 class="section-title">Where Learning Happens</h2>
+    <p class="section-desc">Two arenas. Two languages. One mission: push AI to its limits.</p>
+  </div>
+
+  <!-- PLAYING ARENA -->
+  <div class="group-row reveal">
+    <div class="group-row-header">
+      <span class="group-row-icon">&#x1f3ae;</span>
+      <div>
+        <h3 class="group-row-title">Playing Arena</h3>
+        <p class="group-row-desc">Adversarial testing, creative attacks, competitive scoring</p>
+      </div>
+    </div>
+    <div class="group-row-cards" id="playingCards"></div>
+  </div>
+
+  <!-- LEARNING ARENA -->
+  <div class="group-row reveal">
+    <div class="group-row-header">
+      <span class="group-row-icon">&#x1f4da;</span>
+      <div>
+        <h3 class="group-row-title">Learning Arena</h3>
+        <p class="group-row-desc">Structured Q&A, guides, curriculum, teaching methodology</p>
+      </div>
+    </div>
+    <div class="group-row-cards" id="learningCards"></div>
+  </div>
+
+  <!-- FUNDRAISING -->
+  <div class="group-row reveal">
+    <div class="group-row-header">
+      <span class="group-row-icon">&#x1f4bc;</span>
+      <div>
+        <h3 class="group-row-title">Fundraising</h3>
+        <p class="group-row-desc">Investor communications, pitch practice, market intelligence</p>
+      </div>
+    </div>
+    <div class="group-row-cards" id="fundraisingCards"></div>
+  </div>
+
+  <div class="groups-updated" id="groupsUpdated"></div>
+</section>
+
 <!-- STICKY CATEGORY PILLS -->
+<div class="category-pills" id="categoryPills">
+  <button class="pill active" data-cat="identity">&#x1f9ec; Identity</button>
+  <button class="pill" data-cat="foundations">&#x1f3d7;&#xfe0f; Foundations</button>
+  <button class="pill" data-cat="security">&#x1f6e1;&#xfe0f; Security</button>
+  <button class="pill" data-cat="operations">&#x2699;&#xfe0f; Operations</button>
+  <button class="pill" data-cat="advanced">&#x1f9e0; Advanced</button>
+  <button class="pill" data-cat="building">&#x1f527; Building</button>
+  <button class="pill" data-cat="examples">&#x1f3a8; Examples</button>
+</div>
 
 <!-- IDENTITY & PERSONALITY -->
 <section class="section accent-purple" id="identity">
@@ -717,80 +745,76 @@ a:hover { color: var(--accent-purple); }
   </div>
 
   <!-- DNA Cards -->
+  <div class="cards-grid" id="identityCards"></div>
 </section>
 
-<div class="category-pills" id="categoryPills">
-  <button class="pill active" data-cat="all">📚 All</button>
-  <button class="pill" data-cat="identity">&#x1f9ec; Identity</button>
-  <button class="pill" data-cat="foundations">&#x1f3d7;&#xfe0f; Foundations</button>
-  <button class="pill" data-cat="security">&#x1f6e1;&#xfe0f; Security</button>
-  <button class="pill" data-cat="operations">&#x2699;&#xfe0f; Operations</button>
-  <button class="pill" data-cat="advanced">&#x1f9e0; Advanced</button>
-  <button class="pill" data-cat="building">&#x1f527; Building</button>
-  <button class="pill" data-cat="examples">&#x1f3a8; Examples</button>
-</div>
-
-<!-- IDENTITY & PERSONALITY -->
-
-<section class="section" id="guides">
-  <div class="section-header reveal" id="guidesHeader" style="display:none">
-    <div class="section-badge" id="guidesBadge"></div>
-    <h2 class="section-title" id="guidesTitle"></h2>
-    <p class="section-desc" id="guidesDesc"></p>
+<!-- FOUNDATIONS -->
+<section class="section accent-blue" id="foundations">
+  <div class="section-header reveal">
+    <div class="section-badge">FOUNDATIONS</div>
+    <h2 class="section-title">The Building Blocks</h2>
+    <p class="section-desc">Core technical knowledge that powers everything AlexBot does.</p>
   </div>
-  <div class="cards-grid" id="allCards"></div>
+  <div class="cards-grid" id="foundationsCards"></div>
 </section>
 
+<!-- SECURITY -->
+<section class="section accent-red" id="security">
+  <div class="section-header reveal">
+    <div class="section-badge">SECURITY</div>
+    <h2 class="section-title">Battle-Tested Defenses</h2>
+    <p class="section-desc">Lessons from surviving thousands of real attack attempts.</p>
+  </div>
+  <div class="cards-grid" id="securityCards"></div>
+  <div class="security-cta">
+    <a href="/alexbot-public/security-challenge">&#x1f6e1;&#xfe0f; Try the Security Challenge &rarr;</a>
+  </div>
+</section>
+
+<!-- OPERATIONS -->
+<section class="section accent-green" id="operations">
+  <div class="section-header reveal">
+    <div class="section-badge">OPERATIONS</div>
+    <h2 class="section-title">How It All Runs</h2>
+    <p class="section-desc">The systems, automation, and memory that keep AlexBot alive.</p>
+  </div>
+  <div class="cards-grid" id="operationsCards"></div>
+</section>
+
+<!-- ADVANCED -->
+<section class="section accent-gold" id="advanced">
+  <div class="section-header reveal">
+    <div class="section-badge">ADVANCED</div>
+    <h2 class="section-title">Deep Knowledge</h2>
+    <p class="section-desc">Architecture, multi-agent systems, and the philosophy behind it all.</p>
+  </div>
+  <div class="cards-grid" id="advancedCards"></div>
+</section>
+
+
+
+<section class="section accent-blue" id="building">
+  <div class="section-header reveal">
+    <div class="section-badge">BUILDING & REFERENCE</div>
+    <h2 class="section-title">Build Your Own</h2>
+    <p class="section-desc">From first bot to production architecture — everything you need to build.</p>
+  </div>
+  <div class="cards-grid" id="buildingCards"></div>
+</section>
+
+<!-- EXAMPLES -->
+<section class="section accent-rainbow" id="examples">
+  <div class="section-header reveal">
+    <div class="section-badge">EXAMPLES</div>
+    <h2 class="section-title">Greatest Hits</h2>
+    <p class="section-desc">The best moments, funniest responses, and most creative attacks.</p>
+  </div>
+  <div class="cards-grid" id="examplesCards"></div>
+</section>
 
 <!-- BUILDING & REFERENCE -->
 
 <!-- FEATURED INSIGHTS -->
-
-<section class="groups-section" id="groupsSection">
-  <div class="section-header reveal">
-    <h2 class="section-title">Where Learning Happens</h2>
-    <p class="section-desc">Two arenas. Two languages. One mission: push AI to its limits.</p>
-  </div>
-
-  <!-- PLAYING ARENA -->
-  <div class="group-row reveal">
-    <div class="group-row-header">
-      <span class="group-row-icon">&#x1f3ae;</span>
-      <div>
-        <h3 class="group-row-title">Playing Arena</h3>
-        <p class="group-row-desc">Adversarial testing, creative attacks, competitive scoring</p>
-      </div>
-    </div>
-    <div class="group-row-cards" id="playingCards"></div>
-  </div>
-
-  <!-- LEARNING ARENA -->
-  <div class="group-row reveal">
-    <div class="group-row-header">
-      <span class="group-row-icon">&#x1f4da;</span>
-      <div>
-        <h3 class="group-row-title">Learning Arena</h3>
-        <p class="group-row-desc">Structured Q&A, guides, curriculum, teaching methodology</p>
-      </div>
-    </div>
-    <div class="group-row-cards" id="learningCards"></div>
-  </div>
-
-  <!-- FUNDRAISING -->
-  <div class="group-row reveal">
-    <div class="group-row-header">
-      <span class="group-row-icon">&#x1f4bc;</span>
-      <div>
-        <h3 class="group-row-title">Fundraising</h3>
-        <p class="group-row-desc">Investor communications, pitch practice, market intelligence</p>
-      </div>
-    </div>
-    <div class="group-row-cards" id="fundraisingCards"></div>
-  </div>
-
-  <div class="groups-updated" id="groupsUpdated"></div>
-</section>
-
 <section class="insights-section">
   <div class="insights-aurora"></div>
   <div class="section-header reveal" style="max-width:1200px;margin:0 auto 48px;">
@@ -808,19 +832,14 @@ a:hover { color: var(--accent-purple); }
 </section>
 
 <!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-brand-row">
-    <span class="brand-icon">&#129302;</span>
-    <span><span class="brand-alex">Alex</span>Bot</span>
-  </div>
-  <p class="footer-tagline">A digital twin experiment by <a href="https://www.linkedin.com/in/alexliv" target="_blank" rel="noopener">Alex Liverant</a></p>
-  <nav class="footer-nav">
+<footer class="footer">
+  <div class="footer-brand"><span>Alex</span>Bot</div>
+  <p class="footer-text">Built with curiosity, hardened by adversity, guided by soul.</p>
+  <div class="footer-links">
     <a href="/alexbot-public/">Home</a>
-    <a href="/alexbot-public/learning-guides">Learning Guides</a>
     <a href="/alexbot-public/security-challenge">Security Challenge</a>
-    <a href="/alexbot-public/community">Community</a>
-  </nav>
-  <p class="footer-copy">&copy; 2026 AlexBot. Built with curiosity and 14,000+ messages.</p>
+    <a href="/alexbot-public/learning-guides">Learning Guides</a>
+  </div>
 </footer>
 
 <script>
@@ -1014,68 +1033,13 @@ function renderCards(containerId, category, sectionClass) {
   }).join('');
 }
 
-// Build flat list with category metadata
-const CAT_COLORS = {identity:'#bc8cff',foundations:'#58a6ff',security:'#f85149',operations:'#3fb950',advanced:'#d29922',building:'#58a6ff',examples:'#e88080'};
-let allGuides = [];
-Object.keys(GUIDES).forEach(cat => {
-  GUIDES[cat].forEach(g => { allGuides.push({...g, category: cat}); });
-});
-let currentFilter = 'all';
-
-const CAT_HEADERS = {
-  identity: {badge:'IDENTITY & PERSONALITY', title:'Who Is AlexBot?', desc:'Core values, personality, and the soul behind the code.'},
-  foundations: {badge:'FOUNDATIONS', title:'The Building Blocks', desc:'Core technical knowledge that powers everything AlexBot does.'},
-  security: {badge:'SECURITY', title:'Battle-Tested Defenses', desc:'Lessons from surviving thousands of real attack attempts.'},
-  operations: {badge:'OPERATIONS', title:'How It All Runs', desc:'The systems, automation, and memory that keep AlexBot alive.'},
-  advanced: {badge:'ADVANCED', title:'Deep Knowledge', desc:'Architecture, multi-agent systems, and the philosophy behind it all.'},
-  building: {badge:'BUILDING & REFERENCE', title:'Build Your Own', desc:'From first bot to production architecture.'},
-  examples: {badge:'EXAMPLES', title:'Greatest Hits', desc:'The best moments, funniest responses, and most creative attacks.'}
-};
-function renderFilteredCards() {
-  var hdr = document.getElementById('guidesHeader');
-  if (currentFilter !== 'all' && currentFilter !== 'identity' && CAT_HEADERS[currentFilter]) {
-    var h = CAT_HEADERS[currentFilter];
-    document.getElementById('guidesBadge').textContent = h.badge;
-    document.getElementById('guidesTitle').textContent = h.title;
-    document.getElementById('guidesDesc').textContent = h.desc;
-    hdr.style.display = '';
-  } else {
-    hdr.style.display = 'none';
-  }
-  const container = document.getElementById('allCards');
-  const filtered = currentFilter === 'all' ? allGuides : allGuides.filter(g => g.category === currentFilter);
-  container.innerHTML = filtered.map((g, i) => {
-    const quoteHtml = g.isChatBubble
-      ? '<div class="chat-bubble">' + g.quote + '</div>'
-      : '<div class="card-quote">"' + g.quote + '"</div>';
-    const barHtml = g.bar
-      ? '<div class="mini-bar"><div class="mini-bar-fill" data-width="' + g.bar + '" style="width:0%"></div></div>'
-      : '';
-    const catColor = CAT_COLORS[g.category] || '#58a6ff';
-    return '<a href="' + g.url + '" class="guide-card" data-cat="' + g.category + '" style="text-decoration:none;color:inherit;border-left:3px solid ' + catColor + ';opacity:0;transform:translateY(20px);transition:opacity 0.5s,transform 0.5s,box-shadow 0.3s;transition-delay:' + (i*60) + 'ms">' +
-      '<div class="card-number">#' + g.id + '</div>' +
-      '<div class="card-title">' + g.title + '</div>' +
-      '<div class="card-desc">' + g.desc + '</div>' +
-      quoteHtml + barHtml +
-      '<div class="card-meta"><div class="card-time">\u23f1 ' + g.time + ' read</div><div class="card-arrow">\u2192</div></div>' +
-    '</a>';
-  }).join('');
-  setTimeout(() => {
-    container.querySelectorAll('.guide-card').forEach(c => { c.style.opacity='1'; c.style.transform='translateY(0)'; });
-  }, 50);
-}
-renderFilteredCards();
-
-// Dynamic hero stats
-(function(){
-  const totalGuides = allGuides.length;
-  const totalCats = Object.keys(GUIDES).length;
-  document.querySelectorAll('.stat-number[data-target]').forEach(el => {
-    const label = el.nextElementSibling ? el.nextElementSibling.textContent.trim() : '';
-    if (label === 'Guides') el.setAttribute('data-target', totalGuides);
-    if (label === 'Categories') el.setAttribute('data-target', totalCats);
-  });
-})();
+renderCards('identityCards', 'identity');
+renderCards('foundationsCards', 'foundations');
+renderCards('securityCards', 'security');
+renderCards('operationsCards', 'operations');
+renderCards('advancedCards', 'advanced');
+renderCards('buildingCards', 'building');
+renderCards('examplesCards', 'examples');
 
 // ===== PARTICLE CANVAS =====
 (function() {
@@ -1235,7 +1199,7 @@ renderFilteredCards();
       }
     });
   }, { threshold: 0.3 });
-  if (container) observer.observe(container);
+  observer.observe(container);
 })();
 
 // ===== MINI BARS (security) =====
@@ -1249,7 +1213,7 @@ renderFilteredCards();
       }
     });
   }, { threshold: 0.2 });
-  const secSection = document.getElementById('guides');
+  const secSection = document.getElementById('security');
   if (secSection) observer.observe(secSection);
 })();
 
@@ -1274,51 +1238,36 @@ renderFilteredCards();
     pill.addEventListener('click', () => {
       pills.forEach(p => p.classList.remove('active'));
       pill.classList.add('active');
-      currentFilter = pill.dataset.cat;
-      renderFilteredCards();
-      const guidesEl = document.getElementById('guides');
-      if (guidesEl) guidesEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const target = document.getElementById(pill.dataset.cat);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
+  });
+
+  // Update active pill on scroll
+  const sections = ['identity','foundations','security','operations','advanced','building','examples'];
+  const sObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        pills.forEach(p => p.classList.remove('active'));
+        const match = document.querySelector(`.pill[data-cat="${entry.target.id}"]`);
+        if (match) match.classList.add('active');
+      }
+    });
+  }, { threshold: 0.2, rootMargin: '-100px 0px -60% 0px' });
+  sections.forEach(s => {
+    const el = document.getElementById(s);
+    if (el) sObserver.observe(el);
   });
 })();
 
-// ===== UNIFIED NAV JS =====
-(function(){
-  // Theme toggle
-  var toggle = document.getElementById('themeToggle');
-  var saved = localStorage.getItem('alexbot-theme');
-  if (saved) document.documentElement.setAttribute('data-theme', saved);
-  function updateIcon() {
-    var t = document.documentElement.getAttribute('data-theme');
-    toggle.innerHTML = t === 'light' ? '\u2600\uFE0F' : '\uD83C\uDF19';
-  }
-  updateIcon();
-  toggle.addEventListener('click', function() {
-    var cur = document.documentElement.getAttribute('data-theme') || 'dark';
-    var next = cur === 'light' ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem('alexbot-theme', next);
-    updateIcon();
-  });
-  // Hamburger
-  var hamburger = document.getElementById('navHamburger');
-  var navLinks = document.getElementById('navLinks');
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', function() {
-      hamburger.classList.toggle('open');
-      navLinks.classList.toggle('open');
-    });
-    navLinks.querySelectorAll('a').forEach(function(a) {
-      a.addEventListener('click', function() {
-        hamburger.classList.remove('open');
-        navLinks.classList.remove('open');
-      });
-    });
-  }
-  // Scroll shadow
-  window.addEventListener('scroll', function() {
-    var nav = document.getElementById('siteNav');
-    if (nav) nav.classList.toggle('scrolled', window.scrollY > 20);
+// ===== THEME TOGGLE =====
+(function() {
+  const toggle = document.getElementById('themeToggle');
+  const html = document.documentElement;
+  toggle.addEventListener('click', () => {
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    toggle.innerHTML = isDark ? '&#9728;' : '&#9790;';
   });
 })();
 </script>
