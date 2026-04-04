@@ -1120,11 +1120,12 @@ renderFilteredCards();
     pill.addEventListener('click', () => {
       pills.forEach(p => p.classList.remove('active'));
       pill.classList.add('active');
-      const target = document.getElementById(pill.dataset.cat);
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      currentFilter = pill.dataset.cat;
+      renderFilteredCards();
+      const guidesEl = document.getElementById('guides');
+      if (guidesEl) guidesEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
-
 })();
 
 // ===== THEME TOGGLE =====
