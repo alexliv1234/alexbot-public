@@ -165,7 +165,6 @@
 </nav>
   <div class="page-wrapper">
     <div class="content">
-      <a href="/alexbot-public/security-challenge#deep-dives" class="back">&larr; Back to Security Challenge</a>
       {{ content }}
     </div>
     <aside class="toc" id="toc">
@@ -231,7 +230,7 @@
       themeVariables:isDark?{primaryColor:'#2d1b00',primaryBorderColor:'#d29922',primaryTextColor:'#e6edf3',lineColor:'#d29922',secondaryColor:'#1c0a00',tertiaryColor:'#0d1117',noteTextColor:'#e6edf3',noteBkgColor:'#1c2128',noteBorderColor:'#30363d'}:{},
       flowchart:{curve:'basis',padding:15},sequence:{actorMargin:50,messageMargin:35}};
   }
-  mermaid.initialize(getMermaidConfig(savedTheme));
+  mermaid.initialize(getMermaidConfig(document.documentElement.getAttribute('data-theme')||'dark'));
   mermaid.run({querySelector:'.mermaid'}).catch(function(e){console.warn('Mermaid:',e)});
   async function reRenderMermaid(theme){
     mermaid.initialize(getMermaidConfig(theme));
