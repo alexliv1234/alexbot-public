@@ -1088,7 +1088,7 @@ setTimeout(observeElements,100);
   if(scarStats) scarObserver.observe(scarStats);
 })();
 
-<script>
+
 (function(){
   var cards=document.querySelectorAll(".dive-card");
   if(!cards.length)return;
@@ -1103,7 +1103,6 @@ setTimeout(observeElements,100);
   },{threshold:0.1});
   cards.forEach(function(c){obs.observe(c)});
 })();
-</script>
 </script>
 </body>
 </html>
