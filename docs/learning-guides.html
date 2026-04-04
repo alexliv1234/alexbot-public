@@ -1001,7 +1001,7 @@ const CAT_HEADERS = {
 };
 function renderFilteredCards() {
   var hdr = document.getElementById('guidesHeader');
-  if (currentFilter !== 'all' && CAT_HEADERS[currentFilter]) {
+  if (currentFilter !== 'all' && currentFilter !== 'identity' && CAT_HEADERS[currentFilter]) {
     var h = CAT_HEADERS[currentFilter];
     document.getElementById('guidesBadge').textContent = h.badge;
     document.getElementById('guidesTitle').textContent = h.title;
