@@ -1081,7 +1081,7 @@ renderFilteredCards();
       }
     });
   }, { threshold: 0.3 });
-  observer.observe(container);
+  if (container) observer.observe(container);
 })();
 
 // ===== MINI BARS (security) =====
@@ -1095,7 +1095,7 @@ renderFilteredCards();
       }
     });
   }, { threshold: 0.2 });
-  const secSection = document.getElementById('security');
+  const secSection = document.getElementById('guides');
   if (secSection) observer.observe(secSection);
 })();
 
@@ -1125,21 +1125,6 @@ renderFilteredCards();
     });
   });
 
-  // Update active pill on scroll
-  const sections = ['identity','foundations','security','operations','advanced','building','examples'];
-  const sObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        pills.forEach(p => p.classList.remove('active'));
-        const match = document.querySelector(`.pill[data-cat="${entry.target.id}"]`);
-        if (match) match.classList.add('active');
-      }
-    });
-  }, { threshold: 0.2, rootMargin: '-100px 0px -60% 0px' });
-  sections.forEach(s => {
-    const el = document.getElementById(s);
-    if (el) sObserver.observe(el);
-  });
 })();
 
 // ===== THEME TOGGLE =====
