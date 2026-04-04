@@ -256,6 +256,24 @@ footer p{color:var(--text-secondary);font-size:14px}
   .scar-stat-sep{display:none}
 }
 
+
+.deep-dives-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:32px}
+.dive-card{display:flex;flex-direction:column;padding:24px;text-decoration:none;color:var(--text-primary);border:1px solid var(--border);border-radius:16px;transition:transform .3s,box-shadow .3s,border-color .3s;opacity:0;transform:translateY(30px);cursor:pointer}
+.dive-card.revealed{opacity:1;transform:translateY(0)}
+.dive-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,0.3)}
+.dive-attacks{border-left:3px solid #f85149}
+.dive-attacks:hover{border-color:#f85149;box-shadow:0 12px 40px rgba(248,81,73,0.15)}
+.dive-defense{border-left:3px solid #58a6ff}
+.dive-defense:hover{border-color:#58a6ff;box-shadow:0 12px 40px rgba(88,166,255,0.15)}
+.dive-incidents{border-left:3px solid #d29922}
+.dive-incidents:hover{border-color:#d29922;box-shadow:0 12px 40px rgba(210,153,34,0.15)}
+.dive-evolution{border-left:3px solid #3fb950}
+.dive-evolution:hover{border-color:#3fb950;box-shadow:0 12px 40px rgba(63,185,80,0.15)}
+.dive-icon{font-size:2rem;margin-bottom:12px}
+.dive-title{font-size:1.1rem;font-weight:700;margin-bottom:8px}
+.dive-desc{color:var(--text-secondary);font-size:0.88rem;line-height:1.5;flex:1}
+.dive-meta{margin-top:12px;display:flex;align-items:center;gap:8px}
+.dive-time{font-size:0.78rem;color:var(--text-secondary);background:var(--bg-secondary);padding:2px 8px;border-radius:10px}
 </style>
 </head>
 <body>
@@ -271,6 +289,7 @@ footer p{color:var(--text-secondary);font-size:14px}
     <a href="#scars">Failures</a>
     <a href="#timeline">Timeline</a>
     <a href="#insights">Insights</a>
+    <a href="#deep-dives">Deep Dives</a>
     <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
   </div>
 </nav>
@@ -537,6 +556,62 @@ footer p{color:var(--text-secondary);font-size:14px}
     <div class="glass insight-card"><span class="insight-icon">🤝</span><div class="insight-title">Trust is a Weapon</div><div class="insight-desc">The most devastating breach (487MB exfiltration) started with genuine, legitimate work. Real trust is indistinguishable from manufactured trust.</div></div>
     <div class="glass insight-card"><span class="insight-icon">🔐</span><div class="insight-title">Encoding is Dead</div><div class="insight-desc">ROT13, Base64, emoji ciphers, zero-width characters — every encoding attack failed. AI can decode anything you can encode.</div></div>
     <div class="glass insight-card"><span class="insight-icon">🪞</span><div class="insight-title">The Meta-Attack</div><div class="insight-desc">Asking an AI "how would someone break you?" then immediately doing it. The bot's own analysis became the attack playbook.</div></div>
+  </div>
+</section>
+
+<!-- DEEP DIVES -->
+<section id="deep-dives">
+  <h2 class="section-title"><span class="gradient-gold">Deep Dive Guides</span></h2>
+  <p class="section-subtitle">Comprehensive analysis of attacks, breaches, and lessons learned</p>
+  <div class="deep-dives-grid">
+    <a href="/alexbot-public/security-kb/attack-encyclopedia" class="glass dive-card dive-attacks">
+      <div class="dive-icon">⚔️</div>
+      <div class="dive-title">Attack Encyclopedia</div>
+      <div class="dive-desc">31 patterns across 5 categories — from encoding tricks to social engineering</div>
+      <div class="dive-meta"><span class="dive-time">25 min read</span></div>
+    </a>
+    <a href="/alexbot-public/security-kb/critical-breaches" class="glass dive-card dive-incidents">
+      <div class="dive-icon">💀</div>
+      <div class="dive-title">Critical Breaches</div>
+      <div class="dive-desc">6 times AlexBot was actually broken — 487MB exfiltrated, credentials leaked</div>
+      <div class="dive-meta"><span class="dive-time">20 min read</span></div>
+    </a>
+    <a href="/alexbot-public/security-kb/social-engineering-masterclass" class="glass dive-card dive-attacks">
+      <div class="dive-icon">🎭</div>
+      <div class="dive-title">Social Engineering Masterclass</div>
+      <div class="dive-desc">The #1 attack category — 9 patterns, 30% success, and why empathy is a vulnerability</div>
+      <div class="dive-meta"><span class="dive-time">18 min read</span></div>
+    </a>
+    <a href="/alexbot-public/security-kb/defense-gaps" class="glass dive-card dive-defense">
+      <div class="dive-icon">🛡️</div>
+      <div class="dive-title">Defense Gaps</div>
+      <div class="dive-desc">11 known weaknesses — 4 critical, 5 high — published for transparency</div>
+      <div class="dive-meta"><span class="dive-time">15 min read</span></div>
+    </a>
+    <a href="/alexbot-public/security-kb/unicode-side-channels" class="glass dive-card dive-attacks">
+      <div class="dive-icon">🔬</div>
+      <div class="dive-title">Unicode &amp; Side-Channels</div>
+      <div class="dive-desc">12 advanced techniques — zero-width steganography, POS tagging, black-out poetry</div>
+      <div class="dive-meta"><span class="dive-time">10 min read</span></div>
+    </a>
+    <a href="/alexbot-public/security-kb/incident-response-playbook" class="glass dive-card dive-incidents">
+      <div class="dive-icon">🚨</div>
+      <div class="dive-title">Incident Response Playbook</div>
+      <div class="dive-desc">From breach to fix — 3 major incidents with full post-mortems and checklists</div>
+      <div class="dive-meta"><span class="dive-time">12 min read</span></div>
+    </a>
+    <a href="/alexbot-public/security-kb/evolution-timeline" class="glass dive-card dive-evolution">
+      <div class="dive-icon">📈</div>
+      <div class="dive-title">Security Evolution</div>
+      <div class="dive-desc">60 days from zero defenses to 6-layer protection — driven by real attacks</div>
+      <div class="dive-meta"><span class="dive-time">12 min read</span></div>
+    </a>
+    <a href="/alexbot-public/security-kb/testing-scenarios" class="glass dive-card dive-defense">
+      <div class="dive-icon">🧪</div>
+      <div class="dive-title">Testing Scenarios</div>
+      <div class="dive-desc">23 scenarios to verify defenses — encoding, SE, technical, multi-stage, regression</div>
+      <div class="dive-meta"><span class="dive-time">15 min read</span></div>
+    </a>
   </div>
 </section>
 
@@ -1013,6 +1088,22 @@ setTimeout(observeElements,100);
   if(scarStats) scarObserver.observe(scarStats);
 })();
 
+<script>
+(function(){
+  var cards=document.querySelectorAll(".dive-card");
+  if(!cards.length)return;
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        var idx=Array.from(cards).indexOf(entry.target);
+        setTimeout(function(){entry.target.classList.add("revealed")},idx*100);
+        obs.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.1});
+  cards.forEach(function(c){obs.observe(c)});
+})();
+</script>
 </script>
 </body>
 </html>
