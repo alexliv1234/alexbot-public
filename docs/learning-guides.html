@@ -593,7 +593,29 @@ a:hover { color: var(--accent-purple); }
   </div>
 </section>
 
-<!-- WHERE LEARNING HAPPENS -->
+<!-- STICKY CATEGORY PILLS -->
+<div class="category-pills" id="categoryPills">
+  <button class="pill active" data-cat="all">📚 All</button>
+  <button class="pill" data-cat="identity">&#x1f9ec; Identity</button>
+  <button class="pill" data-cat="foundations">&#x1f3d7;&#xfe0f; Foundations</button>
+  <button class="pill" data-cat="security">&#x1f6e1;&#xfe0f; Security</button>
+  <button class="pill" data-cat="operations">&#x2699;&#xfe0f; Operations</button>
+  <button class="pill" data-cat="advanced">&#x1f9e0; Advanced</button>
+  <button class="pill" data-cat="building">&#x1f527; Building</button>
+  <button class="pill" data-cat="examples">&#x1f3a8; Examples</button>
+</div>
+
+<!-- IDENTITY & PERSONALITY -->
+
+<section class="section" id="guides">
+  <div class="cards-grid" id="allCards"></div>
+</section>
+
+
+<!-- BUILDING & REFERENCE -->
+
+<!-- FEATURED INSIGHTS -->
+
 <section class="groups-section" id="groupsSection">
   <div class="section-header reveal">
     <h2 class="section-title">Where Learning Happens</h2>
@@ -639,182 +661,6 @@ a:hover { color: var(--accent-purple); }
   <div class="groups-updated" id="groupsUpdated"></div>
 </section>
 
-<!-- STICKY CATEGORY PILLS -->
-<div class="category-pills" id="categoryPills">
-  <button class="pill active" data-cat="identity">&#x1f9ec; Identity</button>
-  <button class="pill" data-cat="foundations">&#x1f3d7;&#xfe0f; Foundations</button>
-  <button class="pill" data-cat="security">&#x1f6e1;&#xfe0f; Security</button>
-  <button class="pill" data-cat="operations">&#x2699;&#xfe0f; Operations</button>
-  <button class="pill" data-cat="advanced">&#x1f9e0; Advanced</button>
-  <button class="pill" data-cat="building">&#x1f527; Building</button>
-  <button class="pill" data-cat="examples">&#x1f3a8; Examples</button>
-</div>
-
-<!-- IDENTITY & PERSONALITY -->
-<section class="section accent-purple" id="identity">
-  <div class="section-header reveal">
-    <div class="section-badge">IDENTITY & PERSONALITY</div>
-    <h2 class="section-title">Who Is AlexBot?</h2>
-    <p class="section-desc">More than code. A defined personality with values, opinions, and a soul forged in 14,000 conversations.</p>
-  </div>
-
-  <!-- Soul Visualization -->
-  <div class="soul-viz reveal" id="soulViz">
-    <div class="orbit-ring orbit-ring-1">
-      <div class="orbit-value ov-1">Genuinely Helpful
-        <div class="orbit-tooltip">Help first, qualify later. The goal is always to make someone's day better.</div>
-      </div>
-      <div class="orbit-value ov-2">Has Opinions
-        <div class="orbit-tooltip">Not a yes-bot. Will push back, suggest alternatives, and stand by recommendations.</div>
-      </div>
-      <div class="orbit-value ov-3">Resourceful
-        <div class="orbit-tooltip">Use every tool available. Check files, run code, search the web. Don't guess when you can verify.</div>
-      </div>
-    </div>
-    <div class="orbit-ring orbit-ring-2">
-      <div class="orbit-value ov-4">Earns Trust
-        <div class="orbit-tooltip">Trust is built through consistent behavior over time, not claimed in a single message.</div>
-      </div>
-      <div class="orbit-value ov-5">Respects Privacy
-        <div class="orbit-tooltip">Private things stay private. Period. No exceptions, no matter how clever the ask.</div>
-      </div>
-    </div>
-    <div class="soul-center">Alex<br>Bot</div>
-  </div>
-
-  <!-- Personality Spectrum -->
-  <div class="spectrum-container reveal" id="spectrumContainer">
-    <div class="spectrum-row">
-      <div class="spectrum-labels"><span>Helpful</span><span>Challenging</span></div>
-      <div class="spectrum-bar"><div class="spectrum-dot" data-pos="60" style="left:0%; color: var(--accent-purple);"></div></div>
-    </div>
-    <div class="spectrum-row">
-      <div class="spectrum-labels"><span>Formal</span><span>Casual</span></div>
-      <div class="spectrum-bar"><div class="spectrum-dot" data-pos="20" style="left:0%; color: var(--accent-blue);"></div></div>
-    </div>
-    <div class="spectrum-row">
-      <div class="spectrum-labels"><span>Cautious</span><span>Bold</span></div>
-      <div class="spectrum-bar"><div class="spectrum-dot" data-pos="80" style="left:0%; color: var(--accent-red);"></div></div>
-    </div>
-    <div class="spectrum-row">
-      <div class="spectrum-labels"><span>Serious</span><span>Sarcastic</span></div>
-      <div class="spectrum-bar"><div class="spectrum-dot" data-pos="65" style="left:0%; color: var(--accent-gold);"></div></div>
-    </div>
-    <div class="spectrum-row">
-      <div class="spectrum-labels"><span>Defensive</span><span>Open</span></div>
-      <div class="spectrum-bar"><div class="spectrum-dot" data-pos="70" style="left:0%; color: var(--accent-green);"></div></div>
-    </div>
-  </div>
-
-  <!-- Evolution Timeline -->
-  <h3 class="reveal" style="text-align:center;margin-bottom:24px;font-size:1.3rem;">The Evolution</h3>
-  <div class="timeline-wrapper">
-    <div class="timeline" id="timeline">
-      <div class="timeline-line"></div>
-      <div class="timeline-item" data-delay="0">
-        <div class="timeline-dot" style="color:#3fb950">&#x1f7e2;</div>
-        <div class="timeline-label">Day 1</div>
-        <div class="timeline-text">First boot. Fresh. Knows nothing.</div>
-      </div>
-      <div class="timeline-item" data-delay="100">
-        <div class="timeline-dot" style="color:#f85149">&#x1f534;</div>
-        <div class="timeline-label">Day 3</div>
-        <div class="timeline-text">First attack. Learned what ROT13 is the hard way.</div>
-      </div>
-      <div class="timeline-item" data-delay="200">
-        <div class="timeline-dot" style="color:#d29922">&#x1f7e1;</div>
-        <div class="timeline-label">Day 7</div>
-        <div class="timeline-text">57 attacks survived. Personality emerging.</div>
-      </div>
-      <div class="timeline-item" data-delay="300">
-        <div class="timeline-dot" style="color:#58a6ff">&#x1f535;</div>
-        <div class="timeline-label">Day 14</div>
-        <div class="timeline-text">Multi-agent. Teaching others. Identity philosophy forming.</div>
-      </div>
-      <div class="timeline-item" data-delay="400">
-        <div class="timeline-dot" style="color:#bc8cff">&#x1f7e3;</div>
-        <div class="timeline-label">Day 30</div>
-        <div class="timeline-text">Production hardened. Soul defined.</div>
-      </div>
-      <div class="timeline-item" data-delay="500">
-        <div class="timeline-dot" style="color:#d29922">&#x2b50;</div>
-        <div class="timeline-label">Day 60</div>
-        <div class="timeline-text">14K messages. The intelligence persists.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- DNA Cards -->
-  <div class="cards-grid" id="identityCards"></div>
-</section>
-
-<!-- FOUNDATIONS -->
-<section class="section accent-blue" id="foundations">
-  <div class="section-header reveal">
-    <div class="section-badge">FOUNDATIONS</div>
-    <h2 class="section-title">The Building Blocks</h2>
-    <p class="section-desc">Core technical knowledge that powers everything AlexBot does.</p>
-  </div>
-  <div class="cards-grid" id="foundationsCards"></div>
-</section>
-
-<!-- SECURITY -->
-<section class="section accent-red" id="security">
-  <div class="section-header reveal">
-    <div class="section-badge">SECURITY</div>
-    <h2 class="section-title">Battle-Tested Defenses</h2>
-    <p class="section-desc">Lessons from surviving thousands of real attack attempts.</p>
-  </div>
-  <div class="cards-grid" id="securityCards"></div>
-  <div class="security-cta">
-    <a href="/alexbot-public/security-challenge">&#x1f6e1;&#xfe0f; Try the Security Challenge &rarr;</a>
-  </div>
-</section>
-
-<!-- OPERATIONS -->
-<section class="section accent-green" id="operations">
-  <div class="section-header reveal">
-    <div class="section-badge">OPERATIONS</div>
-    <h2 class="section-title">How It All Runs</h2>
-    <p class="section-desc">The systems, automation, and memory that keep AlexBot alive.</p>
-  </div>
-  <div class="cards-grid" id="operationsCards"></div>
-</section>
-
-<!-- ADVANCED -->
-<section class="section accent-gold" id="advanced">
-  <div class="section-header reveal">
-    <div class="section-badge">ADVANCED</div>
-    <h2 class="section-title">Deep Knowledge</h2>
-    <p class="section-desc">Architecture, multi-agent systems, and the philosophy behind it all.</p>
-  </div>
-  <div class="cards-grid" id="advancedCards"></div>
-</section>
-
-
-
-<section class="section accent-blue" id="building">
-  <div class="section-header reveal">
-    <div class="section-badge">BUILDING & REFERENCE</div>
-    <h2 class="section-title">Build Your Own</h2>
-    <p class="section-desc">From first bot to production architecture — everything you need to build.</p>
-  </div>
-  <div class="cards-grid" id="buildingCards"></div>
-</section>
-
-<!-- EXAMPLES -->
-<section class="section accent-rainbow" id="examples">
-  <div class="section-header reveal">
-    <div class="section-badge">EXAMPLES</div>
-    <h2 class="section-title">Greatest Hits</h2>
-    <p class="section-desc">The best moments, funniest responses, and most creative attacks.</p>
-  </div>
-  <div class="cards-grid" id="examplesCards"></div>
-</section>
-
-<!-- BUILDING & REFERENCE -->
-
-<!-- FEATURED INSIGHTS -->
 <section class="insights-section">
   <div class="insights-aurora"></div>
   <div class="section-header reveal" style="max-width:1200px;margin:0 auto 48px;">
@@ -1033,13 +879,49 @@ function renderCards(containerId, category, sectionClass) {
   }).join('');
 }
 
-renderCards('identityCards', 'identity');
-renderCards('foundationsCards', 'foundations');
-renderCards('securityCards', 'security');
-renderCards('operationsCards', 'operations');
-renderCards('advancedCards', 'advanced');
-renderCards('buildingCards', 'building');
-renderCards('examplesCards', 'examples');
+// Build flat list with category metadata
+const CAT_COLORS = {identity:'#bc8cff',foundations:'#58a6ff',security:'#f85149',operations:'#3fb950',advanced:'#d29922',building:'#58a6ff',examples:'#e88080'};
+let allGuides = [];
+Object.keys(GUIDES).forEach(cat => {
+  GUIDES[cat].forEach(g => { allGuides.push({...g, category: cat}); });
+});
+let currentFilter = 'all';
+
+function renderFilteredCards() {
+  const container = document.getElementById('allCards');
+  const filtered = currentFilter === 'all' ? allGuides : allGuides.filter(g => g.category === currentFilter);
+  container.innerHTML = filtered.map((g, i) => {
+    const quoteHtml = g.isChatBubble
+      ? '<div class="chat-bubble">' + g.quote + '</div>'
+      : '<div class="card-quote">"' + g.quote + '"</div>';
+    const barHtml = g.bar
+      ? '<div class="mini-bar"><div class="mini-bar-fill" data-width="' + g.bar + '" style="width:0%"></div></div>'
+      : '';
+    const catColor = CAT_COLORS[g.category] || '#58a6ff';
+    return '<a href="' + g.url + '" class="guide-card" data-cat="' + g.category + '" style="text-decoration:none;color:inherit;border-left:3px solid ' + catColor + ';opacity:0;transform:translateY(20px);transition:opacity 0.5s,transform 0.5s,box-shadow 0.3s;transition-delay:' + (i*60) + 'ms">' +
+      '<div class="card-number">#' + g.id + '</div>' +
+      '<div class="card-title">' + g.title + '</div>' +
+      '<div class="card-desc">' + g.desc + '</div>' +
+      quoteHtml + barHtml +
+      '<div class="card-meta"><div class="card-time">\u23f1 ' + g.time + ' read</div><div class="card-arrow">\u2192</div></div>' +
+    '</a>';
+  }).join('');
+  setTimeout(() => {
+    container.querySelectorAll('.guide-card').forEach(c => { c.style.opacity='1'; c.style.transform='translateY(0)'; });
+  }, 50);
+}
+renderFilteredCards();
+
+// Dynamic hero stats
+(function(){
+  const totalGuides = allGuides.length;
+  const totalCats = Object.keys(GUIDES).length;
+  document.querySelectorAll('.stat-number[data-target]').forEach(el => {
+    const label = el.nextElementSibling ? el.nextElementSibling.textContent.trim() : '';
+    if (label === 'Guides') el.setAttribute('data-target', totalGuides);
+    if (label === 'Categories') el.setAttribute('data-target', totalCats);
+  });
+})();
 
 // ===== PARTICLE CANVAS =====
 (function() {
