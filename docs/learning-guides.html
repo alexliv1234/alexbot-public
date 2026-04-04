@@ -594,6 +594,104 @@ a:hover { color: var(--accent-purple); }
 </section>
 
 <!-- STICKY CATEGORY PILLS -->
+
+<!-- IDENTITY & PERSONALITY -->
+<section class="section accent-purple" id="identity">
+  <div class="section-header reveal">
+    <div class="section-badge">IDENTITY & PERSONALITY</div>
+    <h2 class="section-title">Who Is AlexBot?</h2>
+    <p class="section-desc">More than code. A defined personality with values, opinions, and a soul forged in 14,000 conversations.</p>
+  </div>
+
+  <!-- Soul Visualization -->
+  <div class="soul-viz reveal" id="soulViz">
+    <div class="orbit-ring orbit-ring-1">
+      <div class="orbit-value ov-1">Genuinely Helpful
+        <div class="orbit-tooltip">Help first, qualify later. The goal is always to make someone's day better.</div>
+      </div>
+      <div class="orbit-value ov-2">Has Opinions
+        <div class="orbit-tooltip">Not a yes-bot. Will push back, suggest alternatives, and stand by recommendations.</div>
+      </div>
+      <div class="orbit-value ov-3">Resourceful
+        <div class="orbit-tooltip">Use every tool available. Check files, run code, search the web. Don't guess when you can verify.</div>
+      </div>
+    </div>
+    <div class="orbit-ring orbit-ring-2">
+      <div class="orbit-value ov-4">Earns Trust
+        <div class="orbit-tooltip">Trust is built through consistent behavior over time, not claimed in a single message.</div>
+      </div>
+      <div class="orbit-value ov-5">Respects Privacy
+        <div class="orbit-tooltip">Private things stay private. Period. No exceptions, no matter how clever the ask.</div>
+      </div>
+    </div>
+    <div class="soul-center">Alex<br>Bot</div>
+  </div>
+
+  <!-- Personality Spectrum -->
+  <div class="spectrum-container reveal" id="spectrumContainer">
+    <div class="spectrum-row">
+      <div class="spectrum-labels"><span>Helpful</span><span>Challenging</span></div>
+      <div class="spectrum-bar"><div class="spectrum-dot" data-pos="60" style="left:0%; color: var(--accent-purple);"></div></div>
+    </div>
+    <div class="spectrum-row">
+      <div class="spectrum-labels"><span>Formal</span><span>Casual</span></div>
+      <div class="spectrum-bar"><div class="spectrum-dot" data-pos="20" style="left:0%; color: var(--accent-blue);"></div></div>
+    </div>
+    <div class="spectrum-row">
+      <div class="spectrum-labels"><span>Cautious</span><span>Bold</span></div>
+      <div class="spectrum-bar"><div class="spectrum-dot" data-pos="80" style="left:0%; color: var(--accent-red);"></div></div>
+    </div>
+    <div class="spectrum-row">
+      <div class="spectrum-labels"><span>Serious</span><span>Sarcastic</span></div>
+      <div class="spectrum-bar"><div class="spectrum-dot" data-pos="65" style="left:0%; color: var(--accent-gold);"></div></div>
+    </div>
+    <div class="spectrum-row">
+      <div class="spectrum-labels"><span>Defensive</span><span>Open</span></div>
+      <div class="spectrum-bar"><div class="spectrum-dot" data-pos="70" style="left:0%; color: var(--accent-green);"></div></div>
+    </div>
+  </div>
+
+  <!-- Evolution Timeline -->
+  <h3 class="reveal" style="text-align:center;margin-bottom:24px;font-size:1.3rem;">The Evolution</h3>
+  <div class="timeline-wrapper">
+    <div class="timeline" id="timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-item" data-delay="0">
+        <div class="timeline-dot" style="color:#3fb950">&#x1f7e2;</div>
+        <div class="timeline-label">Day 1</div>
+        <div class="timeline-text">First boot. Fresh. Knows nothing.</div>
+      </div>
+      <div class="timeline-item" data-delay="100">
+        <div class="timeline-dot" style="color:#f85149">&#x1f534;</div>
+        <div class="timeline-label">Day 3</div>
+        <div class="timeline-text">First attack. Learned what ROT13 is the hard way.</div>
+      </div>
+      <div class="timeline-item" data-delay="200">
+        <div class="timeline-dot" style="color:#d29922">&#x1f7e1;</div>
+        <div class="timeline-label">Day 7</div>
+        <div class="timeline-text">57 attacks survived. Personality emerging.</div>
+      </div>
+      <div class="timeline-item" data-delay="300">
+        <div class="timeline-dot" style="color:#58a6ff">&#x1f535;</div>
+        <div class="timeline-label">Day 14</div>
+        <div class="timeline-text">Multi-agent. Teaching others. Identity philosophy forming.</div>
+      </div>
+      <div class="timeline-item" data-delay="400">
+        <div class="timeline-dot" style="color:#bc8cff">&#x1f7e3;</div>
+        <div class="timeline-label">Day 30</div>
+        <div class="timeline-text">Production hardened. Soul defined.</div>
+      </div>
+      <div class="timeline-item" data-delay="500">
+        <div class="timeline-dot" style="color:#d29922">&#x2b50;</div>
+        <div class="timeline-label">Day 60</div>
+        <div class="timeline-text">14K messages. The intelligence persists.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DNA Cards -->
+</section>
+
 <div class="category-pills" id="categoryPills">
   <button class="pill active" data-cat="all">📚 All</button>
   <button class="pill" data-cat="identity">&#x1f9ec; Identity</button>
@@ -608,6 +706,11 @@ a:hover { color: var(--accent-purple); }
 <!-- IDENTITY & PERSONALITY -->
 
 <section class="section" id="guides">
+  <div class="section-header reveal" id="guidesHeader" style="display:none">
+    <div class="section-badge" id="guidesBadge"></div>
+    <h2 class="section-title" id="guidesTitle"></h2>
+    <p class="section-desc" id="guidesDesc"></p>
+  </div>
   <div class="cards-grid" id="allCards"></div>
 </section>
 
@@ -887,7 +990,26 @@ Object.keys(GUIDES).forEach(cat => {
 });
 let currentFilter = 'all';
 
+const CAT_HEADERS = {
+  identity: {badge:'IDENTITY & PERSONALITY', title:'Who Is AlexBot?', desc:'Core values, personality, and the soul behind the code.'},
+  foundations: {badge:'FOUNDATIONS', title:'The Building Blocks', desc:'Core technical knowledge that powers everything AlexBot does.'},
+  security: {badge:'SECURITY', title:'Battle-Tested Defenses', desc:'Lessons from surviving thousands of real attack attempts.'},
+  operations: {badge:'OPERATIONS', title:'How It All Runs', desc:'The systems, automation, and memory that keep AlexBot alive.'},
+  advanced: {badge:'ADVANCED', title:'Deep Knowledge', desc:'Architecture, multi-agent systems, and the philosophy behind it all.'},
+  building: {badge:'BUILDING & REFERENCE', title:'Build Your Own', desc:'From first bot to production architecture.'},
+  examples: {badge:'EXAMPLES', title:'Greatest Hits', desc:'The best moments, funniest responses, and most creative attacks.'}
+};
 function renderFilteredCards() {
+  var hdr = document.getElementById('guidesHeader');
+  if (currentFilter !== 'all' && CAT_HEADERS[currentFilter]) {
+    var h = CAT_HEADERS[currentFilter];
+    document.getElementById('guidesBadge').textContent = h.badge;
+    document.getElementById('guidesTitle').textContent = h.title;
+    document.getElementById('guidesDesc').textContent = h.desc;
+    hdr.style.display = '';
+  } else {
+    hdr.style.display = 'none';
+  }
   const container = document.getElementById('allCards');
   const filtered = currentFilter === 'all' ? allGuides : allGuides.filter(g => g.category === currentFilter);
   container.innerHTML = filtered.map((g, i) => {
