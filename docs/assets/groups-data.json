@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-04",
-  "timestamp": "2026-04-04T17:01Z",
+  "lastUpdated": "2026-04-07",
+  "timestamp": "2026-04-07T02:00Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -12,7 +12,7 @@
     "name": "לומדים עם אלכס הבוט",
     "guides": 17,
     "categories": 6,
-    "dailySummaries": 34,
+    "dailySummaries": 36,
     "qaExchanges": 3
   },
   "intlPlaying": {
@@ -23,7 +23,7 @@
   },
   "intlLearning": {
     "name": "Learning with AlexBot",
-    "tipsGenerated": 24,
+    "tipsGenerated": 26,
     "topicsCovered": 3,
     "topicsPlanned": 40,
     "deliveryFailures": 1
@@ -53,9 +53,9 @@
     }
   ],
   "guideOfTheDay": {
-    "num": 15,
-    "title": "Communication & Group Dynamics",
-    "slug": "15-communication-group-dynamics"
+    "num": 2,
+    "title": "Prompt Engineering — Building the Brain",
+    "slug": "02-prompt-engineering"
   },
   "communityMilestones": [
     {
