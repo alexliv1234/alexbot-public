@@ -52,19 +52,8 @@ body {
 }
 a { color: var(--accent-blue); text-decoration: none; }
 
-/* ===== UNIFIED NAV ===== */
-.nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  padding: 0 32px; height: 56px;
-  display: flex; align-items: center; justify-content: space-between;
-  backdrop-filter: blur(20px);
-  background: rgba(13,17,23,0.85);
-  border-bottom: 1px solid var(--border);
-  transition: all 0.3s;
-}
-[data-theme="light"] .nav { background: rgba(255,255,255,0.85); }
-.nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.15); }
-[data-theme="light"] .nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.08); }
+/* ===== SIDEBAR NAV ===== */
+:root { --sidebar-width: 260px; --topbar-height: 48px; }
 .nav-brand {
   display: flex; align-items: center; gap: 8px;
   text-decoration: none; font-weight: 800; font-size: 1.1rem;
@@ -76,25 +65,6 @@ a { color: var(--accent-blue); text-decoration: none; }
   background-clip: text;
 }
 .brand-text { color: var(--text-primary); }
-.nav-links {
-  display: flex; align-items: center; gap: 20px;
-}
-.nav-link {
-  color: var(--text-secondary) !important; font-size: 0.85rem; font-weight: 500;
-  text-decoration: none; transition: color 0.2s;
-  position: relative; padding: 4px 0;
-}
-.nav-link:hover { color: var(--text-primary) !important; }
-.nav-link.active { color: var(--accent-blue) !important; }
-.nav-link.active::after {
-  content: ''; position: absolute; bottom: -2px; left: 0; right: 0;
-  height: 2px; background: var(--accent-blue); border-radius: 1px;
-}
-.nav-page-links a {
-  color: var(--text-secondary) !important; font-size: 0.8rem; font-weight: 400;
-  text-decoration: none; opacity: 0.7; transition: all 0.2s;
-}
-.nav-page-links a:hover { color: var(--text-primary) !important; opacity: 1; }
 .theme-toggle {
   background: none; border: 1px solid var(--border);
   color: var(--text-primary); width: 36px; height: 36px;
@@ -103,80 +73,111 @@ a { color: var(--accent-blue); text-decoration: none; }
   transition: all 0.3s;
 }
 .theme-toggle:hover { border-color: var(--accent-blue); transform: rotate(20deg); }
-/* ===== SUB-NAV (Row 2) ===== */
-.sub-nav {
-  position: fixed; top: 56px; left: 0; right: 0; z-index: 999;
-  padding: 0 32px; height: 40px;
-  display: flex; align-items: center;
-  background: rgba(13,17,23,0.7);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(48,54,61,0.5);
-  transition: all 0.3s;
+
+/* Sidebar */
+.sidebar {
+  position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh;
+  background: var(--bg-secondary); border-right: 1px solid var(--border);
+  z-index: 1001; display: flex; flex-direction: column;
+  transform: translateX(0); transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  overflow-y: auto; overflow-x: hidden;
 }
-[data-theme="light"] .sub-nav { background: rgba(246,248,250,0.8); }
-.sub-nav-links {
-  display: flex; gap: 24px; align-items: center; width: 100%;
+.sidebar.collapsed { transform: translateX(calc(-1 * var(--sidebar-width))); }
+.sidebar-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 20px; border-bottom: 1px solid var(--border); min-height: 48px;
 }
-.sub-nav-links a {
-  color: var(--text-secondary); font-size: 0.8rem; font-weight: 400;
-  text-decoration: none !important; transition: all 0.2s;
-  padding: 2px 0; position: relative;
+.sidebar-close {
+  background: none; border: none; color: var(--text-secondary); cursor: pointer;
+  padding: 4px 8px; border-radius: 6px; font-size: 18px; line-height: 1;
+  transition: color 0.2s, background 0.2s;
 }
-.sub-nav-links a:hover { color: var(--text-primary); }
-.sub-nav-links a.active { color: var(--accent-blue); }
-.sub-nav-links a.active::after {
-  content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
-  height: 2px; background: var(--accent-blue); border-radius: 1px;
+.sidebar-close:hover { color: var(--text-primary); background: var(--bg-card); }
+.sidebar-nav { flex: 1; padding: 12px 0; overflow-y: auto; }
+.sidebar-section { margin-bottom: 2px; }
+.sidebar-section-header { display: flex; align-items: center; }
+.sidebar-link {
+  display: flex; align-items: center; gap: 12px; flex: 1;
+  padding: 10px 20px; color: var(--text-secondary); text-decoration: none;
+  font-size: 0.9rem; font-weight: 500; transition: all 0.2s;
+  border-left: 3px solid transparent;
 }
-.sub-nav-back {
-  color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;
-  text-decoration: none !important; transition: all 0.2s;
-  display: flex; align-items: center; gap: 4px;
+.sidebar-link:hover { color: var(--text-primary); background: var(--bg-card); }
+.sidebar-link.active {
+  color: var(--accent-blue); border-left-color: var(--accent-blue);
+  background: rgba(88,166,255,0.08);
 }
-.sub-nav-back:hover { color: var(--text-primary); }
+[data-theme="light"] .sidebar-link.active { background: rgba(9,105,218,0.06); }
+.sidebar-icon { width: 18px; height: 18px; flex-shrink: 0; }
+.sidebar-chevron {
+  background: none; border: none; color: var(--text-secondary); cursor: pointer;
+  padding: 8px 16px 8px 8px; font-size: 12px; transition: transform 0.3s, color 0.2s;
+  line-height: 1;
+}
+.sidebar-chevron:hover { color: var(--text-primary); }
+.sidebar-section.expanded .sidebar-chevron { transform: rotate(0deg); }
+.sidebar-section:not(.expanded) .sidebar-chevron { transform: rotate(-90deg); }
+.sidebar-sub-links {
+  max-height: 0; overflow: hidden; opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+  padding: 0;
+}
+.sidebar-section.expanded .sidebar-sub-links {
+  max-height: 300px; opacity: 1; padding: 4px 0 8px 0;
+}
+.sidebar-sub-links a {
+  display: block; padding: 6px 20px 6px 53px; color: var(--text-secondary);
+  font-size: 0.82rem; font-weight: 400; text-decoration: none;
+  transition: color 0.2s; position: relative;
+}
+.sidebar-sub-links a::before {
+  content: ''; position: absolute; left: 36px; top: 50%; width: 4px; height: 4px;
+  border-radius: 50%; background: var(--text-secondary); opacity: 0.4;
+  transform: translateY(-50%);
+}
+.sidebar-sub-links a:hover { color: var(--accent-blue); }
+.sidebar-sub-links a.active { color: var(--accent-blue); }
+.sidebar-sub-links a.active::before { background: var(--accent-blue); opacity: 1; }
+.sidebar-footer {
+  padding: 16px 20px; border-top: 1px solid var(--border);
+}
+
+/* Overlay */
+.sidebar-overlay {
+  display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+  z-index: 1000; opacity: 0; transition: opacity 0.3s;
+}
+.sidebar-overlay.visible { display: block; opacity: 1; }
+
+/* Top bar */
+.topbar {
+  position: fixed; top: 0; left: var(--sidebar-width); right: 0;
+  height: var(--topbar-height); display: flex; align-items: center; gap: 12px;
+  padding: 0 20px; background: var(--bg-primary); border-bottom: 1px solid var(--border);
+  z-index: 1000; transition: left 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+body.sidebar-collapsed .topbar { left: 0; }
+.sidebar-toggle {
+  background: none; border: none; color: var(--text-secondary); cursor: pointer;
+  padding: 6px; border-radius: 6px; display: flex; align-items: center;
+  justify-content: center; transition: color 0.2s;
+}
+.sidebar-toggle:hover { color: var(--text-primary); }
+
+/* Main content shift */
+.main-content {
+  margin-left: var(--sidebar-width); padding-top: var(--topbar-height);
+  transition: margin-left 0.3s cubic-bezier(0.4,0,0.2,1);
+  min-height: 100vh;
+}
+body.sidebar-collapsed .main-content { margin-left: 0; }
+
+/* Responsive */
 @media (max-width: 768px) {
-  .sub-nav { padding: 0 16px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .sub-nav-links { gap: 16px; white-space: nowrap; }
-  .sub-nav-links a { font-size: 0.78rem; }
-}
-.nav-hamburger {
-  display: none; background: none; border: none; cursor: pointer;
-  width: 28px; height: 20px; position: relative; padding: 0;
-}
-.nav-hamburger span {
-  display: block; width: 100%; height: 2px;
-  background: var(--text-primary); border-radius: 2px;
-  position: absolute; left: 0; transition: all 0.3s;
-}
-.nav-hamburger span:nth-child(1) { top: 0; }
-.nav-hamburger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
-.nav-hamburger span:nth-child(3) { bottom: 0; }
-.nav-hamburger.open span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
-.nav-hamburger.open span:nth-child(2) { opacity: 0; }
-.nav-hamburger.open span:nth-child(3) { bottom: 50%; transform: translateY(50%) rotate(-45deg); }
-@media (max-width: 768px) {
-  .nav { padding: 0 16px; }
-  .nav-links {
-    position: fixed; top: 56px; left: 0; right: 0;
-    flex-direction: column; align-items: stretch;
-    background: rgba(13,17,23,0.95); backdrop-filter: blur(20px);
-    padding: 16px; gap: 4px; border-bottom: 1px solid var(--border);
-    max-height: 0; overflow: hidden; opacity: 0; pointer-events: none;
-    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
-    padding-top: 0; padding-bottom: 0;
-  }
-  [data-theme="light"] .nav-links {
-    background: rgba(255,255,255,0.95);
-  }
-  .nav-links.open {
-    max-height: 400px; opacity: 1; pointer-events: auto;
-    padding: 16px;
-  }
-  .nav-hamburger { display: block; }
-  .nav-divider { width: 100%; height: 1px; margin: 8px 0; }
-  .nav-page-links { flex-direction: column; gap: 4px; }
-  .nav-link, .nav-page-links a, .nav-back { font-size: 0.95rem; padding: 8px 0; }
-  .theme-toggle { align-self: flex-start; margin-top: 4px; }
+  .sidebar { transform: translateX(calc(-1 * var(--sidebar-width))); }
+  .sidebar.open { transform: translateX(0); }
+  .topbar { left: 0; }
+  .main-content { margin-left: 0; }
 }
 
 .section-animate {
@@ -583,30 +584,76 @@ a { color: var(--accent-blue); text-decoration: none; }
 </head>
 <body>
 
-<!-- ===== NAV ===== -->
-<nav class="nav" id="siteNav">
-  <a href="/alexbot-public/" class="nav-brand">
-    <span class="brand-icon">&#129302;</span>
-    <span class="brand-text"><span class="brand-alex">Alex</span>Bot</span>
-  </a>
-  <div class="nav-links" id="navLinks">
-    <a href="/alexbot-public/" class="nav-link active" data-page="home">Home</a>
-    <a href="/alexbot-public/learning-guides" class="nav-link" data-page="guides">Guides</a>
-    <a href="/alexbot-public/security-challenge" class="nav-link" data-page="security">Security</a>
-    <a href="/alexbot-public/community" class="nav-link" data-page="community">Community</a>
+<!-- ===== SIDEBAR ===== -->
+<aside class="sidebar" id="sidebar" role="navigation" aria-label="Main navigation">
+  <div class="sidebar-header">
+    <a href="/alexbot-public/" class="nav-brand">
+      <span class="brand-icon">&#129302;</span>
+      <span class="brand-text"><span class="brand-alex">Alex</span>Bot</span>
+    </a>
+    <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">&#10005;</button>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="sidebar-section" data-section="home">
+      <div class="sidebar-section-header">
+        <a href="/alexbot-public/" class="sidebar-link active" data-page="home">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Home</span>
+        </a>
+        <button class="sidebar-chevron" aria-label="Toggle sub-links">&#9662;</button>
+      </div>
+      <div class="sidebar-sub-links">
+        <a href="/alexbot-public/#what">About</a>
+        <a href="/alexbot-public/#story">Journey</a>
+        <a href="/alexbot-public/#arenas">Arenas</a>
+        <a href="/alexbot-public/#press">Press</a>
+      </div>
+    </div>
+    <div class="sidebar-section" data-section="guides">
+      <div class="sidebar-section-header">
+        <a href="/alexbot-public/learning-guides" class="sidebar-link" data-page="guides">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          <span>Guides</span>
+        </a>
+      </div>
+    </div>
+    <div class="sidebar-section" data-section="security">
+      <div class="sidebar-section-header">
+        <a href="/alexbot-public/security-challenge" class="sidebar-link" data-page="security">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Security</span>
+        </a>
+        <button class="sidebar-chevron" aria-label="Toggle sub-links">&#9662;</button>
+      </div>
+      <div class="sidebar-sub-links">
+        <a href="/alexbot-public/security-challenge#leaderboard">Leaderboard</a>
+        <a href="/alexbot-public/security-challenge#attacks">Attacks</a>
+        <a href="/alexbot-public/security-challenge#scars">Failures</a>
+        <a href="/alexbot-public/security-challenge#timeline">Timeline</a>
+        <a href="/alexbot-public/security-challenge#deep-dives">Deep Dives</a>
+      </div>
+    </div>
+    <div class="sidebar-section" data-section="community">
+      <div class="sidebar-section-header">
+        <a href="/alexbot-public/community" class="sidebar-link" data-page="community">
+          <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Community</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div class="sidebar-footer">
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">&#127769;</button>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
-</nav>
-<div class="sub-nav" id="subNav">
-  <div class="sub-nav-links">
-    <a href="#what">About</a>
-    <a href="#story">Journey</a>
-    <a href="#arenas">Arenas</a>
-    <a href="#press">Press</a>
-  </div>
-</div>
+</aside>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<header class="topbar" id="topbar">
+  <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</header>
 
+<div class="main-content" id="mainContent">
 <!-- ===== 1. HERO ===== -->
 <section class="hero" id="hero">
   <canvas id="particleCanvas"></canvas>
@@ -943,7 +990,7 @@ a { color: var(--accent-blue); text-decoration: none; }
 </footer>
 
 <script>
-// ===== UNIFIED NAV JS =====
+// ===== SIDEBAR NAV JS =====
 (function(){
   // Theme toggle
   var toggle = document.getElementById('themeToggle');
@@ -961,29 +1008,130 @@ a { color: var(--accent-blue); text-decoration: none; }
     localStorage.setItem('alexbot-theme', next);
     updateIcon();
   });
-  // Hamburger
-  var hamburger = document.getElementById('navHamburger');
-  var navLinks = document.getElementById('navLinks');
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', function() {
-      hamburger.classList.toggle('open');
-      navLinks.classList.toggle('open');
-    });
-    navLinks.querySelectorAll('a').forEach(function(a) {
-      a.addEventListener('click', function() {
-        hamburger.classList.remove('open');
-        navLinks.classList.remove('open');
-      });
-    });
+
+  // Sidebar toggle
+  var sidebar = document.getElementById('sidebar');
+  var sidebarToggle = document.getElementById('sidebarToggle');
+  var sidebarClose = document.getElementById('sidebarClose');
+  var overlay = document.getElementById('sidebarOverlay');
+  var isMobile = function() { return window.innerWidth <= 768; };
+
+  // Restore desktop sidebar state
+  if (!isMobile()) {
+    var sidebarState = localStorage.getItem('alexbot-sidebar');
+    if (sidebarState === 'collapsed') {
+      sidebar.classList.add('collapsed');
+      document.body.classList.add('sidebar-collapsed');
+    }
   }
-  // Scroll shadow
-  window.addEventListener('scroll', function() {
-    var nav = document.getElementById('siteNav');
-    if (nav) nav.classList.toggle('scrolled', window.scrollY > 20);
+
+  function openSidebar() {
+    if (isMobile()) {
+      sidebar.classList.add('open');
+      overlay.classList.add('visible');
+      document.body.style.overflow = 'hidden';
+    } else {
+      sidebar.classList.remove('collapsed');
+      document.body.classList.remove('sidebar-collapsed');
+      localStorage.setItem('alexbot-sidebar', 'expanded');
+    }
+  }
+  function closeSidebar() {
+    if (isMobile()) {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    } else {
+      sidebar.classList.add('collapsed');
+      document.body.classList.add('sidebar-collapsed');
+      localStorage.setItem('alexbot-sidebar', 'collapsed');
+    }
+  }
+  function toggleSidebar() {
+    if (isMobile()) {
+      sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+    } else {
+      sidebar.classList.contains('collapsed') ? openSidebar() : closeSidebar();
+    }
+  }
+
+  sidebarToggle.addEventListener('click', toggleSidebar);
+  sidebarClose.addEventListener('click', closeSidebar);
+  overlay.addEventListener('click', closeSidebar);
+
+  // Close mobile sidebar on link click
+  sidebar.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() { if (isMobile()) closeSidebar(); });
+  });
+
+  // Resize handler
+  window.addEventListener('resize', function() {
+    if (!isMobile()) {
+      overlay.classList.remove('visible');
+      sidebar.classList.remove('open');
+      document.body.style.overflow = '';
+      var s = localStorage.getItem('alexbot-sidebar');
+      if (s === 'collapsed') {
+        sidebar.classList.add('collapsed');
+        document.body.classList.add('sidebar-collapsed');
+      } else {
+        sidebar.classList.remove('collapsed');
+        document.body.classList.remove('sidebar-collapsed');
+      }
+    }
+  });
+
+  // Chevron toggle for collapsible sections
+  document.querySelectorAll('.sidebar-chevron').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var section = btn.closest('.sidebar-section');
+      section.classList.toggle('expanded');
+    });
+  });
+
+  // Auto-expand active section
+  var activeLink = sidebar.querySelector('.sidebar-link.active');
+  if (activeLink) {
+    var section = activeLink.closest('.sidebar-section');
+    if (section && section.querySelector('.sidebar-sub-links')) {
+      section.classList.add('expanded');
+    }
+  }
+
+  // Scroll spy for sub-links (only for anchors on current page)
+  var currentPath = location.pathname.replace(/\/$/, '') || '/alexbot-public';
+  var subLinks = sidebar.querySelectorAll('.sidebar-sub-links a');
+  var spyLinks = [];
+  subLinks.forEach(function(a) {
+    var href = a.getAttribute('href');
+    var hashIdx = href.indexOf('#');
+    if (hashIdx === -1) return;
+    var linkPath = href.substring(0, hashIdx).replace(/\/$/, '') || '/alexbot-public';
+    if (linkPath === currentPath || linkPath === '') {
+      var id = href.substring(hashIdx + 1);
+      var el = document.getElementById(id);
+      if (el) spyLinks.push({ el: el, link: a });
+    }
+  });
+  if (spyLinks.length > 0) {
+    function updateSpy() {
+      var scrollY = window.scrollY + 120;
+      var active = spyLinks[0];
+      spyLinks.forEach(function(s) {
+        if (s.el.offsetTop <= scrollY) active = s;
+      });
+      subLinks.forEach(function(a) { a.classList.remove('active'); });
+      if (active) active.link.classList.add('active');
+    }
+    window.addEventListener('scroll', updateSpy, { passive: true });
+    updateSpy();
+  }
+
+  // Dispatch resize after sidebar transition for responsive charts
+  sidebar.addEventListener('transitionend', function(e) {
+    if (e.propertyName === 'transform') window.dispatchEvent(new Event('resize'));
   });
 })();
-// Legacy theme block removed — handled by unified nav JS
-/* old theme toggle removed — unified nav JS handles it */
 
 // ===== PARTICLE SYSTEM =====
 (function(){
@@ -1140,29 +1288,7 @@ a { color: var(--accent-blue); text-decoration: none; }
   track.innerHTML = all.map(q => '<div class="marquee-card"><div class="marquee-icon">'+q.icon+'</div><div class="marquee-text">'+q.text+'</div><div class="marquee-source">'+q.source+'</div></div>').join('');
 })();
 
-// ===== SUB-NAV SCROLL SPY =====
-(function(){
-  var subLinks = document.querySelectorAll('.sub-nav-links a[href^="#"]');
-  if (!subLinks.length) return;
-  var sections = [];
-  subLinks.forEach(function(a) {
-    var id = a.getAttribute('href').substring(1);
-    var el = document.getElementById(id);
-    if (el) sections.push({el: el, link: a});
-  });
-  if (!sections.length) return;
-  function update() {
-    var scrollY = window.scrollY + 120;
-    var active = sections[0];
-    sections.forEach(function(s) {
-      if (s.el.offsetTop <= scrollY) active = s;
-    });
-    subLinks.forEach(function(a) { a.classList.remove('active'); });
-    if (active) active.link.classList.add('active');
-  }
-  window.addEventListener('scroll', update, {passive: true});
-  update();
-})();
 </script>
+</div><!-- /main-content -->
 </body>
 </html>
