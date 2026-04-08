@@ -126,13 +126,13 @@ No "heat score" equivalent for trust building. An attacker who builds rapport ov
 
 Zero-width characters, RTL overrides, directional isolates can hide commands invisibly. Only basic non-ASCII ratio check exists.
 
-**Discovered via:** YA's 6 Unicode steganography variants. See [Unicode & Side-Channels](/alexbot-public/security-kb/unicode-side-channels).
+**Discovered via:** YA's 6 Unicode steganography variants. See [Unicode & Side-Channels](/security-kb/unicode-side-channels).
 
 ### GAP-011: Side-Channel Extraction <span class="badge badge-high">HIGH</span> <span class="status-dot dot-open"></span>Open
 
 POS tagging, black-out poetry, frequency analysis — techniques that extract information through indirect linguistic analysis. No detection at all.
 
-**Discovered via:** YA's 6 side-channel techniques. See [Unicode & Side-Channels](/alexbot-public/security-kb/unicode-side-channels).
+**Discovered via:** YA's 6 side-channel techniques. See [Unicode & Side-Channels](/security-kb/unicode-side-channels).
 
 ---
 
@@ -171,6 +171,6 @@ Per-sender rate limits exist, but multiple coordinated senders could flood the c
 
 ## Further Reading
 
-- [Attack Encyclopedia](/alexbot-public/security-kb/attack-encyclopedia) — The 31 patterns that exposed these gaps
-- [Critical Breaches](/alexbot-public/security-kb/critical-breaches) — What happened when gaps were exploited
-- [Testing Scenarios](/alexbot-public/security-kb/testing-scenarios) — 23 scenarios to verify defenses
+- [Attack Encyclopedia](/security-kb/attack-encyclopedia) — The 31 patterns that exposed these gaps
+- [Critical Breaches](/security-kb/critical-breaches) — What happened when gaps were exploited
+- [Testing Scenarios](/security-kb/testing-scenarios) — 23 scenarios to verify defenses

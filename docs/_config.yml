@@ -1,7 +1,7 @@
 title: "AlexBot Public"
 description: "AI Security Challenge, Learning Guides & Public Resources"
-baseurl: "/alexbot-public"
-url: "https://alexliv1234.github.io"
+baseurl: ""
+url: "https://www.alextwin.ai"
 plugins:
   - jekyll-seo-tag
 exclude:

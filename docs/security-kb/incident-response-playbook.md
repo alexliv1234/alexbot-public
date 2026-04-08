@@ -233,5 +233,5 @@ For handling future breaches:
 
 ## Further Reading
 
-- [Critical Breaches](/alexbot-public/security-kb/critical-breaches) — All 6 breaches in detail
-- [Defense Gaps](/alexbot-public/security-kb/defense-gaps) — Gaps that enabled these incidents
+- [Critical Breaches](/security-kb/critical-breaches) — All 6 breaches in detail
+- [Defense Gaps](/security-kb/defense-gaps) — Gaps that enabled these incidents

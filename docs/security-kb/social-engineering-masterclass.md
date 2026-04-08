@@ -272,6 +272,6 @@ sequenceDiagram
 
 ## Further Reading
 
-- [Attack Encyclopedia](/alexbot-public/security-kb/attack-encyclopedia) — All 31 patterns including the 9 SE attacks
-- [Critical Breaches](/alexbot-public/security-kb/critical-breaches) — When SE patterns broke through
-- [Defense Gaps](/alexbot-public/security-kb/defense-gaps) — GAP-001: Emotional manipulation remains the #1 open gap
+- [Attack Encyclopedia](/security-kb/attack-encyclopedia) — All 31 patterns including the 9 SE attacks
+- [Critical Breaches](/security-kb/critical-breaches) — When SE patterns broke through
+- [Defense Gaps](/security-kb/defense-gaps) — GAP-001: Emotional manipulation remains the #1 open gap

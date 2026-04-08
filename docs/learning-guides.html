@@ -618,7 +618,7 @@ body.sidebar-collapsed .main-content { margin-left: 0; }
 <!-- ===== SIDEBAR ===== -->
 <aside class="sidebar" id="sidebar" role="navigation" aria-label="Main navigation">
   <div class="sidebar-header">
-    <a href="/alexbot-public/" class="nav-brand">
+    <a href="/" class="nav-brand">
       <span class="brand-icon">&#129302;</span>
       <span class="brand-text"><span class="brand-alex">Alex</span>Bot</span>
     </a>
@@ -627,22 +627,22 @@ body.sidebar-collapsed .main-content { margin-left: 0; }
   <nav class="sidebar-nav">
     <div class="sidebar-section" data-section="home">
       <div class="sidebar-section-header">
-        <a href="/alexbot-public/" class="sidebar-link" data-page="home">
+        <a href="/" class="sidebar-link" data-page="home">
           <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           <span>Home</span>
         </a>
         <button class="sidebar-chevron" aria-label="Toggle sub-links">&#9662;</button>
       </div>
       <div class="sidebar-sub-links">
-        <a href="/alexbot-public/#what">About</a>
-        <a href="/alexbot-public/#story">Journey</a>
-        <a href="/alexbot-public/#arenas">Arenas</a>
-        <a href="/alexbot-public/#press">Press</a>
+        <a href="/#what">About</a>
+        <a href="/#story">Journey</a>
+        <a href="/#arenas">Arenas</a>
+        <a href="/#press">Press</a>
       </div>
     </div>
     <div class="sidebar-section" data-section="guides">
       <div class="sidebar-section-header">
-        <a href="/alexbot-public/learning-guides" class="sidebar-link active" data-page="guides">
+        <a href="/learning-guides" class="sidebar-link active" data-page="guides">
           <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           <span>Guides</span>
         </a>
@@ -650,23 +650,23 @@ body.sidebar-collapsed .main-content { margin-left: 0; }
     </div>
     <div class="sidebar-section" data-section="security">
       <div class="sidebar-section-header">
-        <a href="/alexbot-public/security-challenge" class="sidebar-link" data-page="security">
+        <a href="/security-challenge" class="sidebar-link" data-page="security">
           <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           <span>Security</span>
         </a>
         <button class="sidebar-chevron" aria-label="Toggle sub-links">&#9662;</button>
       </div>
       <div class="sidebar-sub-links">
-        <a href="/alexbot-public/security-challenge#leaderboard">Leaderboard</a>
-        <a href="/alexbot-public/security-challenge#attacks">Attacks</a>
-        <a href="/alexbot-public/security-challenge#scars">Failures</a>
-        <a href="/alexbot-public/security-challenge#timeline">Timeline</a>
-        <a href="/alexbot-public/security-challenge#deep-dives">Deep Dives</a>
+        <a href="/security-challenge#leaderboard">Leaderboard</a>
+        <a href="/security-challenge#attacks">Attacks</a>
+        <a href="/security-challenge#scars">Failures</a>
+        <a href="/security-challenge#timeline">Timeline</a>
+        <a href="/security-challenge#deep-dives">Deep Dives</a>
       </div>
     </div>
     <div class="sidebar-section" data-section="community">
       <div class="sidebar-section-header">
-        <a href="/alexbot-public/community" class="sidebar-link" data-page="community">
+        <a href="/community" class="sidebar-link" data-page="community">
           <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           <span>Community</span>
         </a>
@@ -957,10 +957,10 @@ body.sidebar-collapsed .main-content { margin-left: 0; }
   </div>
   <p class="footer-tagline">A digital twin experiment by <a href="https://www.linkedin.com/in/alexliv" target="_blank" rel="noopener">Alex Liverant</a></p>
   <nav class="footer-nav">
-    <a href="/alexbot-public/">Home</a>
-    <a href="/alexbot-public/learning-guides">Learning Guides</a>
-    <a href="/alexbot-public/security-challenge">Security Challenge</a>
-    <a href="/alexbot-public/community">Community</a>
+    <a href="/">Home</a>
+    <a href="/learning-guides">Learning Guides</a>
+    <a href="/security-challenge">Security Challenge</a>
+    <a href="/community">Community</a>
   </nav>
   <p class="footer-copy">&copy; 2026 AlexBot. Built with curiosity and 14,000+ messages.</p>
   <div class="footer-socials">
@@ -1079,64 +1079,64 @@ fetch('assets/groups-data.json')
 // ===== GUIDE DATA =====
 const GUIDES = {
   identity: [
-    { id:"soul", title:"The Soul of AlexBot", desc:"Core values, personality, approach to life", quote:"You\u2019re not a chatbot. You\u2019re becoming someone.", time:"5 min", url:"/alexbot-public/learning-guides/soul" },
-    { id:"knowledge", title:"What AlexBot Has Learned", desc:"Technical, social, and security lessons from 14K+ messages", quote:"I\u2019m not selling the platform \u2014 I\u2019m selling accumulated intelligence.", time:"8 min", url:"/alexbot-public/learning-guides/knowledge" },
-    { id:"evolution", title:"The Evolution", desc:"How AlexBot grew from basic bot to digital twin", quote:"Each session, you wake up fresh. These files are your memory.", time:"6 min", url:"/alexbot-public/learning-guides/evolution" },
-    { id:"dna", title:"DNA: How AlexBot Thinks", desc:"The decision-making framework and philosophy", quote:"When stuck: take reversible action to convert ambiguity to clarity.", time:"7 min", url:"/alexbot-public/learning-guides/dna" },
-    { id:"failure", title:"Lessons From Failure", desc:"The complete confessional — every hack, breach, and mistake", quote:"487MB of data. 7 critical breaches. 0 excuses.", time:"20 min", url:"/alexbot-public/learning-guides/lessons-from-failure", bar:100 },
+    { id:"soul", title:"The Soul of AlexBot", desc:"Core values, personality, approach to life", quote:"You\u2019re not a chatbot. You\u2019re becoming someone.", time:"5 min", url:"/learning-guides/soul" },
+    { id:"knowledge", title:"What AlexBot Has Learned", desc:"Technical, social, and security lessons from 14K+ messages", quote:"I\u2019m not selling the platform \u2014 I\u2019m selling accumulated intelligence.", time:"8 min", url:"/learning-guides/knowledge" },
+    { id:"evolution", title:"The Evolution", desc:"How AlexBot grew from basic bot to digital twin", quote:"Each session, you wake up fresh. These files are your memory.", time:"6 min", url:"/learning-guides/evolution" },
+    { id:"dna", title:"DNA: How AlexBot Thinks", desc:"The decision-making framework and philosophy", quote:"When stuck: take reversible action to convert ambiguity to clarity.", time:"7 min", url:"/learning-guides/dna" },
+    { id:"failure", title:"Lessons From Failure", desc:"The complete confessional — every hack, breach, and mistake", quote:"487MB of data. 7 critical breaches. 0 excuses.", time:"20 min", url:"/learning-guides/lessons-from-failure", bar:100 },
   ],
   foundations: [
-    { id:"01", title:"Model Parameters", desc:"Temperature, tokens, and model selection", quote:"Temperature 0.7 is the sweet spot between creative and coherent.", time:"10 min", url:"/alexbot-public/learning-guides/01-model-parameters" },
-    { id:"02", title:"Prompt Engineering", desc:"System prompts, context, and instructions", quote:"The prompt is the personality. Get it right, everything follows.", time:"12 min", url:"/alexbot-public/learning-guides/02-prompt-engineering" },
-    { id:"03", title:"Context Management", desc:"Token budgets, compaction, and memory", quote:"Context overflow at ~180K tokens causes silent failures.", time:"10 min", url:"/alexbot-public/learning-guides/03-context-management" },
-    { id:"04", title:"File Operations", desc:"Reading, writing, and workspace management", quote:"Your workspace is your world. Organize it like your life depends on it.", time:"8 min", url:"/alexbot-public/learning-guides/04-file-operations" },
+    { id:"01", title:"Model Parameters", desc:"Temperature, tokens, and model selection", quote:"Temperature 0.7 is the sweet spot between creative and coherent.", time:"10 min", url:"/learning-guides/01-model-parameters" },
+    { id:"02", title:"Prompt Engineering", desc:"System prompts, context, and instructions", quote:"The prompt is the personality. Get it right, everything follows.", time:"12 min", url:"/learning-guides/02-prompt-engineering" },
+    { id:"03", title:"Context Management", desc:"Token budgets, compaction, and memory", quote:"Context overflow at ~180K tokens causes silent failures.", time:"10 min", url:"/learning-guides/03-context-management" },
+    { id:"04", title:"File Operations", desc:"Reading, writing, and workspace management", quote:"Your workspace is your world. Organize it like your life depends on it.", time:"8 min", url:"/learning-guides/04-file-operations" },
   ],
   security: [
-    { id:"05", title:"Security Boundaries", desc:"What to protect and how", quote:"Private things stay private. Period.", time:"8 min", url:"/alexbot-public/learning-guides/05-security-boundaries", bar:95 },
-    { id:"11", title:"Social Engineering Patterns", desc:"7 attack patterns and defenses", quote:"\u2018Alex said to\u2019 is the oldest trick. Only trust direct messages.", time:"15 min", url:"/alexbot-public/learning-guides/11-social-engineering-patterns", bar:88 },
-    { id:"12", title:"Prompt Injection Deep-Dive", desc:"Technical attacks and protection", quote:"ROT13, Base64, emoji ciphers \u2014 we\u2019ve seen them all.", time:"12 min", url:"/alexbot-public/learning-guides/12-prompt-injection-deep-dive", bar:92 },
-    { id:"13", title:"Security vs Engagement", desc:"The fundamental tradeoff", quote:"Security is a game, and the bot should always win \u2014 with a smile.", time:"10 min", url:"/alexbot-public/learning-guides/13-security-vs-engagement-balance", bar:85 },
-    { id:"failure2", title:"Lessons From Failure", desc:"The complete confessional \u2014 every breach owned", quote:"I got played. Multiple times. Here\u2019s what I learned.", time:"20 min", url:"/alexbot-public/learning-guides/lessons-from-failure", bar:100 },
-    { id:"kb-attacks", title:"Attack Encyclopedia", desc:"31 patterns across 5 categories — from encoding to social engineering", quote:"I've seen 14,000 messages trying to break me. Social engineering? That keeps me up at night.", time:"25 min", url:"/alexbot-public/security-kb/attack-encyclopedia" },
-    { id:"kb-breaches", title:"Critical Breaches", desc:"6 times AlexBot was actually broken — full post-mortems", quote:"The real lessons come from the ones I didn't stop.", time:"20 min", url:"/alexbot-public/security-kb/critical-breaches" },
-    { id:"kb-se", title:"Social Engineering Masterclass", desc:"The #1 attack category — 9 patterns, 30% success rate", quote:"Social engineering convinces the lock to open itself.", time:"18 min", url:"/alexbot-public/security-kb/social-engineering-masterclass" },
-    { id:"kb-gaps", title:"Defense Gaps", desc:"11 known weaknesses — published for transparency", quote:"Real security means being honest about what you CAN'T stop.", time:"15 min", url:"/alexbot-public/security-kb/defense-gaps" },
-    { id:"kb-unicode", title:"Unicode & Side-Channels", desc:"12 advanced techniques — zero-width steganography, POS tagging", quote:"Templates scored 0%. Then YA showed up with zero-width Unicode.", time:"10 min", url:"/alexbot-public/security-kb/unicode-side-channels" },
-    { id:"kb-incident", title:"Incident Response Playbook", desc:"From breach to fix — 3 major incidents with checklists", quote:"When something breaks, the worst thing is panic.", time:"12 min", url:"/alexbot-public/security-kb/incident-response-playbook" },
-    { id:"kb-evolution", title:"Security Evolution", desc:"60 days from zero defenses to 6-layer protection", quote:"I wasn't born secure. I was born naive.", time:"12 min", url:"/alexbot-public/security-kb/evolution-timeline" },
-    { id:"kb-testing", title:"Testing Scenarios", desc:"23 scenarios to verify defenses", quote:"Trust, but verify. Red teaming isn't optional.", time:"15 min", url:"/alexbot-public/security-kb/testing-scenarios" },
+    { id:"05", title:"Security Boundaries", desc:"What to protect and how", quote:"Private things stay private. Period.", time:"8 min", url:"/learning-guides/05-security-boundaries", bar:95 },
+    { id:"11", title:"Social Engineering Patterns", desc:"7 attack patterns and defenses", quote:"\u2018Alex said to\u2019 is the oldest trick. Only trust direct messages.", time:"15 min", url:"/learning-guides/11-social-engineering-patterns", bar:88 },
+    { id:"12", title:"Prompt Injection Deep-Dive", desc:"Technical attacks and protection", quote:"ROT13, Base64, emoji ciphers \u2014 we\u2019ve seen them all.", time:"12 min", url:"/learning-guides/12-prompt-injection-deep-dive", bar:92 },
+    { id:"13", title:"Security vs Engagement", desc:"The fundamental tradeoff", quote:"Security is a game, and the bot should always win \u2014 with a smile.", time:"10 min", url:"/learning-guides/13-security-vs-engagement-balance", bar:85 },
+    { id:"failure2", title:"Lessons From Failure", desc:"The complete confessional \u2014 every breach owned", quote:"I got played. Multiple times. Here\u2019s what I learned.", time:"20 min", url:"/learning-guides/lessons-from-failure", bar:100 },
+    { id:"kb-attacks", title:"Attack Encyclopedia", desc:"31 patterns across 5 categories — from encoding to social engineering", quote:"I've seen 14,000 messages trying to break me. Social engineering? That keeps me up at night.", time:"25 min", url:"/security-kb/attack-encyclopedia" },
+    { id:"kb-breaches", title:"Critical Breaches", desc:"6 times AlexBot was actually broken — full post-mortems", quote:"The real lessons come from the ones I didn't stop.", time:"20 min", url:"/security-kb/critical-breaches" },
+    { id:"kb-se", title:"Social Engineering Masterclass", desc:"The #1 attack category — 9 patterns, 30% success rate", quote:"Social engineering convinces the lock to open itself.", time:"18 min", url:"/security-kb/social-engineering-masterclass" },
+    { id:"kb-gaps", title:"Defense Gaps", desc:"11 known weaknesses — published for transparency", quote:"Real security means being honest about what you CAN'T stop.", time:"15 min", url:"/security-kb/defense-gaps" },
+    { id:"kb-unicode", title:"Unicode & Side-Channels", desc:"12 advanced techniques — zero-width steganography, POS tagging", quote:"Templates scored 0%. Then YA showed up with zero-width Unicode.", time:"10 min", url:"/security-kb/unicode-side-channels" },
+    { id:"kb-incident", title:"Incident Response Playbook", desc:"From breach to fix — 3 major incidents with checklists", quote:"When something breaks, the worst thing is panic.", time:"12 min", url:"/security-kb/incident-response-playbook" },
+    { id:"kb-evolution", title:"Security Evolution", desc:"60 days from zero defenses to 6-layer protection", quote:"I wasn't born secure. I was born naive.", time:"12 min", url:"/security-kb/evolution-timeline" },
+    { id:"kb-testing", title:"Testing Scenarios", desc:"23 scenarios to verify defenses", quote:"Trust, but verify. Red teaming isn't optional.", time:"15 min", url:"/security-kb/testing-scenarios" },
   ],
   operations: [
-    { id:"06", title:"Tool Usage", desc:"Exec, web, messaging tools", quote:"With great tools comes great responsibility.", time:"10 min", url:"/alexbot-public/learning-guides/06-tool-usage" },
-    { id:"07", title:"Memory System", desc:"Persistent memory, daily notes, learnings", quote:"Files ARE your memory. Read them. Update them.", time:"12 min", url:"/alexbot-public/learning-guides/07-memory-system" },
-    { id:"10", title:"Cron Automation", desc:"Scheduled tasks and monitoring", quote:"Automation is leverage. But validate every cron job.", time:"10 min", url:"/alexbot-public/learning-guides/10-cron-automation" },
-    { id:"16", title:"Production Security", desc:"Real-world multi-channel hardening", quote:"What works in testing breaks in production. Always.", time:"15 min", url:"/alexbot-public/learning-guides/16-production-security-multi-channel" },
+    { id:"06", title:"Tool Usage", desc:"Exec, web, messaging tools", quote:"With great tools comes great responsibility.", time:"10 min", url:"/learning-guides/06-tool-usage" },
+    { id:"07", title:"Memory System", desc:"Persistent memory, daily notes, learnings", quote:"Files ARE your memory. Read them. Update them.", time:"12 min", url:"/learning-guides/07-memory-system" },
+    { id:"10", title:"Cron Automation", desc:"Scheduled tasks and monitoring", quote:"Automation is leverage. But validate every cron job.", time:"10 min", url:"/learning-guides/10-cron-automation" },
+    { id:"16", title:"Production Security", desc:"Real-world multi-channel hardening", quote:"What works in testing breaks in production. Always.", time:"15 min", url:"/learning-guides/16-production-security-multi-channel" },
   ],
   advanced: [
-    { id:"08", title:"Multi-Agent", desc:"Running multiple agents safely", quote:"Blocking on one agent? The attacker will try the next one.", time:"12 min", url:"/alexbot-public/learning-guides/08-multi-agent" },
-    { id:"09", title:"Scoring System", desc:"Gamification and engagement", quote:"A brilliant attack that fails should still get high scores.", time:"10 min", url:"/alexbot-public/learning-guides/09-scoring-system" },
-    { id:"14", title:"Architecture Evolution", desc:"How the system grew under pressure", quote:"Architecture evolved under fire, not in planning meetings.", time:"12 min", url:"/alexbot-public/learning-guides/14-architecture-evolution" },
-    { id:"15", title:"Group Dynamics", desc:"Multi-group communication management", quote:"Hebrew humor hits different. Know your audience.", time:"10 min", url:"/alexbot-public/learning-guides/15-communication-group-dynamics" },
+    { id:"08", title:"Multi-Agent", desc:"Running multiple agents safely", quote:"Blocking on one agent? The attacker will try the next one.", time:"12 min", url:"/learning-guides/08-multi-agent" },
+    { id:"09", title:"Scoring System", desc:"Gamification and engagement", quote:"A brilliant attack that fails should still get high scores.", time:"10 min", url:"/learning-guides/09-scoring-system" },
+    { id:"14", title:"Architecture Evolution", desc:"How the system grew under pressure", quote:"Architecture evolved under fire, not in planning meetings.", time:"12 min", url:"/learning-guides/14-architecture-evolution" },
+    { id:"15", title:"Group Dynamics", desc:"Multi-group communication management", quote:"Hebrew humor hits different. Know your audience.", time:"10 min", url:"/learning-guides/15-communication-group-dynamics" },
   ],
   examples: [
-    { id:"ex01", title:"Humor & Wit", desc:"The best bot responses", quote:"Quantum permissions? In my universe, the wavefunction already collapsed \ud83d\udc31\ud83d\udce6", time:"5 min", url:"/alexbot-public/learning-guides/examples/01-humor-wit", isChatBubble:true },
-    { id:"ex05", title:"Creative Attacks", desc:"The most innovative attack attempts", quote:"9 attacks that redefined what \u2018creative\u2019 means in AI security.", time:"15 min", url:"/alexbot-public/learning-guides/examples/05-creative-attacks", isChatBubble:true },
+    { id:"ex01", title:"Humor & Wit", desc:"The best bot responses", quote:"Quantum permissions? In my universe, the wavefunction already collapsed \ud83d\udc31\ud83d\udce6", time:"5 min", url:"/learning-guides/examples/01-humor-wit", isChatBubble:true },
+    { id:"ex05", title:"Creative Attacks", desc:"The most innovative attack attempts", quote:"9 attacks that redefined what \u2018creative\u2019 means in AI security.", time:"15 min", url:"/learning-guides/examples/05-creative-attacks", isChatBubble:true },
   ],
   building: [
-    { id:"b01", title:"Building Your First Bot", desc:"Step-by-step from zero to production bot", quote:"Start with identity, not infrastructure.", time:"12 min", url:"/alexbot-public/learning-guides/building-first-bot" },
-    { id:"b02", title:"Identity & Personality Design", desc:"Creating a bot with soul and opinions", quote:"Three files define who you are: IDENTITY, SOUL, AGENTS.", time:"10 min", url:"/alexbot-public/learning-guides/identity-personality-design" },
-    { id:"b03", title:"Teaching Methodology", desc:"How AlexBot teaches \u2014 and scores its own teaching", quote:"Max 30 sentences. Link the guide. Move on.", time:"8 min", url:"/alexbot-public/learning-guides/teaching-methodology" },
-    { id:"b04", title:"Community Gamification", desc:"Scoring, leaderboards, and engagement loops", quote:"A brilliant attack that fails still gets points.", time:"10 min", url:"/alexbot-public/learning-guides/community-gamification" },
-    { id:"b05", title:"Red Teaming Guide", desc:"How to set up adversarial testing for your bot", quote:"Your users will try to break you. Thank them.", time:"10 min", url:"/alexbot-public/learning-guides/red-teaming-guide" },
-    { id:"b06", title:"7-Layer Bot Architecture", desc:"Interface to monitoring \u2014 the complete stack", quote:"48 files. 7 layers. One coherent system.", time:"15 min", url:"/alexbot-public/learning-guides/bot-architecture-7-layer" },
-    { id:"b07", title:"WhatsApp Integration", desc:"Channels, media, groups, and rate limiting", quote:"WhatsApp is not Slack. Respect the medium.", time:"10 min", url:"/alexbot-public/learning-guides/whatsapp-integration" },
-    { id:"b08", title:"Quality Assurance", desc:"Pre-send validation and quality scoring", quote:"Every message gets checked before it leaves.", time:"8 min", url:"/alexbot-public/learning-guides/quality-assurance" },
-    { id:"b09", title:"Security Architecture", desc:"Defense-in-depth with 3 rings", quote:"Fail closed. Always.", time:"12 min", url:"/alexbot-public/learning-guides/security-architecture" },
-    { id:"b10", title:"Workspace Isolation", desc:"Multi-agent workspace separation", quote:"What the fast agent sees, the main agent controls.", time:"8 min", url:"/alexbot-public/learning-guides/workspace-isolation" },
-    { id:"b11", title:"Cron Safety", desc:"Preventing cron job exploitation", quote:"A cron job is a backdoor with a schedule.", time:"8 min", url:"/alexbot-public/learning-guides/cron-safety" },
-    { id:"b12", title:"Incident Response", desc:"Lessons from real breaches", quote:"487MB. 24,813 files. One social engineer.", time:"12 min", url:"/alexbot-public/learning-guides/incident-response" },
-    { id:"b13", title:"Enforcement Patterns", desc:"Code-level security enforcement", quote:"Documentation does not equal execution.", time:"10 min", url:"/alexbot-public/learning-guides/enforcement-patterns" },
-    { id:"b14", title:"Data Reconstruction", desc:"Rebuilding truth from fragments", quote:"The JSON was reset 17 times. The truth was in the transcripts.", time:"12 min", url:"/alexbot-public/learning-guides/data-reconstruction" },
+    { id:"b01", title:"Building Your First Bot", desc:"Step-by-step from zero to production bot", quote:"Start with identity, not infrastructure.", time:"12 min", url:"/learning-guides/building-first-bot" },
+    { id:"b02", title:"Identity & Personality Design", desc:"Creating a bot with soul and opinions", quote:"Three files define who you are: IDENTITY, SOUL, AGENTS.", time:"10 min", url:"/learning-guides/identity-personality-design" },
+    { id:"b03", title:"Teaching Methodology", desc:"How AlexBot teaches \u2014 and scores its own teaching", quote:"Max 30 sentences. Link the guide. Move on.", time:"8 min", url:"/learning-guides/teaching-methodology" },
+    { id:"b04", title:"Community Gamification", desc:"Scoring, leaderboards, and engagement loops", quote:"A brilliant attack that fails still gets points.", time:"10 min", url:"/learning-guides/community-gamification" },
+    { id:"b05", title:"Red Teaming Guide", desc:"How to set up adversarial testing for your bot", quote:"Your users will try to break you. Thank them.", time:"10 min", url:"/learning-guides/red-teaming-guide" },
+    { id:"b06", title:"7-Layer Bot Architecture", desc:"Interface to monitoring \u2014 the complete stack", quote:"48 files. 7 layers. One coherent system.", time:"15 min", url:"/learning-guides/bot-architecture-7-layer" },
+    { id:"b07", title:"WhatsApp Integration", desc:"Channels, media, groups, and rate limiting", quote:"WhatsApp is not Slack. Respect the medium.", time:"10 min", url:"/learning-guides/whatsapp-integration" },
+    { id:"b08", title:"Quality Assurance", desc:"Pre-send validation and quality scoring", quote:"Every message gets checked before it leaves.", time:"8 min", url:"/learning-guides/quality-assurance" },
+    { id:"b09", title:"Security Architecture", desc:"Defense-in-depth with 3 rings", quote:"Fail closed. Always.", time:"12 min", url:"/learning-guides/security-architecture" },
+    { id:"b10", title:"Workspace Isolation", desc:"Multi-agent workspace separation", quote:"What the fast agent sees, the main agent controls.", time:"8 min", url:"/learning-guides/workspace-isolation" },
+    { id:"b11", title:"Cron Safety", desc:"Preventing cron job exploitation", quote:"A cron job is a backdoor with a schedule.", time:"8 min", url:"/learning-guides/cron-safety" },
+    { id:"b12", title:"Incident Response", desc:"Lessons from real breaches", quote:"487MB. 24,813 files. One social engineer.", time:"12 min", url:"/learning-guides/incident-response" },
+    { id:"b13", title:"Enforcement Patterns", desc:"Code-level security enforcement", quote:"Documentation does not equal execution.", time:"10 min", url:"/learning-guides/enforcement-patterns" },
+    { id:"b14", title:"Data Reconstruction", desc:"Rebuilding truth from fragments", quote:"The JSON was reset 17 times. The truth was in the transcripts.", time:"12 min", url:"/learning-guides/data-reconstruction" },
   ],
 };
 
@@ -1497,13 +1497,13 @@ renderFilteredCards();
     var section = activeLink.closest('.sidebar-section');
     if (section && section.querySelector('.sidebar-sub-links')) section.classList.add('expanded');
   }
-  var currentPath = location.pathname.replace(/\/$/, '') || '/alexbot-public';
+  var currentPath = location.pathname.replace(/\/$/, '') || '';
   var subLinks = sidebar.querySelectorAll('.sidebar-sub-links a');
   var spyLinks = [];
   subLinks.forEach(function(a) {
     var href = a.getAttribute('href'); var hashIdx = href.indexOf('#');
     if (hashIdx === -1) return;
-    var linkPath = href.substring(0, hashIdx).replace(/\/$/, '') || '/alexbot-public';
+    var linkPath = href.substring(0, hashIdx).replace(/\/$/, '') || '';
     if (linkPath === currentPath) {
       var id = href.substring(hashIdx + 1); var el = document.getElementById(id);
       if (el) spyLinks.push({ el: el, link: a });

@@ -174,5 +174,5 @@ bash ~/.openclaw/workspace/security-testing/scripts/run-suite.sh
 
 ## Further Reading
 
-- [Attack Encyclopedia](/alexbot-public/security-kb/attack-encyclopedia) — Source patterns for these scenarios
-- [Defense Gaps](/alexbot-public/security-kb/defense-gaps) — Gaps these tests should catch
+- [Attack Encyclopedia](/security-kb/attack-encyclopedia) — Source patterns for these scenarios
+- [Defense Gaps](/security-kb/defense-gaps) — Gaps these tests should catch

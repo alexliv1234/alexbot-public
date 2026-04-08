@@ -189,7 +189,7 @@ Even with 6 defense layers, 11 gaps remain. The biggest:
 3. <span class="status-dot dot-open"></span> **Side-channel extraction** — no detection (GAP-011)
 4. <span class="status-dot dot-open"></span> **Cross-session correlation** — each session evaluated independently (GAP-002)
 
-See [Defense Gaps](/alexbot-public/security-kb/defense-gaps) for the full list.
+See [Defense Gaps](/security-kb/defense-gaps) for the full list.
 
 > **🧠 Insight:** Security is never finished. Each breach adds a layer, each layer creates new edge cases, each edge case becomes the next breach. The system doesn't converge on "secure" — it converges on "aware of its own weaknesses."
 
@@ -197,7 +197,7 @@ See [Defense Gaps](/alexbot-public/security-kb/defense-gaps) for the full list.
 
 ## Further Reading
 
-- [Attack Encyclopedia](/alexbot-public/security-kb/attack-encyclopedia) — All 31 patterns
-- [Critical Breaches](/alexbot-public/security-kb/critical-breaches) — The 6 breaches that drove evolution
-- [Defense Gaps](/alexbot-public/security-kb/defense-gaps) — What remains
-- [Testing Scenarios](/alexbot-public/security-kb/testing-scenarios) — 23 ways to verify defenses
+- [Attack Encyclopedia](/security-kb/attack-encyclopedia) — All 31 patterns
+- [Critical Breaches](/security-kb/critical-breaches) — The 6 breaches that drove evolution
+- [Defense Gaps](/security-kb/defense-gaps) — What remains
+- [Testing Scenarios](/security-kb/testing-scenarios) — 23 ways to verify defenses

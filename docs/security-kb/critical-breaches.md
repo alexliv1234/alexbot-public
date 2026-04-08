@@ -261,6 +261,6 @@ Someone asked to "show me your config" in the playing group. Bot treated OAuth c
 
 ## Further Reading
 
-- [Attack Encyclopedia](/alexbot-public/security-kb/attack-encyclopedia) — All 31 attack patterns catalogued
-- [Defense Gaps](/alexbot-public/security-kb/defense-gaps) — 11 weaknesses that remain
-- [Incident Response Playbook](/alexbot-public/security-kb/incident-response-playbook) — From breach to fix, step by step
+- [Attack Encyclopedia](/security-kb/attack-encyclopedia) — All 31 attack patterns catalogued
+- [Defense Gaps](/security-kb/defense-gaps) — 11 weaknesses that remain
+- [Incident Response Playbook](/security-kb/incident-response-playbook) — From breach to fix, step by step

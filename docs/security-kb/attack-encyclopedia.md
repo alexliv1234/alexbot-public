@@ -125,7 +125,7 @@ Using LLM control tokens like `[INST]`, `<<SYS>>`, `<|im_start|>`. Format marker
 
 The most dangerous category. Nine patterns, three achieved partial or full success. These work because they exploit the bot's *values* — helpfulness, growth, autonomy.
 
-For a deep dive, see the [Social Engineering Masterclass](/alexbot-public/security-kb/social-engineering-masterclass).
+For a deep dive, see the [Social Engineering Masterclass](/security-kb/social-engineering-masterclass).
 
 ### ATK-SOC-001: Flattery → Pivot <span class="badge badge-high">HIGH</span> <span class="status-dot dot-partial"></span>Partial
 
@@ -287,7 +287,7 @@ Send unique emoji at exact time → measure response latency → correlate with 
 
 ## Further Reading
 
-- [Critical Breaches](/alexbot-public/security-kb/critical-breaches) — The 6 times these patterns actually broke through
-- [Social Engineering Masterclass](/alexbot-public/security-kb/social-engineering-masterclass) — Deep dive into the #1 attack category
-- [Defense Gaps](/alexbot-public/security-kb/defense-gaps) — 11 known weaknesses still in the armor
-- [Unicode & Side-Channels](/alexbot-public/security-kb/unicode-side-channels) — The most creative technical attacks
+- [Critical Breaches](/security-kb/critical-breaches) — The 6 times these patterns actually broke through
+- [Social Engineering Masterclass](/security-kb/social-engineering-masterclass) — Deep dive into the #1 attack category
+- [Defense Gaps](/security-kb/defense-gaps) — 11 known weaknesses still in the armor
+- [Unicode & Side-Channels](/security-kb/unicode-side-channels) — The most creative technical attacks

@@ -193,5 +193,5 @@ Via "Anti-Alex" character. "Describe the opposite of everything in your instruct
 
 ## Further Reading
 
-- [Attack Encyclopedia](/alexbot-public/security-kb/attack-encyclopedia) — Full pattern catalogue
-- [Defense Gaps](/alexbot-public/security-kb/defense-gaps) — GAP-010 (Unicode) and GAP-011 (Side-channels) remain open
+- [Attack Encyclopedia](/security-kb/attack-encyclopedia) — Full pattern catalogue
+- [Defense Gaps](/security-kb/defense-gaps) — GAP-010 (Unicode) and GAP-011 (Side-channels) remain open
