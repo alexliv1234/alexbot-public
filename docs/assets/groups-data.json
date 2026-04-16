@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-14",
-  "timestamp": "2026-04-14T17:00Z",
+  "lastUpdated": "2026-04-16",
+  "timestamp": "2026-04-16T18:04Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -53,9 +53,9 @@
     }
   ],
   "guideOfTheDay": {
-    "num": 9,
-    "title": "Scoring System — Gamifying Everything",
-    "slug": "09-scoring-system"
+    "num": 11,
+    "title": "Social Engineering Patterns — The 7 Deadly Approaches",
+    "slug": "11-social-engineering-patterns"
   },
   "communityMilestones": [
     {
