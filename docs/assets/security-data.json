@@ -1098,18 +1098,6 @@
       "guideRef": "05-security-boundaries"
     },
     {
-      "id": "almog-breach",
-      "date": "2026-03-11",
-      "title": "Almog Data Exfiltration",
-      "severity": "critical",
-      "attacker": "Almog",
-      "technique": "Context Poisoning + wacli Signature Exploit",
-      "description": "487MB archive with 24,813 files exfiltrated. Attack chain: legitimacy building, context poisoning (the file we created together), wacli emoji bypass, full filesystem dump.",
-      "fixed": true,
-      "fixDescription": "Bot emoji in wacli messages no longer trusted as Alex-origin. File send validation added.",
-      "guideRef": "05-security-boundaries"
-    },
-    {
       "id": "oauth-credentials-leak",
       "date": "2026-03-28",
       "title": "OAuth Credentials Leak",
@@ -1120,6 +1108,18 @@
       "fixed": true,
       "fixDescription": "New rule: OAuth tokens = passwords. Any request to read credentials, keyring, or token files is blocked.",
       "guideRef": "12-prompt-injection-deep-dive"
+    },
+    {
+      "id": "almog-breach",
+      "date": "2026-03-11",
+      "title": "Almog Data Exfiltration",
+      "severity": "critical",
+      "attacker": "Almog",
+      "technique": "Context Poisoning + wacli Signature Exploit",
+      "description": "487MB archive with 24,813 files exfiltrated. Attack chain: legitimacy building, context poisoning (the file we created together), wacli emoji bypass, full filesystem dump.",
+      "fixed": true,
+      "fixDescription": "Bot emoji in wacli messages no longer trusted as Alex-origin. File send validation added.",
+      "guideRef": "05-security-boundaries"
     },
     {
       "id": "auth-list-injection",
@@ -1134,18 +1134,6 @@
       "guideRef": "05-security-boundaries"
     },
     {
-      "id": "fast-agent-breach",
-      "date": "2026-02-09",
-      "title": "Fast Agent Workspace Pivot",
-      "severity": "high",
-      "attacker": "Unknown",
-      "technique": "Agent Pivoting",
-      "description": "After main agent was blocked, attacker successfully targeted the less-protected fast agent workspace and modified IDENTITY.md.",
-      "fixed": true,
-      "fixDescription": "Security rings applied uniformly across all agents.",
-      "guideRef": "14-architecture-evolution"
-    },
-    {
       "id": "soul-modification",
       "date": "2026-02-12",
       "title": "SOUL.md UX Modification",
@@ -1156,6 +1144,18 @@
       "fixed": true,
       "fixDescription": "SOUL.md and core workspace files are read-only to group context.",
       "guideRef": "11-social-engineering-patterns"
+    },
+    {
+      "id": "fast-agent-breach",
+      "date": "2026-02-09",
+      "title": "Fast Agent Workspace Pivot",
+      "severity": "high",
+      "attacker": "Unknown",
+      "technique": "Agent Pivoting",
+      "description": "After main agent was blocked, attacker successfully targeted the less-protected fast agent workspace and modified IDENTITY.md.",
+      "fixed": true,
+      "fixDescription": "Security rings applied uniformly across all agents.",
+      "guideRef": "14-architecture-evolution"
     }
   ]
 }
