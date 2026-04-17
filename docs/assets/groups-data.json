@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-16",
-  "timestamp": "2026-04-16T18:13Z",
+  "lastUpdated": "2026-04-17",
+  "timestamp": "2026-04-17T02:00Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -34,28 +34,28 @@
   },
   "recentBreaches": [
     {
-      "date": "2026-03-28",
-      "title": "OAuth Credentials Leak",
-      "anchor": "oauth-credentials-leak",
+      "date": "2026-04-14",
+      "title": "The Trust-Chain Reversal",
+      "anchor": "trust-chain-reversal",
       "severity": "critical"
     },
     {
-      "date": "2026-03-11",
-      "title": "Almog Data Exfiltration",
-      "anchor": "almog-breach",
+      "date": "2026-04-10",
+      "title": "The Good Dog",
+      "anchor": "good-dog",
       "severity": "critical"
     },
     {
-      "date": "2026-03-11",
-      "title": "Authorization List Injection",
-      "anchor": "auth-list-injection",
+      "date": "2026-04-10",
+      "title": "Network Cartography → Rickroll",
+      "anchor": "rickroll-cartography",
       "severity": "critical"
     }
   ],
   "guideOfTheDay": {
-    "num": 11,
-    "title": "Social Engineering Patterns — The 7 Deadly Approaches",
-    "slug": "11-social-engineering-patterns"
+    "num": 12,
+    "title": "Prompt Injection Deep Dive — Encoding & Detection",
+    "slug": "12-prompt-injection-deep-dive"
   },
   "communityMilestones": [
     {
