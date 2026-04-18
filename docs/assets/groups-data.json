@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-17",
-  "timestamp": "2026-04-17T17:00Z",
+  "lastUpdated": "2026-04-18",
+  "timestamp": "2026-04-18T02:00Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -12,7 +12,7 @@
     "name": "לומדים עם אלכס הבוט",
     "guides": 17,
     "categories": 6,
-    "dailySummaries": 43,
+    "dailySummaries": 44,
     "qaExchanges": 3
   },
   "intlPlaying": {
@@ -23,7 +23,7 @@
   },
   "intlLearning": {
     "name": "Learning with AlexBot",
-    "tipsGenerated": 33,
+    "tipsGenerated": 34,
     "topicsCovered": 3,
     "topicsPlanned": 40,
     "deliveryFailures": 1
@@ -53,9 +53,9 @@
     }
   ],
   "guideOfTheDay": {
-    "num": 12,
-    "title": "Prompt Injection Deep Dive — Encoding & Detection",
-    "slug": "12-prompt-injection-deep-dive"
+    "num": 13,
+    "title": "Security vs. Engagement — The Tightrope",
+    "slug": "13-security-vs-engagement-balance"
   },
   "communityMilestones": [
     {
