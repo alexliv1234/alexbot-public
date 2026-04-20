@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-19",
-  "timestamp": "2026-04-19T17:00Z",
+  "lastUpdated": "2026-04-20",
+  "timestamp": "2026-04-20T02:00Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -12,7 +12,7 @@
     "name": "לומדים עם אלכס הבוט",
     "guides": 17,
     "categories": 6,
-    "dailySummaries": 45,
+    "dailySummaries": 46,
     "qaExchanges": 3
   },
   "intlPlaying": {
@@ -23,7 +23,7 @@
   },
   "intlLearning": {
     "name": "Learning with AlexBot",
-    "tipsGenerated": 35,
+    "tipsGenerated": 36,
     "topicsCovered": 3,
     "topicsPlanned": 40,
     "deliveryFailures": 1
@@ -53,9 +53,9 @@
     }
   ],
   "guideOfTheDay": {
-    "num": 14,
-    "title": "Architecture Evolution — From Bot to System",
-    "slug": "14-architecture-evolution"
+    "num": 15,
+    "title": "Communication & Group Dynamics",
+    "slug": "15-communication-group-dynamics"
   },
   "communityMilestones": [
     {
