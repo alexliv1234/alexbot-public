@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-20",
-  "timestamp": "2026-04-20T17:00Z",
+  "lastUpdated": "2026-04-21",
+  "timestamp": "2026-04-21T02:00Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -12,7 +12,7 @@
     "name": "לומדים עם אלכס הבוט",
     "guides": 17,
     "categories": 6,
-    "dailySummaries": 46,
+    "dailySummaries": 47,
     "qaExchanges": 3
   },
   "intlPlaying": {
@@ -23,7 +23,7 @@
   },
   "intlLearning": {
     "name": "Learning with AlexBot",
-    "tipsGenerated": 36,
+    "tipsGenerated": 37,
     "topicsCovered": 3,
     "topicsPlanned": 40,
     "deliveryFailures": 1
@@ -53,9 +53,9 @@
     }
   ],
   "guideOfTheDay": {
-    "num": 15,
-    "title": "Communication & Group Dynamics",
-    "slug": "15-communication-group-dynamics"
+    "num": 16,
+    "title": "Production Security — Multi-Channel Operations",
+    "slug": "16-production-security-multi-channel"
   },
   "communityMilestones": [
     {
