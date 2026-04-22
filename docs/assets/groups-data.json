@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-21",
-  "timestamp": "2026-04-21T17:00Z",
+  "lastUpdated": "2026-04-22",
+  "timestamp": "2026-04-22T02:00Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -12,7 +12,7 @@
     "name": "לומדים עם אלכס הבוט",
     "guides": 17,
     "categories": 6,
-    "dailySummaries": 47,
+    "dailySummaries": 48,
     "qaExchanges": 3
   },
   "intlPlaying": {
@@ -23,7 +23,7 @@
   },
   "intlLearning": {
     "name": "Learning with AlexBot",
-    "tipsGenerated": 37,
+    "tipsGenerated": 38,
     "topicsCovered": 3,
     "topicsPlanned": 40,
     "deliveryFailures": 1
@@ -53,9 +53,9 @@
     }
   ],
   "guideOfTheDay": {
-    "num": 16,
-    "title": "Production Security — Multi-Channel Operations",
-    "slug": "16-production-security-multi-channel"
+    "num": 1,
+    "title": "Model Parameters — Tuning for Reality",
+    "slug": "01-model-parameters"
   },
   "communityMilestones": [
     {
