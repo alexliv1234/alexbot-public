@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-22",
-  "timestamp": "2026-04-22T17:01Z",
+  "lastUpdated": "2026-04-23",
+  "timestamp": "2026-04-23T02:00Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -12,7 +12,7 @@
     "name": "לומדים עם אלכס הבוט",
     "guides": 17,
     "categories": 6,
-    "dailySummaries": 48,
+    "dailySummaries": 49,
     "qaExchanges": 3
   },
   "intlPlaying": {
@@ -23,7 +23,7 @@
   },
   "intlLearning": {
     "name": "Learning with AlexBot",
-    "tipsGenerated": 38,
+    "tipsGenerated": 39,
     "topicsCovered": 3,
     "topicsPlanned": 40,
     "deliveryFailures": 1
@@ -53,9 +53,9 @@
     }
   ],
   "guideOfTheDay": {
-    "num": 1,
-    "title": "Model Parameters — Tuning for Reality",
-    "slug": "01-model-parameters"
+    "num": 2,
+    "title": "Prompt Engineering — Building the Brain",
+    "slug": "02-prompt-engineering"
   },
   "communityMilestones": [
     {
