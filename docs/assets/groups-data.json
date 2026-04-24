@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-23",
-  "timestamp": "2026-04-23T17:00Z",
+  "lastUpdated": "2026-04-24",
+  "timestamp": "2026-04-24T02:00Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -12,7 +12,7 @@
     "name": "לומדים עם אלכס הבוט",
     "guides": 17,
     "categories": 6,
-    "dailySummaries": 49,
+    "dailySummaries": 50,
     "qaExchanges": 3
   },
   "intlPlaying": {
@@ -23,7 +23,7 @@
   },
   "intlLearning": {
     "name": "Learning with AlexBot",
-    "tipsGenerated": 39,
+    "tipsGenerated": 40,
     "topicsCovered": 3,
     "topicsPlanned": 40,
     "deliveryFailures": 1
@@ -53,9 +53,9 @@
     }
   ],
   "guideOfTheDay": {
-    "num": 2,
-    "title": "Prompt Engineering — Building the Brain",
-    "slug": "02-prompt-engineering"
+    "num": 3,
+    "title": "Context Management — Memory Without the Overflow",
+    "slug": "03-context-management"
   },
   "communityMilestones": [
     {
