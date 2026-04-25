@@ -1,0 +1,15 @@
+---
+layout: lifechange
+title: "קניות"
+permalink: /lifechange/shopping/
+sitemap: false
+---
+<p><small>נוצר ב: {{ site.data.coach.shopping-list.generated_at }}</small></p>
+{% for cat in site.data.coach.shopping-list.categories %}
+  <section class="shopping-cat">
+    <h2>{{ cat[0] }}</h2>
+    <ul class="shopping-items">
+      {% for item in cat[1] %}<li><label><input type="checkbox"> {{ item }}</label></li>{% endfor %}
+    </ul>
+  </section>
+{% endfor %}

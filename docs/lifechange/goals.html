@@ -1,0 +1,31 @@
+---
+layout: lifechange
+title: "מטרות"
+permalink: /lifechange/goals/
+sitemap: false
+---
+<section>
+  <h2>נקודת התחלה</h2>
+  <table class="metrics">
+    <tr><td>תאריך</td><td>{{ site.data.coach.goals.start.date }}</td></tr>
+    <tr><td>משקל</td><td>{{ site.data.coach.goals.start.weight_kg }} ק"ג</td></tr>
+    <tr><td>היקף מותן</td><td>{{ site.data.coach.goals.start.waist_cm }} ס"מ</td></tr>
+    <tr><td>אחוז שומן</td><td>{{ site.data.coach.goals.start.body_fat_pct }}%</td></tr>
+    <tr><td>גובה</td><td>{{ site.data.coach.goals.start.height_m }} מ'</td></tr>
+    <tr><td>היקף כתפיים</td><td>{{ site.data.coach.goals.start.shoulders_cm }} ס"מ</td></tr>
+    <tr><td>היקף יד</td><td>{{ site.data.coach.goals.start.arm_cm }} ס"מ</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>אבני דרך</h2>
+  <div class="milestones">
+    {% for m in site.data.coach.goals.milestones %}
+      <article class="milestone-card">
+        <h3>{{ m.date }}</h3>
+        <p>{{ m.description }}</p>
+        <ul>{% for t in m.targets %}<li>{{ t[0] }}: {{ t[1] }}</li>{% endfor %}</ul>
+      </article>
+    {% endfor %}
+  </div>
+</section>

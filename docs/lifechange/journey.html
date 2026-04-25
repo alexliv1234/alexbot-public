@@ -1,0 +1,28 @@
+---
+layout: lifechange
+title: "מסע"
+permalink: /lifechange/journey/
+sitemap: false
+---
+<h2>אדהרנס — 90 ימים</h2>
+<div id="adherence-heatmap"></div>
+<p class="legend"><span class="cell c0"></span> אין נתונים <span class="cell c1"></span> &lt;0.4 <span class="cell c2"></span> 0.4–0.6 <span class="cell c3"></span> 0.6–0.8 <span class="cell c4"></span> ≥0.8</p>
+
+<h2>משקל והיקף מותן</h2>
+<canvas id="weight-chart" width="800" height="300"></canvas>
+
+<h2>תמונות התקדמות</h2>
+<div id="photo-timeline">
+{% for photo in site.data.coach.photos %}
+  <figure><img src="/assets/lifechange/photos/{{ photo.file | default: photo.date | append: '.jpg' }}" alt="{{ photo.date }}" loading="lazy" /><figcaption>{{ photo.date }}</figcaption></figure>
+{% endfor %}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+window.COACH_DATA = {
+  adherence: {{ site.data.coach.adherence | default: '[]' | jsonify }},
+  weights: {{ site.data.coach.weights | default: '[]' | jsonify }}
+};
+</script>
+<script src="/assets/lifechange/js/charts.js"></script>

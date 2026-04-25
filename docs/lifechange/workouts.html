@@ -1,0 +1,20 @@
+---
+layout: lifechange
+title: "אימונים"
+permalink: /lifechange/workouts/
+sitemap: false
+---
+<table class="workouts-log">
+  <tr><th>תאריך</th><th>סוג</th><th>סטטוס</th><th>זמן</th><th>RPE</th><th>מקום</th><th>הערות</th></tr>
+  {% for w in site.data.coach.workouts reversed %}
+    <tr class="status-{{ w.actual_status }}">
+      <td>{{ w.date }}</td>
+      <td>{{ w.kind }}</td>
+      <td>{{ w.actual_status | default: '—' }}</td>
+      <td>{{ w.duration_min | default: '—' }}{% if w.duration_min %}'{% endif %}</td>
+      <td>{{ w.rpe | default: '—' }}</td>
+      <td>{{ w.location | default: '—' }}</td>
+      <td>{{ w.actual | truncate: 60 }}</td>
+    </tr>
+  {% endfor %}
+</table>

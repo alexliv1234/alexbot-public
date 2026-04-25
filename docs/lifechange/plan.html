@@ -1,0 +1,46 @@
+---
+layout: lifechange
+title: "תוכנית — שלב 1"
+permalink: /lifechange/plan/
+sitemap: false
+---
+<section>
+  <h2>🍽️ ארוחות</h2>
+  {% for meal_pair in site.data.coach.plan.meals %}
+    {% if meal_pair[1].time %}
+      <article class="plan-block">
+        <h3>{{ meal_pair[0] }} — {{ meal_pair[1].time }}</h3>
+        {% for opt in meal_pair[1].options %}
+          <ul>{% for item in opt.items %}<li>{{ item }}</li>{% endfor %}</ul>
+        {% endfor %}
+      </article>
+    {% endif %}
+  {% endfor %}
+</section>
+
+<section>
+  <h2>🏋️ אימונים</h2>
+  <table class="plan-table">
+    <tr><th>יום</th><th>סוג</th><th>שעה</th><th>תוכנית</th></tr>
+    {% for d in site.data.coach.plan.workouts.schedule %}
+      <tr><td>{{ d[0] }}</td><td>{{ d[1].kind }}</td><td>{{ d[1].time }}</td><td>{{ d[1].program }}</td></tr>
+    {% endfor %}
+  </table>
+</section>
+
+<section>
+  <h2>💊 תוספים</h2>
+  {% for s in site.data.coach.plan.supplements %}
+    <p>{{ s.time | default: s.time_offset }} — <strong>{{ s.name }}</strong> — {{ s.dose | default: '' }} <em>{{ s.note | default: '' }}</em></p>
+  {% endfor %}
+</section>
+
+<section>
+  <h2>📜 10 הדברות</h2>
+  <ol>{% for r in site.data.coach.plan.rules_10_commandments %}<li>{{ r }}</li>{% endfor %}</ol>
+</section>
+
+<section>
+  <h2>📋 כללים נוספים</h2>
+  <ul>{% for r in site.data.coach.plan.rules_general %}<li>{{ r }}</li>{% endfor %}</ul>
+</section>

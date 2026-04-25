@@ -1,0 +1,18 @@
+---
+layout: lifechange
+title: "ארוחות"
+permalink: /lifechange/meals/
+sitemap: false
+---
+<table class="meals-log">
+  <tr><th>תאריך</th><th>ארוחה</th><th>תוכנן</th><th>בפועל</th><th>אדהרנס</th></tr>
+  {% for m in site.data.coach.meals reversed %}
+    <tr class="adh-{{ m.adherence }}">
+      <td>{{ m.date }}</td>
+      <td>{{ m.slot }}</td>
+      <td>{{ m.planned | truncate: 60 }}</td>
+      <td>{{ m.actual | truncate: 80 }}</td>
+      <td>{{ m.adherence }}</td>
+    </tr>
+  {% endfor %}
+</table>

@@ -1,0 +1,44 @@
+.lifechange-container { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; font-family: -apple-system, system-ui, "Segoe UI", sans-serif; line-height: 1.5; }
+.lifechange-nav { display: flex; gap: 0.5rem; margin: 1rem 0 2rem; flex-wrap: wrap; }
+.lifechange-nav a { text-decoration: none; padding: 0.4rem 0.8rem; border-radius: 6px; background: #f0f0f0; color: #333; }
+.lifechange-nav a:hover { background: #d0e0ff; }
+.lifechange-footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #eee; color: #888; font-size: 0.85rem; text-align: center; }
+
+.today-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+.today-grid section { padding: 1rem; border: 1px solid #e0e0e0; border-radius: 8px; background: #fafafa; }
+.today-grid h2 { margin: 0 0 0.5rem; font-size: 0.9rem; color: #666; font-weight: 500; }
+.today-grid p { margin: 0; font-size: 1.5rem; font-weight: 600; }
+.today-grid small { font-size: 0.8rem; font-weight: normal; color: #888; }
+
+.plan-block { padding: 0.5rem 1rem; border-right: 3px solid #2da44e; margin: 1rem 0; background: #f9fffb; }
+.plan-table, .metrics, .meals-log, .workouts-log { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.plan-table th, .plan-table td, .metrics td, .meals-log th, .meals-log td, .workouts-log th, .workouts-log td { padding: 0.5rem 0.8rem; border-bottom: 1px solid #eee; text-align: right; }
+.plan-table th, .meals-log th, .workouts-log th { background: #f5f5f5; }
+
+.milestones { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+.milestone-card { padding: 1rem; border: 1px solid #d0d0d0; border-radius: 8px; }
+.milestone-card h3 { margin-top: 0; color: #2da44e; }
+
+#adherence-heatmap { display: grid; grid-template-columns: repeat(13, 1fr); gap: 2px; margin: 1rem 0; max-width: 600px; }
+#adherence-heatmap > div { aspect-ratio: 1; border-radius: 2px; }
+.legend { font-size: 0.85rem; color: #666; }
+.legend .cell { display: inline-block; width: 12px; height: 12px; border-radius: 2px; margin: 0 4px; vertical-align: middle; }
+.legend .c0 { background: #eee; }
+.legend .c1 { background: #cc4040; }
+.legend .c2 { background: #f0c050; }
+.legend .c3 { background: #7fbf70; }
+.legend .c4 { background: #2da44e; }
+
+#photo-timeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 1rem 0; }
+#photo-timeline figure { margin: 0; }
+#photo-timeline img { width: 100%; height: auto; border-radius: 4px; }
+#photo-timeline figcaption { font-size: 0.85rem; color: #666; text-align: center; }
+
+.adh-full { background: rgba(45, 164, 78, 0.05); }
+.adh-partial { background: rgba(240, 192, 80, 0.05); }
+.adh-skip { background: rgba(204, 64, 64, 0.05); }
+.status-skip { background: rgba(204, 64, 64, 0.05); }
+
+.shopping-cat { margin: 1.5rem 0; }
+.shopping-items { list-style: none; padding: 0; columns: 2; }
+.shopping-items li { break-inside: avoid; padding: 0.2rem 0; }

@@ -1,0 +1,33 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>{{ page.title }} — Lifechange</title>
+  <link rel="stylesheet" href="/assets/lifechange/style.css">
+</head>
+<body>
+<div class="lifechange-container" dir="rtl" lang="he">
+  <header class="lifechange-header">
+    <h1>{{ page.title }}</h1>
+    <nav class="lifechange-nav">
+      <a href="/lifechange/">היום</a>
+      <a href="/lifechange/plan/">תוכנית</a>
+      <a href="/lifechange/goals/">מטרות</a>
+      <a href="/lifechange/journey/">מסע</a>
+      <a href="/lifechange/meals/">ארוחות</a>
+      <a href="/lifechange/workouts/">אימונים</a>
+      <a href="/lifechange/shopping/">קניות</a>
+    </nav>
+  </header>
+  <main>{{ content }}</main>
+  <footer class="lifechange-footer">
+    <small>Generated {{ site.data.coach.today.as_of | default: 'never' }}. Private dashboard, not indexed.</small>
+  </footer>
+</div>
+</body>
+</html>

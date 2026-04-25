@@ -1,0 +1,12 @@
+---
+layout: lifechange
+title: "היום"
+permalink: /lifechange/
+sitemap: false
+---
+<div class="today-grid">
+  <section><h2>הדבר הבא</h2><p>{{ site.data.coach.today.next_event | default: '—' }}</p></section>
+  <section><h2>אדהרנס היום</h2><p>{{ site.data.coach.today.adherence | default: 'בתהליך' }}</p></section>
+  <section><h2>streak</h2><p>{{ site.data.coach.streaks.current.adherence_60.count | default: 0 }} ימים</p></section>
+  <section><h2>אתגר הבא</h2><p>{{ site.data.coach.next_milestone.date | default: '—' }}<br><small>{{ site.data.coach.next_milestone.description }}</small></p></section>
+</div>
