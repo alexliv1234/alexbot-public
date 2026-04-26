@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-25",
-  "timestamp": "2026-04-25T06:29Z",
+  "lastUpdated": "2026-04-26",
+  "timestamp": "2026-04-26T07:09Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -53,9 +53,9 @@
     }
   ],
   "guideOfTheDay": {
-    "num": 4,
-    "title": "File Operations — Reading, Writing, and Not Deleting",
-    "slug": "04-file-operations"
+    "num": 5,
+    "title": "Security Boundaries — What to Protect and How",
+    "slug": "05-security-boundaries"
   },
   "communityMilestones": [
     {
