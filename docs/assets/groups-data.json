@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-26",
-  "timestamp": "2026-04-26T17:02Z",
+  "lastUpdated": "2026-04-27",
+  "timestamp": "2026-04-27T02:00Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -53,9 +53,9 @@
     }
   ],
   "guideOfTheDay": {
-    "num": 5,
-    "title": "Security Boundaries — What to Protect and How",
-    "slug": "05-security-boundaries"
+    "num": 6,
+    "title": "Tool Usage — When to Wield, When to Withhold",
+    "slug": "06-tool-usage"
   },
   "communityMilestones": [
     {
