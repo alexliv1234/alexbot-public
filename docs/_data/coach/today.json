@@ -1,5 +1,64 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-04-25T08:54:21"
+  "as_of": "2026-04-28T22:12:59",
+  "meals": [
+    {
+      "slot": "breakfast",
+      "actual": "ביצים קשות + סלט מלפפון/בצל - חלבון + ירק, על התוכנית",
+      "adherence": "full",
+      "time": "07:59"
+    },
+    {
+      "slot": "lunch",
+      "actual": "meat (sliced turkey/chicken) + roasted potatoes + large salad (cucumber, lettuce, carrot)",
+      "adherence": "full",
+      "time": "13:19"
+    },
+    {
+      "slot": "dinner",
+      "actual": "סלמון אפוי + ירקות מאודים (18:45) + 1L מים + כוס תה",
+      "adherence": "full",
+      "time": "20:09"
+    }
+  ],
+  "workouts": [
+    {
+      "kind": "strength",
+      "actual": "Full Body כח לפי התוכנית של ליאור - 07:30-08:30, 60 דק, בית",
+      "status": "done",
+      "duration_min": 60,
+      "location": "home",
+      "time": "07:29"
+    }
+  ],
+  "supplements": [
+    {
+      "name": "pre_workout",
+      "taken": true,
+      "time": "07:10"
+    },
+    {
+      "name": "espresso",
+      "taken": true,
+      "time": "07:10"
+    },
+    {
+      "name": "hydration_3cups",
+      "taken": true,
+      "time": "07:59"
+    },
+    {
+      "name": "fat_burn_drink",
+      "taken": true,
+      "time": "07:59"
+    },
+    {
+      "name": "magnesium",
+      "taken": true,
+      "time": "22:06"
+    }
+  ],
+  "water_ml": 2250,
+  "water_target_ml": 2500
 }

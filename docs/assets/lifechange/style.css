@@ -42,3 +42,10 @@
 .shopping-cat { margin: 1.5rem 0; }
 .shopping-items { list-style: none; padding: 0; columns: 2; }
 .shopping-items li { break-inside: avoid; padding: 0.2rem 0; }
+
+.today-section { margin-top: 1.5rem; padding: 1rem; border: 1px solid #e0e0e0; border-radius: 8px; background: #fafafa; }
+.today-section h2 { margin: 0 0 0.75rem; font-size: 1.1rem; color: #333; }
+.today-list { list-style: none; padding: 0; margin: 0; }
+.today-list li { padding: 0.5rem 0; border-bottom: 1px solid #eee; }
+.today-list li:last-child { border-bottom: none; }
+.today-list small { color: #666; }

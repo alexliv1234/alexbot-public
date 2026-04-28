@@ -1,67 +1,262 @@
 {
   "version": 1,
-  "phase": { "n": 1, "start": "2026-04-24", "end": "2026-05-08", "next_review": "2026-05-08", "coach": "Lior Amran", "coach_phone": "+972544998647" },
+  "phase": {
+    "n": 1,
+    "start": "2026-04-24",
+    "end": "2026-05-08",
+    "next_review": "2026-05-08",
+    "coach": "Lior Amran",
+    "coach_phone": "+972544998647"
+  },
   "meals": {
-    "breakfast": { "time": "10:00", "with": ["D3/K2"], "options": [
-      { "label": "Eggs + avocado + bread + salad", "items": ["3 eggs", "½ avocado or 1 tbsp olive oil", "1 slice whole-grain/sourdough bread", "vegetable salad"] }
-    ] },
-    "lunch": { "time": "13:00", "pre_warn": "12:30", "options": [
-      { "label": "Chicken + carb + veg + salad", "items": ["180-200g chicken breast / thighs / fillet steak", "1 cup cooked rice / potato / sweet potato / 4-6 rice crackers", "pickled cauliflower / green beans", "large salad + 1 tbsp olive oil"] },
-      { "label": "Option 2", "items": ["180-200g chicken breast / thighs / fillet steak", "1 cup cooked rice / potato / sweet potato", "pickled cauliflower / green beans", "large salad + 1 tbsp olive oil"] },
-      { "label": "Option 3", "items": ["180-200g chicken breast / thighs / fillet steak", "1 cup cooked rice / potato / sweet potato", "pickled cauliflower / green beans", "large salad + 1 tbsp olive oil"] }
-    ] },
-    "snack": { "time": "16:30", "options": [
-      { "label": "Goat yogurt + protein + fruit", "items": ["goat yogurt protein", "1 tbsp plant protein powder", "apple / banana / berries"] }
-    ] },
-    "dinner": { "time": "18:00", "pre_warn": "17:45", "must_finish_by": "19:00", "options": [
-      { "label": "Fish + veg + fats", "items": ["fish: sea bass / denis / salmon", "steamed veg (broccoli / cabbage / cauliflower) OR raw salad with ½ beet", "1 tbsp olive oil OR 2 tsp tahini"] }
-    ] },
+    "breakfast": {
+      "time": "09:30 (Sun-Thu) / 10:00 (Fri-Sat)",
+      "with": [
+        "D3/K2"
+      ],
+      "options": [
+        {
+          "label": "Eggs + avocado + bread + salad",
+          "items": [
+            "3 eggs",
+            "½ avocado or 1 tbsp olive oil",
+            "1 slice whole-grain/sourdough bread",
+            "vegetable salad"
+          ]
+        }
+      ],
+      "weekday_time": "09:30",
+      "weekend_time": "10:00",
+      "note": "Moved 30min earlier on weekdays to avoid morning standup clash."
+    },
+    "lunch": {
+      "time": "13:00",
+      "pre_warn": "12:30",
+      "options": [
+        {
+          "label": "Chicken + carb + veg + salad",
+          "items": [
+            "180-200g chicken breast / thighs / fillet steak",
+            "1 cup cooked rice / potato / sweet potato / 4-6 rice crackers",
+            "pickled cauliflower / green beans",
+            "large salad + 1 tbsp olive oil"
+          ]
+        },
+        {
+          "label": "Option 2",
+          "items": [
+            "180-200g chicken breast / thighs / fillet steak",
+            "1 cup cooked rice / potato / sweet potato",
+            "pickled cauliflower / green beans",
+            "large salad + 1 tbsp olive oil"
+          ]
+        },
+        {
+          "label": "Option 3",
+          "items": [
+            "180-200g chicken breast / thighs / fillet steak",
+            "1 cup cooked rice / potato / sweet potato",
+            "pickled cauliflower / green beans",
+            "large salad + 1 tbsp olive oil"
+          ]
+        }
+      ]
+    },
+    "snack": {
+      "time": "16:30",
+      "options": [
+        {
+          "label": "Goat yogurt + protein + fruit",
+          "items": [
+            "goat yogurt protein",
+            "1 tbsp plant protein powder",
+            "apple / banana / berries"
+          ]
+        }
+      ]
+    },
+    "dinner": {
+      "time": "18:00",
+      "pre_warn": "17:45",
+      "must_finish_by": "19:00",
+      "options": [
+        {
+          "label": "Fish + veg + fats",
+          "items": [
+            "fish: sea bass / denis / salmon",
+            "steamed veg (broccoli / cabbage / cauliflower) OR raw salad with ½ beet",
+            "1 tbsp olive oil OR 2 tsp tahini"
+          ]
+        }
+      ]
+    },
     "post_dinner_allowed": "low-carb munchies (nuts, cheese, olives, veg) if hungry"
   },
   "workouts": {
-    "daily": { "jumping_jacks": "100-200", "steps_min": 10000, "steps_target": 12000 },
+    "daily": {
+      "jumping_jacks": "100-200",
+      "steps_min": 10000,
+      "steps_target": 12000
+    },
     "schedule": {
-      "sun": { "kind": "strength", "time": "07:30", "program": "full-body phase 1" },
-      "mon": { "kind": "hiit", "time": "07:30", "program": "15min intervals", "walks_with_ron": "08:15" },
-      "tue": { "kind": "strength", "time": "07:30", "program": "full-body phase 1" },
-      "wed": { "kind": "hiit", "time": "07:30", "program": "15min intervals", "walks_with_ron": "08:15" },
-      "thu": { "kind": "strength", "time": "07:30", "program": "full-body phase 1" },
-      "fri": { "kind": "tabata", "time": "08:30", "program": "4min tabata", "flexible": true },
-      "sat": { "kind": "tabata", "time": "08:30", "program": "4min tabata", "flexible": true }
+      "sun": {
+        "kind": "strength",
+        "time": "07:30",
+        "program": "full-body phase 1"
+      },
+      "mon": {
+        "kind": "hiit",
+        "time": "07:30",
+        "program": "15min intervals",
+        "walks_with_ron": "08:15"
+      },
+      "tue": {
+        "kind": "strength",
+        "time": "07:30",
+        "program": "full-body phase 1"
+      },
+      "wed": {
+        "kind": "hiit",
+        "time": "07:30",
+        "program": "15min intervals",
+        "walks_with_ron": "08:15"
+      },
+      "thu": {
+        "kind": "strength",
+        "time": "07:30",
+        "program": "full-body phase 1"
+      },
+      "fri": {
+        "kind": "tabata",
+        "time": "08:30",
+        "program": "4min tabata",
+        "flexible": true
+      },
+      "sat": {
+        "kind": "tabata",
+        "time": "08:30",
+        "program": "4min tabata",
+        "flexible": true
+      }
     },
     "strength_full_body": {
       "warmup": "stick pass-over 3x10",
       "exercises": [
-        { "name": "Push-ups (knees on floor, nose to floor)", "sets": "1-2", "reps": "12-15", "rest_min": 1 },
-        { "name": "Squat bodyweight / dumbbells", "sets": "1-2", "reps": "12-15", "rest_min": 1 },
-        { "name": "Hamstring curls on fitball", "sets": 1, "reps": "12-15", "rest_min": 1 },
-        { "name": "Pull-up hang hold", "sets": 1, "reps": "2 min", "rest_min": 1 },
-        { "name": "Dumbbell row", "sets": 1, "reps": "12-15", "rest_min": 1 },
-        { "name": "Lateral raise", "sets": 1, "reps": "12-15", "rest_min": 1 },
-        { "name": "Dips on chair/machine", "sets": 2, "reps": "12-15", "rest_min": 1 },
-        { "name": "Static abs lying", "sets": 1, "reps": "60 sec / side", "rest_min": 1 },
-        { "name": "Static oblique abs with twist", "sets": 1, "reps": "10 / side", "rest_min": 1 }
+        {
+          "name": "Push-ups (knees on floor, nose to floor)",
+          "sets": "1-2",
+          "reps": "12-15",
+          "rest_min": 1
+        },
+        {
+          "name": "Squat bodyweight / dumbbells",
+          "sets": "1-2",
+          "reps": "12-15",
+          "rest_min": 1
+        },
+        {
+          "name": "Hamstring curls on fitball",
+          "sets": 1,
+          "reps": "12-15",
+          "rest_min": 1
+        },
+        {
+          "name": "Pull-up hang hold",
+          "sets": 1,
+          "reps": "2 min",
+          "rest_min": 1
+        },
+        {
+          "name": "Dumbbell row",
+          "sets": 1,
+          "reps": "12-15",
+          "rest_min": 1
+        },
+        {
+          "name": "Lateral raise",
+          "sets": 1,
+          "reps": "12-15",
+          "rest_min": 1
+        },
+        {
+          "name": "Dips on chair/machine",
+          "sets": 2,
+          "reps": "12-15",
+          "rest_min": 1
+        },
+        {
+          "name": "Static abs lying",
+          "sets": 1,
+          "reps": "60 sec / side",
+          "rest_min": 1
+        },
+        {
+          "name": "Static oblique abs with twist",
+          "sets": 1,
+          "reps": "10 / side",
+          "rest_min": 1
+        }
       ],
       "tempo": "2 sec down / 3 sec up, squeeze on each rep"
     },
     "hiit": "10 sec ski/bike at high intensity + 2 min moderate rest, 7 rounds or until exhausted, then 10 min easy walk cooldown"
   },
   "supplements": [
-    { "name": "D3/K2", "time": "10:00", "with_meal": "breakfast" },
-    { "name": "Omega 3", "time": "19:10", "dose": "2 caps", "with_meal": "dinner" },
-    { "name": "Minerals", "time": "19:10", "dose": "1 tablet", "with_meal": "dinner" },
-    { "name": "Magnesium", "time": "22:00", "dose": "2 caps", "note": "before sleep with water" },
-    { "name": "Pre-workout", "time_offset": "-30min before strength", "dose": "½ scoop", "note": "start with ¼ scoop for 3 days", "days": ["sun","mon","tue","wed","thu"] }
+    {
+      "name": "D3/K2",
+      "time": "10:00",
+      "with_meal": "breakfast"
+    },
+    {
+      "name": "Omega 3",
+      "time": "19:10",
+      "dose": "2 caps",
+      "with_meal": "dinner"
+    },
+    {
+      "name": "Minerals",
+      "time": "19:10",
+      "dose": "1 tablet",
+      "with_meal": "dinner"
+    },
+    {
+      "name": "Magnesium",
+      "time": "22:00",
+      "dose": "2 caps",
+      "note": "before sleep with water"
+    },
+    {
+      "name": "Pre-workout",
+      "time_offset": "-30min before strength",
+      "dose": "½ scoop",
+      "note": "start with ¼ scoop for 3 days",
+      "days": [
+        "sun",
+        "mon",
+        "tue",
+        "wed",
+        "thu"
+      ]
+    }
   ],
   "hydration": {
     "wake": "3 cups water",
     "daily_target_liters": 2.5,
-    "fat_burn_drink": { "when": "after wake, 3-4x/week", "recipe": "½ lemon or 1 tsp apple cider vinegar + ¼ tsp ginger powder in 1 cup warm water" },
+    "fat_burn_drink": {
+      "when": "after wake, 3-4x/week",
+      "recipe": "½ lemon or 1 tsp apple cider vinegar + ¼ tsp ginger powder in 1 cup warm water"
+    },
     "green_tea": "between meals, optional",
     "chamomile": "19:00, 4h before bed, empty stomach"
   },
-  "sleep": { "target": "23:00", "screen_off": "22:30" },
-  "wake": { "weekdays": "06:30", "weekends": "08:00" },
+  "sleep": {
+    "target": "23:00",
+    "screen_off": "22:30"
+  },
+  "wake": {
+    "weekdays": "06:30",
+    "weekends": "08:00"
+  },
   "rules_10_commandments": [
     "Lifestyle not diet — this is life creation",
     "Be organized — it shapes your nutrition",

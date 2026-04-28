@@ -1,1 +1,148 @@
-[]
+[
+  {
+    "date": "2026-04-25",
+    "ts": "2026-04-25T10:23:53+03:00",
+    "type": "meal",
+    "slot": "breakfast",
+    "planned": "3 eggs + ½ avocado or 1 tbsp olive oil + 1 slice whole-grain/sourdough bread + vegetable salad",
+    "actual": "3 ביצים, סלט מלפפונים+בצל ירוק+חומץ+כפית שמן זית, 3 כוסות מים",
+    "adherence": "full"
+  },
+  {
+    "date": "2026-04-25",
+    "ts": "2026-04-25T12:31:43+03:00",
+    "type": "meal",
+    "slot": "snack",
+    "planned": "goat yogurt protein + 1 tbsp plant protein powder + apple / banana / berries",
+    "actual": "פחית רדבול במקום קפה (לא על התכנית)",
+    "adherence": "partial"
+  },
+  {
+    "date": "2026-04-25",
+    "ts": "2026-04-25T12:35:27+03:00",
+    "type": "meal",
+    "slot": "snack",
+    "planned": "goat yogurt protein + 1 tbsp plant protein powder + apple / banana / berries",
+    "actual": "תיקון: רדבול ללא סוכר (sugar-free), במקום קפה",
+    "adherence": "partial"
+  },
+  {
+    "date": "2026-04-25",
+    "ts": "2026-04-25T13:27:26+03:00",
+    "type": "meal",
+    "slot": "lunch",
+    "planned": "180-200g chicken breast / thighs / fillet steak + 1 cup cooked rice / potato / sweet potato / 4-6 rice crackers + pickled cauliflower / green beans + large salad + 1 tbsp olive oil",
+    "actual": "סלט גדול (חסה, מלפפון, תירס בייבי, בצל ירוק, כרוב), בשר מעושן, נקניקייה, עוף, 2-3 פרוסות תפוח אדמה אפוי, סלק, חמוצים (פלפל צהוב חריף)",
+    "adherence": "full"
+  },
+  {
+    "date": "2026-04-25",
+    "ts": "2026-04-25T22:38:42+03:00",
+    "type": "meal",
+    "slot": "dinner",
+    "planned": "fish: sea bass / denis / salmon + steamed veg (broccoli / cabbage / cauliflower) OR raw salad with ½ beet + 1 tbsp olive oil OR 2 tsp tahini",
+    "actual": "קערת פול מבושל",
+    "adherence": "partial",
+    "note": "חלבון צמחי במקום דג, ללא ירק/שומן מוגדר"
+  },
+  {
+    "date": "2026-04-26",
+    "ts": "2026-04-26T11:00:59+03:00",
+    "type": "meal",
+    "slot": "breakfast",
+    "planned": "3 eggs + ½ avocado or 1 tbsp olive oil + 1 slice whole-grain/sourdough bread + vegetable salad",
+    "actual": "3 ביצים + סלט קטן (מלפפון, בצל, לימון, מלח) עם כף שמן זית. ללא לחם. מים: ~5 כוסות עד 11:00",
+    "adherence": "full",
+    "note": "updated 11:10 — added forgotten olive oil; bread still missing"
+  },
+  {
+    "date": "2026-04-26",
+    "ts": "2026-04-26T14:54:48+03:00",
+    "type": "meal",
+    "slot": "lunch",
+    "planned": "180-200g chicken breast / thighs / fillet steak + 1 cup cooked rice / potato / sweet potato / 4-6 rice crackers + pickled cauliflower / green beans + large salad + 1 tbsp olive oil",
+    "actual": "3 שיפודי פרגית ברוטב צ׳ילי + 2 פרוסות לחם + סלט גדול (מלפפון, גזר, חסה, בצל) עם לימון ושמן זית. תה ירוק. מים: +3 כוסות (סה״כ ~8 היום)",
+    "adherence": "full"
+  },
+  {
+    "date": "2026-04-26",
+    "ts": "2026-04-26T22:56:27+03:00",
+    "type": "meal",
+    "slot": "snack",
+    "planned": "goat yogurt protein + 1 tbsp plant protein powder + apple / banana / berries",
+    "actual": "כוס מים + בקבוק מים 750ml + 20 גרם יוגורט עזים + חצי כוס פול מבושל (22:55, מאוחר)",
+    "adherence": "partial"
+  },
+  {
+    "date": "2026-04-26",
+    "ts": "2026-04-26T22:57:28+03:00",
+    "type": "meal",
+    "slot": "dinner",
+    "planned": "fish: sea bass / denis / salmon + steamed veg (broccoli / cabbage / cauliflower) OR raw salad with ½ beet + 1 tbsp olive oil OR 2 tsp tahini",
+    "actual": "דילג",
+    "adherence": "full"
+  },
+  {
+    "date": "2026-04-27",
+    "ts": "2026-04-27T10:18:43+03:00",
+    "type": "meal",
+    "slot": "breakfast",
+    "planned": "3 eggs + ½ avocado or 1 tbsp olive oil + 1 slice whole-grain/sourdough bread + vegetable salad",
+    "actual": "סלט עם לימון ושמן זית + 2 פרוסות לחם (ללא ביצים, ללא אבוקדו)",
+    "adherence": "partial"
+  },
+  {
+    "date": "2026-04-27",
+    "ts": "2026-04-27T14:10:07+03:00",
+    "type": "meal",
+    "slot": "lunch",
+    "planned": "180-200g chicken breast / thighs / fillet steak + 1 cup cooked rice / potato / sweet potato / 4-6 rice crackers + pickled cauliflower / green beans + large salad + 1 tbsp olive oil",
+    "actual": "חזה עוף בשום וזיתים + תפו״א צלוי + סלט כרוב/חסה/גזר",
+    "adherence": "full"
+  },
+  {
+    "date": "2026-04-27",
+    "ts": "2026-04-27T16:55:51+03:00",
+    "type": "meal",
+    "slot": "snack",
+    "planned": "goat yogurt protein + 1 tbsp plant protein powder + apple / banana / berries",
+    "actual": "20 קבוקים (בוטנים בקליפה)",
+    "adherence": "full"
+  },
+  {
+    "date": "2026-04-27",
+    "ts": "2026-04-27T19:19:52+03:00",
+    "type": "meal",
+    "slot": "dinner",
+    "planned": "fish: sea bass / denis / salmon + steamed veg (broccoli / cabbage / cauliflower) OR raw salad with ½ beet + 1 tbsp olive oil OR 2 tsp tahini",
+    "actual": "salmon (2 fillets, baked with herbs) + steamed broccoli/cauliflower/green beans + pickled cucumbers + pickled turmeric cauliflower + green onion. Photo: /home/alexliv/.openclaw/media/inbound/1a7df6cc-7aa2-43eb-8d99-31ab26b1669b.jpg",
+    "adherence": "full"
+  },
+  {
+    "date": "2026-04-28",
+    "ts": "2026-04-28T07:59:48+03:00",
+    "type": "meal",
+    "slot": "breakfast",
+    "planned": "3 eggs + ½ avocado or 1 tbsp olive oil + 1 slice whole-grain/sourdough bread + vegetable salad",
+    "actual": "ביצים קשות + סלט מלפפון/בצל - חלבון + ירק, על התוכנית",
+    "adherence": "full"
+  },
+  {
+    "date": "2026-04-28",
+    "ts": "2026-04-28T13:19:15+03:00",
+    "type": "meal",
+    "slot": "lunch",
+    "planned": "180-200g chicken breast / thighs / fillet steak + 1 cup cooked rice / potato / sweet potato / 4-6 rice crackers + pickled cauliflower / green beans + large salad + 1 tbsp olive oil",
+    "actual": "meat (sliced turkey/chicken) + roasted potatoes + large salad (cucumber, lettuce, carrot)",
+    "adherence": "full"
+  },
+  {
+    "date": "2026-04-28",
+    "ts": "2026-04-28T20:09:01+03:00",
+    "type": "meal",
+    "slot": "dinner",
+    "planned": "fish: sea bass / denis / salmon + steamed veg (broccoli / cabbage / cauliflower) OR raw salad with ½ beet + 1 tbsp olive oil OR 2 tsp tahini",
+    "actual": "סלמון אפוי + ירקות מאודים (18:45) + 1L מים + כוס תה",
+    "adherence": "full"
+  }
+]
