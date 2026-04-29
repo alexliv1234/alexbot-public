@@ -1,10 +1,23 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-04-29T05:00:21",
-  "meals": [],
+  "as_of": "2026-04-29T08:00:06",
+  "meals": [
+    {
+      "slot": "breakfast",
+      "actual": "ביצים קשובות קצוצות + סלט מלפפונים ובצל ירוק",
+      "adherence": "full",
+      "time": "07:35"
+    }
+  ],
   "workouts": [],
-  "supplements": [],
+  "supplements": [
+    {
+      "name": "morning_hydration",
+      "taken": true,
+      "time": "06:54"
+    }
+  ],
   "water_ml": 0,
   "water_target_ml": 2500
 }

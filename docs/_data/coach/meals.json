@@ -144,5 +144,14 @@
     "planned": "fish: sea bass / denis / salmon + steamed veg (broccoli / cabbage / cauliflower) OR raw salad with ½ beet + 1 tbsp olive oil OR 2 tsp tahini",
     "actual": "סלמון אפוי + ירקות מאודים (18:45) + 1L מים + כוס תה",
     "adherence": "full"
+  },
+  {
+    "date": "2026-04-29",
+    "ts": "2026-04-29T07:35:03+03:00",
+    "type": "meal",
+    "slot": "breakfast",
+    "planned": "3 eggs + ½ avocado or 1 tbsp olive oil + 1 slice whole-grain/sourdough bread + vegetable salad",
+    "actual": "ביצים קשובות קצוצות + סלט מלפפונים ובצל ירוק",
+    "adherence": "full"
   }
 ]
