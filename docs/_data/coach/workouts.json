@@ -43,5 +43,13 @@
     "actual_status": "done",
     "duration_min": 60,
     "location": "home"
+  },
+  {
+    "date": "2026-04-29",
+    "ts": "2026-04-29T08:17:39+03:00",
+    "type": "workout",
+    "kind": "hiit",
+    "actual": "אימון HIIT הושלם",
+    "actual_status": "done"
   }
 ]
