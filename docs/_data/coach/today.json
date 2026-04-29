@@ -1,7 +1,7 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-04-29T17:00:15",
+  "as_of": "2026-04-29T20:01:57",
   "meals": [
     {
       "slot": "breakfast",
@@ -14,6 +14,18 @@
       "actual": "3 קבבים (~180-200g חלבון), 2 פרוסות לחם כהה (פחמימה), סלט חסה+מלפפון+אבוקדו עם שמן זית",
       "adherence": "full",
       "time": "13:03"
+    },
+    {
+      "slot": "breakfast",
+      "actual": "שני ביצים",
+      "adherence": "full",
+      "time": "17:04"
+    },
+    {
+      "slot": "dinner",
+      "actual": "פוקה סלמון נא + צנונית + בצל סגול + כרוב כבוש + אצות + בצל מטוגן + רוטב טחינה/יוגורט בצד",
+      "adherence": "full",
+      "time": "18:49"
     }
   ],
   "workouts": [

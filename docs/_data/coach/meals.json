@@ -162,5 +162,23 @@
     "planned": "180-200g chicken breast / thighs / fillet steak + 1 cup cooked rice / potato / sweet potato / 4-6 rice crackers + pickled cauliflower / green beans + large salad + 1 tbsp olive oil",
     "actual": "3 קבבים (~180-200g חלבון), 2 פרוסות לחם כהה (פחמימה), סלט חסה+מלפפון+אבוקדו עם שמן זית",
     "adherence": "full"
+  },
+  {
+    "date": "2026-04-29",
+    "ts": "2026-04-29T17:04:58+03:00",
+    "type": "meal",
+    "slot": "breakfast",
+    "planned": "3 eggs + ½ avocado or 1 tbsp olive oil + 1 slice whole-grain/sourdough bread + vegetable salad",
+    "actual": "שני ביצים",
+    "adherence": "full"
+  },
+  {
+    "date": "2026-04-29",
+    "ts": "2026-04-29T18:49:59+03:00",
+    "type": "meal",
+    "slot": "dinner",
+    "planned": "fish: sea bass / denis / salmon + steamed veg (broccoli / cabbage / cauliflower) OR raw salad with ½ beet + 1 tbsp olive oil OR 2 tsp tahini",
+    "actual": "פוקה סלמון נא + צנונית + בצל סגול + כרוב כבוש + אצות + בצל מטוגן + רוטב טחינה/יוגורט בצד",
+    "adherence": "full"
   }
 ]
