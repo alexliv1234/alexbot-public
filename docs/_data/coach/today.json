@@ -1,55 +1,23 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-04-29T20:02:13",
+  "as_of": "2026-04-30T05:00:17",
   "meals": [
     {
-      "slot": "breakfast",
-      "actual": "ביצים קשובות קצוצות + סלט מלפפונים ובצל ירוק",
+      "slot": "hydration",
+      "actual": "שתיתי תה ובקבוק ליטר ופחית ספרייט זירו",
       "adherence": "full",
-      "time": "07:35"
-    },
-    {
-      "slot": "lunch",
-      "actual": "3 קבבים (~180-200g חלבון), 2 פרוסות לחם כהה (פחמימה), סלט חסה+מלפפון+אבוקדו עם שמן זית",
-      "adherence": "full",
-      "time": "13:03"
-    },
-    {
-      "slot": "breakfast",
-      "actual": "שני ביצים",
-      "adherence": "full",
-      "time": "17:04"
-    },
-    {
-      "slot": "dinner",
-      "actual": "פוקה סלמון נא + צנונית + בצל סגול + כרוב כבוש + אצות + בצל מטוגן + רוטב טחינה/יוגורט בצד",
-      "adherence": "full",
-      "time": "18:49"
+      "time": "03:39"
     }
   ],
-  "workouts": [
-    {
-      "kind": "hiit",
-      "actual": "אימון HIIT הושלם",
-      "status": "done",
-      "duration_min": null,
-      "location": null,
-      "time": "08:17"
-    }
-  ],
+  "workouts": [],
   "supplements": [
     {
-      "name": "morning_hydration",
+      "name": "Magnesium",
       "taken": true,
-      "time": "06:54"
-    },
-    {
-      "name": "breakfast_vitamins",
-      "taken": true,
-      "time": "08:19"
+      "time": "03:40"
     }
   ],
-  "water_ml": 0,
+  "water_ml": 250,
   "water_target_ml": 2500
 }
