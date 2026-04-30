@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-29",
-  "timestamp": "2026-04-29T17:02Z",
+  "lastUpdated": "2026-04-30",
+  "timestamp": "2026-04-30T02:00Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -12,7 +12,7 @@
     "name": "לומדים עם אלכס הבוט",
     "guides": 17,
     "categories": 6,
-    "dailySummaries": 54,
+    "dailySummaries": 55,
     "qaExchanges": 3
   },
   "intlPlaying": {
@@ -23,7 +23,7 @@
   },
   "intlLearning": {
     "name": "Learning with AlexBot",
-    "tipsGenerated": 44,
+    "tipsGenerated": 45,
     "topicsCovered": 3,
     "topicsPlanned": 40,
     "deliveryFailures": 1
@@ -53,9 +53,9 @@
     }
   ],
   "guideOfTheDay": {
-    "num": 8,
-    "title": "Multi-Agent Architecture — The Team",
-    "slug": "08-multi-agent"
+    "num": 9,
+    "title": "Scoring System — Gamifying Everything",
+    "slug": "09-scoring-system"
   },
   "communityMilestones": [
     {
