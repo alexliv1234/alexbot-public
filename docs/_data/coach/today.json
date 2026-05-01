@@ -1,7 +1,7 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-05-01T14:00:23",
+  "as_of": "2026-05-01T20:02:13",
   "meals": [
     {
       "slot": "breakfast",
@@ -14,6 +14,12 @@
       "actual": "2 עיגולי פנקייק מלוחים - אחד עם ביצה ושני עם גבינה צהובה",
       "adherence": "full",
       "time": "08:58"
+    },
+    {
+      "slot": "lunch",
+      "actual": "מרק אדמה-טופו, סלט אטריות שעועית עם טופו וירוקים",
+      "adherence": "full",
+      "time": "16:03"
     }
   ],
   "workouts": [],
