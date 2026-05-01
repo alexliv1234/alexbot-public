@@ -198,5 +198,14 @@
     "planned": "fish: sea bass / denis / salmon + steamed veg (broccoli / cabbage / cauliflower) OR raw salad with ½ beet + 1 tbsp olive oil OR 2 tsp tahini",
     "actual": "דג עם סלט",
     "adherence": "full"
+  },
+  {
+    "date": "2026-05-01",
+    "ts": "2026-05-01T08:03:26+03:00",
+    "type": "meal",
+    "slot": "breakfast",
+    "planned": "3 eggs + ½ avocado or 1 tbsp olive oil + 1 slice whole-grain/sourdough bread + vegetable salad",
+    "actual": "3 eggs only — no avocado/oil, no bread, no salad. Pre-breakfast: 3 cups water + 1 cup warm water with apple cider vinegar (fat-burn drink).",
+    "adherence": "partial"
   }
 ]
