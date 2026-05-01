@@ -1,38 +1,10 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-04-30T20:01:27",
-  "meals": [
-    {
-      "slot": "hydration",
-      "actual": "שתיתי תה ובקבוק ליטר ופחית ספרייט זירו",
-      "adherence": "full",
-      "time": "03:39"
-    }
-  ],
+  "as_of": "2026-05-01T05:00:14",
+  "meals": [],
   "workouts": [],
-  "supplements": [
-    {
-      "name": "Magnesium",
-      "taken": true,
-      "time": "03:40"
-    },
-    {
-      "name": "morning_water",
-      "taken": true,
-      "time": "08:03"
-    },
-    {
-      "name": "fat_burner_drink",
-      "taken": true,
-      "time": "08:03"
-    },
-    {
-      "name": "pre_workout",
-      "taken": true,
-      "time": "08:10"
-    }
-  ],
-  "water_ml": 250,
+  "supplements": [],
+  "water_ml": 0,
   "water_target_ml": 2500
 }

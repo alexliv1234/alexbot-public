@@ -51,5 +51,14 @@
     "kind": "hiit",
     "actual": "אימון HIIT הושלם",
     "actual_status": "done"
+  },
+  {
+    "date": "2026-04-30",
+    "ts": "2026-04-30T22:34:50+03:00",
+    "type": "workout",
+    "kind": "hiit",
+    "actual": "30 דקות אופניים דרגה 3 (cardio steady-state, לא אינטרוולים)",
+    "actual_status": "done",
+    "duration_min": 30
   }
 ]

@@ -189,5 +189,14 @@
     "planned": "hydration target",
     "actual": "שתיתי תה ובקבוק ליטר ופחית ספרייט זירו",
     "adherence": "full"
+  },
+  {
+    "date": "2026-04-30",
+    "ts": "2026-04-30T22:34:51+03:00",
+    "type": "meal",
+    "slot": "dinner",
+    "planned": "fish: sea bass / denis / salmon + steamed veg (broccoli / cabbage / cauliflower) OR raw salad with ½ beet + 1 tbsp olive oil OR 2 tsp tahini",
+    "actual": "דג עם סלט",
+    "adherence": "full"
   }
 ]
