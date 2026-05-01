@@ -1,13 +1,19 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-05-01T08:05:06",
+  "as_of": "2026-05-01T14:00:05",
   "meals": [
     {
       "slot": "breakfast",
       "actual": "3 eggs only — no avocado/oil, no bread, no salad. Pre-breakfast: 3 cups water + 1 cup warm water with apple cider vinegar (fat-burn drink).",
       "adherence": "partial",
       "time": "08:03"
+    },
+    {
+      "slot": "breakfast",
+      "actual": "2 עיגולי פנקייק מלוחים - אחד עם ביצה ושני עם גבינה צהובה",
+      "adherence": "full",
+      "time": "08:58"
     }
   ],
   "workouts": [],

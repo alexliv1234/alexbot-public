@@ -207,5 +207,14 @@
     "planned": "3 eggs + ½ avocado or 1 tbsp olive oil + 1 slice whole-grain/sourdough bread + vegetable salad",
     "actual": "3 eggs only — no avocado/oil, no bread, no salad. Pre-breakfast: 3 cups water + 1 cup warm water with apple cider vinegar (fat-burn drink).",
     "adherence": "partial"
+  },
+  {
+    "date": "2026-05-01",
+    "ts": "2026-05-01T08:58:02+03:00",
+    "type": "meal",
+    "slot": "breakfast",
+    "planned": "3 eggs + ½ avocado or 1 tbsp olive oil + 1 slice whole-grain/sourdough bread + vegetable salad",
+    "actual": "2 עיגולי פנקייק מלוחים - אחד עם ביצה ושני עם גבינה צהובה",
+    "adherence": "full"
   }
 ]
