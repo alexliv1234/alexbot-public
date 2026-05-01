@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-30",
-  "timestamp": "2026-04-30T17:01Z",
+  "lastUpdated": "2026-05-01",
+  "timestamp": "2026-05-01T02:00Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -12,7 +12,7 @@
     "name": "לומדים עם אלכס הבוט",
     "guides": 17,
     "categories": 6,
-    "dailySummaries": 55,
+    "dailySummaries": 56,
     "qaExchanges": 3
   },
   "intlPlaying": {
@@ -23,7 +23,7 @@
   },
   "intlLearning": {
     "name": "Learning with AlexBot",
-    "tipsGenerated": 45,
+    "tipsGenerated": 46,
     "topicsCovered": 3,
     "topicsPlanned": 40,
     "deliveryFailures": 1
@@ -53,9 +53,9 @@
     }
   ],
   "guideOfTheDay": {
-    "num": 9,
-    "title": "Scoring System — Gamifying Everything",
-    "slug": "09-scoring-system"
+    "num": 10,
+    "title": "Cron Automation — 80+ Jobs That Keep AlexBot Alive",
+    "slug": "10-cron-automation"
   },
   "communityMilestones": [
     {
