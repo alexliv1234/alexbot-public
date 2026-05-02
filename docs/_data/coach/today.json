@@ -1,10 +1,34 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-05-02T08:00:05",
-  "meals": [],
+  "as_of": "2026-05-02T14:00:05",
+  "meals": [
+    {
+      "slot": "breakfast",
+      "actual": "2 eggs, salad with ½ avocado, whole-grain bagel",
+      "adherence": "full",
+      "time": "10:40"
+    },
+    {
+      "slot": "lunch",
+      "actual": "Grilled chicken leg, pickled cauliflower + green beans + beets, large salad. No carb (Saturday — protein+fats focus).",
+      "adherence": "full",
+      "time": "13:37"
+    }
+  ],
   "workouts": [],
-  "supplements": [],
+  "supplements": [
+    {
+      "name": "morning_water",
+      "taken": true,
+      "time": "10:28"
+    },
+    {
+      "name": "apple_cider_vinegar",
+      "taken": true,
+      "time": "10:28"
+    }
+  ],
   "water_ml": 0,
   "water_target_ml": 2500
 }
