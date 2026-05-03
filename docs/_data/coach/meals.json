@@ -243,5 +243,14 @@
     "planned": "180-200g chicken breast / thighs / fillet steak + 1 cup cooked rice / potato / sweet potato / 4-6 rice crackers + pickled cauliflower / green beans + large salad + 1 tbsp olive oil",
     "actual": "Grilled chicken leg, pickled cauliflower + green beans + beets, large salad. No carb (Saturday — protein+fats focus).",
     "adherence": "full"
+  },
+  {
+    "date": "2026-05-03",
+    "ts": "2026-05-03T10:29:28+03:00",
+    "type": "meal",
+    "slot": "breakfast",
+    "planned": "3 eggs + ½ avocado or 1 tbsp olive oil + 1 slice whole-grain/sourdough bread + vegetable salad",
+    "actual": "סלט עם אבוקדו, 3 ביצים, מלפפונים, בצל, מיץ לימון ומלח (ללא לחם)",
+    "adherence": "partial"
   }
 ]
