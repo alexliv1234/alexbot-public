@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-05-02",
-  "timestamp": "2026-05-02T17:02Z",
+  "lastUpdated": "2026-05-03",
+  "timestamp": "2026-05-03T02:00Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -12,7 +12,7 @@
     "name": "לומדים עם אלכס הבוט",
     "guides": 17,
     "categories": 6,
-    "dailySummaries": 57,
+    "dailySummaries": 58,
     "qaExchanges": 3
   },
   "intlPlaying": {
@@ -23,7 +23,7 @@
   },
   "intlLearning": {
     "name": "Learning with AlexBot",
-    "tipsGenerated": 47,
+    "tipsGenerated": 48,
     "topicsCovered": 3,
     "topicsPlanned": 40,
     "deliveryFailures": 1
@@ -53,9 +53,9 @@
     }
   ],
   "guideOfTheDay": {
-    "num": 11,
-    "title": "Social Engineering Patterns — The 7 Deadly Approaches",
-    "slug": "11-social-engineering-patterns"
+    "num": 12,
+    "title": "Prompt Injection Deep Dive — Encoding & Detection",
+    "slug": "12-prompt-injection-deep-dive"
   },
   "communityMilestones": [
     {
