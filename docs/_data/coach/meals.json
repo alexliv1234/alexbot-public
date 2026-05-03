@@ -252,5 +252,14 @@
     "planned": "3 eggs + ½ avocado or 1 tbsp olive oil + 1 slice whole-grain/sourdough bread + vegetable salad",
     "actual": "סלט עם אבוקדו, 3 ביצים, מלפפונים, בצל, מיץ לימון ומלח (ללא לחם)",
     "adherence": "partial"
+  },
+  {
+    "date": "2026-05-03",
+    "ts": "2026-05-03T14:08:45+03:00",
+    "type": "meal",
+    "slot": "lunch",
+    "planned": "180-200g chicken breast / thighs / fillet steak + 1 cup cooked rice / potato / sweet potato / 4-6 rice crackers + pickled cauliflower / green beans + large salad + 1 tbsp olive oil",
+    "actual": "סלט ענק (חסה, מלפפון, בצל סגול, עגבניה), חזה עוף בגריל, כרוב כבוש, צנון ורוד, פיסת לחם/לאפה",
+    "adherence": "full"
   }
 ]
