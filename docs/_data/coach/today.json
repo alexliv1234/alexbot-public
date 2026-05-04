@@ -1,10 +1,21 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-05-04T05:00:15",
+  "as_of": "2026-05-04T08:00:06",
   "meals": [],
   "workouts": [],
-  "supplements": [],
+  "supplements": [
+    {
+      "name": "water_3cups",
+      "taken": true,
+      "time": "07:31"
+    },
+    {
+      "name": "fat_burner",
+      "taken": true,
+      "time": "07:31"
+    }
+  ],
   "water_ml": 0,
   "water_target_ml": 2500
 }
