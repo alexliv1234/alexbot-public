@@ -1,8 +1,15 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-05-04T11:00:17",
-  "meals": [],
+  "as_of": "2026-05-04T14:00:06",
+  "meals": [
+    {
+      "slot": "lunch",
+      "actual": "פרגית, כוס אורז, סלט עם מיץ לימון ושמן זית",
+      "adherence": "full",
+      "time": "13:42"
+    }
+  ],
   "workouts": [],
   "supplements": [
     {

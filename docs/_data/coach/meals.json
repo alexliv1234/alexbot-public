@@ -270,5 +270,14 @@
     "planned": "fish: sea bass / denis / salmon + steamed veg (broccoli / cabbage / cauliflower) OR raw salad with ½ beet + 1 tbsp olive oil OR 2 tsp tahini",
     "actual": "אכלתי (replied to reminder: דג + ירקות מבושלים/סלט + שמן זית או טחינה)",
     "adherence": "full"
+  },
+  {
+    "date": "2026-05-04",
+    "ts": "2026-05-04T13:42:09+03:00",
+    "type": "meal",
+    "slot": "lunch",
+    "planned": "180-200g chicken breast / thighs / fillet steak + 1 cup cooked rice / potato / sweet potato / 4-6 rice crackers + pickled cauliflower / green beans + large salad + 1 tbsp olive oil",
+    "actual": "פרגית, כוס אורז, סלט עם מיץ לימון ושמן זית",
+    "adherence": "full"
   }
 ]
