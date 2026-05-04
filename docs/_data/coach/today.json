@@ -1,27 +1,8 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-05-03T20:01:54",
-  "meals": [
-    {
-      "slot": "breakfast",
-      "actual": "סלט עם אבוקדו, 3 ביצים, מלפפונים, בצל, מיץ לימון ומלח (ללא לחם)",
-      "adherence": "partial",
-      "time": "10:29"
-    },
-    {
-      "slot": "lunch",
-      "actual": "סלט ענק (חסה, מלפפון, בצל סגול, עגבניה), חזה עוף בגריל, כרוב כבוש, צנון ורוד, פיסת לחם/לאפה",
-      "adherence": "full",
-      "time": "14:08"
-    },
-    {
-      "slot": "dinner",
-      "actual": "אכלתי (replied to reminder: דג + ירקות מבושלים/סלט + שמן זית או טחינה)",
-      "adherence": "full",
-      "time": "19:02"
-    }
-  ],
+  "as_of": "2026-05-04T05:00:15",
+  "meals": [],
   "workouts": [],
   "supplements": [],
   "water_ml": 0,
