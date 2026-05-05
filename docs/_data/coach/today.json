@@ -1,28 +1,10 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-05-04T20:02:13",
-  "meals": [
-    {
-      "slot": "lunch",
-      "actual": "פרגית, כוס אורז, סלט עם מיץ לימון ושמן זית",
-      "adherence": "full",
-      "time": "13:42"
-    }
-  ],
+  "as_of": "2026-05-05T05:00:14",
+  "meals": [],
   "workouts": [],
-  "supplements": [
-    {
-      "name": "water_3cups",
-      "taken": true,
-      "time": "07:31"
-    },
-    {
-      "name": "fat_burner",
-      "taken": true,
-      "time": "07:31"
-    }
-  ],
+  "supplements": [],
   "water_ml": 0,
   "water_target_ml": 2500
 }
