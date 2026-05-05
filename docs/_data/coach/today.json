@@ -1,8 +1,15 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-05-05T08:05:06",
-  "meals": [],
+  "as_of": "2026-05-05T14:00:10",
+  "meals": [
+    {
+      "slot": "breakfast",
+      "actual": "3 ביצים, סלט (מלפפון, בצל, לימון, כף שמן זית). דילג על אבוקדו ולחם מלא",
+      "adherence": "full",
+      "time": "13:36"
+    }
+  ],
   "workouts": [
     {
       "kind": "strength",
@@ -23,6 +30,16 @@
       "name": "fat_burner_drink",
       "taken": true,
       "time": "07:43"
+    },
+    {
+      "name": "D3",
+      "taken": true,
+      "time": "13:36"
+    },
+    {
+      "name": "K2",
+      "taken": true,
+      "time": "13:36"
     }
   ],
   "water_ml": 0,
