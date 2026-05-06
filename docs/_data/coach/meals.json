@@ -297,5 +297,14 @@
     "planned": "180-200g chicken breast / thighs / fillet steak + 1 cup cooked rice / potato / sweet potato / 4-6 rice crackers + pickled cauliflower / green beans + large salad + 1 tbsp olive oil",
     "actual": "200g סטייק, בייגל, סלט עם שמן זית",
     "adherence": "full"
+  },
+  {
+    "date": "2026-05-06",
+    "ts": "2026-05-06T10:43:43+03:00",
+    "type": "meal",
+    "slot": "breakfast",
+    "planned": "3 eggs + ½ avocado or 1 tbsp olive oil + 1 slice whole-grain/sourdough bread + vegetable salad",
+    "actual": "3 ביצים, סלט, חצי אבוקדו, פרוסת לחם מלא",
+    "adherence": "partial"
   }
 ]
