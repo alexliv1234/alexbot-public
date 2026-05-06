@@ -1,13 +1,19 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-05-06T17:00:19",
+  "as_of": "2026-05-06T20:02:00",
   "meals": [
     {
       "slot": "breakfast",
       "actual": "3 ביצים, סלט, חצי אבוקדו, פרוסת לחם מלא",
       "adherence": "partial",
       "time": "10:43"
+    },
+    {
+      "slot": "lunch",
+      "actual": "200g פילה בקר + סלט ירקות + אבוקדו + פרוסת לחם",
+      "adherence": "full",
+      "time": "20:00"
     }
   ],
   "workouts": [],
@@ -16,6 +22,11 @@
       "name": "morning_hydration",
       "taken": true,
       "time": "10:43"
+    },
+    {
+      "name": "d3-k2",
+      "taken": true,
+      "time": "19:59"
     }
   ],
   "water_ml": 0,
