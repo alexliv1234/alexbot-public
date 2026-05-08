@@ -1,10 +1,28 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-05-08T08:00:07",
-  "meals": [],
+  "as_of": "2026-05-08T14:00:05",
+  "meals": [
+    {
+      "slot": "breakfast",
+      "actual": "3 eggs + half avocado + whole grain bread + salad with olive oil — full plan",
+      "adherence": "full",
+      "time": "10:18"
+    }
+  ],
   "workouts": [],
-  "supplements": [],
+  "supplements": [
+    {
+      "name": "מים",
+      "taken": true,
+      "time": "10:03"
+    },
+    {
+      "name": "משקה שריפת שומן",
+      "taken": true,
+      "time": "10:03"
+    }
+  ],
   "water_ml": 0,
   "water_target_ml": 2500
 }
