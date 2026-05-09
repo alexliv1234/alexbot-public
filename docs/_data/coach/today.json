@@ -1,34 +1,10 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-05-08T20:02:10",
-  "meals": [
-    {
-      "slot": "breakfast",
-      "actual": "3 eggs + half avocado + whole grain bread + salad with olive oil — full plan",
-      "adherence": "full",
-      "time": "10:18"
-    },
-    {
-      "slot": "lunch",
-      "actual": "צ'ופד סלט עם חזה עוף + פרוסת לחם מלא — חלבון+ירק+סלט נראה. כמות לחם פחותה מכוס פחמימה מלאה.",
-      "adherence": "partial",
-      "time": "14:32"
-    }
-  ],
+  "as_of": "2026-05-09T05:00:17",
+  "meals": [],
   "workouts": [],
-  "supplements": [
-    {
-      "name": "מים",
-      "taken": true,
-      "time": "10:03"
-    },
-    {
-      "name": "משקה שריפת שומן",
-      "taken": true,
-      "time": "10:03"
-    }
-  ],
+  "supplements": [],
   "water_ml": 0,
   "water_target_ml": 2500
 }
