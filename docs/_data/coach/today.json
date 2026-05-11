@@ -1,7 +1,7 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-05-11T17:00:15",
+  "as_of": "2026-05-11T20:01:59",
   "meals": [
     {
       "slot": "breakfast",
@@ -14,6 +14,18 @@
       "actual": "3 eggs, half avocado, whole wheat bread, salad",
       "adherence": "full",
       "time": "09:32"
+    },
+    {
+      "slot": "lunch",
+      "actual": "אכלתי צהריים מלא",
+      "adherence": "full",
+      "time": "19:13"
+    },
+    {
+      "slot": "snack",
+      "actual": "אכלתי 2 ביצים",
+      "adherence": "full",
+      "time": "19:13"
     }
   ],
   "workouts": [],
