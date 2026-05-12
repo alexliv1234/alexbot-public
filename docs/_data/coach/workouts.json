@@ -68,5 +68,13 @@
     "kind": "strength",
     "actual": "אימון כח מלא",
     "actual_status": "done"
+  },
+  {
+    "date": "2026-05-12",
+    "ts": "2026-05-12T07:56:16+03:00",
+    "type": "workout",
+    "kind": "strength",
+    "actual": "אימון כוח מלא",
+    "actual_status": "done"
   }
 ]

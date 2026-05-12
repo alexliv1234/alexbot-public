@@ -1,10 +1,25 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-05-12T05:00:16",
+  "as_of": "2026-05-12T08:00:08",
   "meals": [],
-  "workouts": [],
-  "supplements": [],
+  "workouts": [
+    {
+      "kind": "strength",
+      "actual": "אימון כוח מלא",
+      "status": "done",
+      "duration_min": null,
+      "location": null,
+      "time": "07:56"
+    }
+  ],
+  "supplements": [
+    {
+      "name": "morning_hydration",
+      "taken": true,
+      "time": "07:51"
+    }
+  ],
   "water_ml": 0,
   "water_target_ml": 2500
 }
