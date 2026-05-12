@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-05-11",
-  "timestamp": "2026-05-11T17:02Z",
+  "lastUpdated": "2026-05-12",
+  "timestamp": "2026-05-12T02:00Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -12,7 +12,7 @@
     "name": "לומדים עם אלכס הבוט",
     "guides": 17,
     "categories": 6,
-    "dailySummaries": 66,
+    "dailySummaries": 67,
     "qaExchanges": 3
   },
   "intlPlaying": {
@@ -23,7 +23,7 @@
   },
   "intlLearning": {
     "name": "Learning with AlexBot",
-    "tipsGenerated": 56,
+    "tipsGenerated": 57,
     "topicsCovered": 3,
     "topicsPlanned": 40,
     "deliveryFailures": 1
@@ -53,9 +53,9 @@
     }
   ],
   "guideOfTheDay": {
-    "num": 4,
-    "title": "File Operations — Reading, Writing, and Not Deleting",
-    "slug": "04-file-operations"
+    "num": 5,
+    "title": "Security Boundaries — What to Protect and How",
+    "slug": "05-security-boundaries"
   },
   "communityMilestones": [
     {
