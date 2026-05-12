@@ -369,5 +369,23 @@
     "planned": "goat yogurt protein + 1 tbsp plant protein powder + apple / banana / berries",
     "actual": "אכלתי 2 ביצים",
     "adherence": "full"
+  },
+  {
+    "date": "2026-05-12",
+    "ts": "2026-05-12T12:48:51+03:00",
+    "type": "meal",
+    "slot": "breakfast",
+    "planned": "3 eggs + ½ avocado or 1 tbsp olive oil + 1 slice whole-grain/sourdough bread + vegetable salad",
+    "actual": "אכלתי עם חצי אבוקדו (D3/K2 reminder response, eggs/bread not confirmed)",
+    "adherence": "partial"
+  },
+  {
+    "date": "2026-05-12",
+    "ts": "2026-05-12T12:49:30+03:00",
+    "type": "meal",
+    "slot": "breakfast",
+    "planned": "3 eggs + ½ avocado or 1 tbsp olive oil + 1 slice whole-grain/sourdough bread + vegetable salad",
+    "actual": "ביצה אחת, סלט, לחם, חצי אבוקדו (plan: 3 ביצים — partial על החלבון)",
+    "adherence": "partial"
   }
 ]
