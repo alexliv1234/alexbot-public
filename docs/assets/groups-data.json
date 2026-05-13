@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-05-12",
-  "timestamp": "2026-05-12T17:02Z",
+  "lastUpdated": "2026-05-13",
+  "timestamp": "2026-05-13T17:10Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -12,7 +12,7 @@
     "name": "לומדים עם אלכס הבוט",
     "guides": 17,
     "categories": 6,
-    "dailySummaries": 67,
+    "dailySummaries": 68,
     "qaExchanges": 3
   },
   "intlPlaying": {
@@ -23,7 +23,7 @@
   },
   "intlLearning": {
     "name": "Learning with AlexBot",
-    "tipsGenerated": 57,
+    "tipsGenerated": 58,
     "topicsCovered": 3,
     "topicsPlanned": 40,
     "deliveryFailures": 1
@@ -53,9 +53,9 @@
     }
   ],
   "guideOfTheDay": {
-    "num": 5,
-    "title": "Security Boundaries — What to Protect and How",
-    "slug": "05-security-boundaries"
+    "num": 6,
+    "title": "Tool Usage — When to Wield, When to Withhold",
+    "slug": "06-tool-usage"
   },
   "communityMilestones": [
     {
