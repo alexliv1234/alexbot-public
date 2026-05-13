@@ -1,38 +1,10 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-05-12T20:02:19",
-  "meals": [
-    {
-      "slot": "breakfast",
-      "actual": "אכלתי עם חצי אבוקדו (D3/K2 reminder response, eggs/bread not confirmed)",
-      "adherence": "partial",
-      "time": "12:48"
-    },
-    {
-      "slot": "breakfast",
-      "actual": "ביצה אחת, סלט, לחם, חצי אבוקדו (plan: 3 ביצים — partial על החלבון)",
-      "adherence": "partial",
-      "time": "12:49"
-    }
-  ],
-  "workouts": [
-    {
-      "kind": "strength",
-      "actual": "אימון כוח מלא",
-      "status": "done",
-      "duration_min": null,
-      "location": null,
-      "time": "07:56"
-    }
-  ],
-  "supplements": [
-    {
-      "name": "morning_hydration",
-      "taken": true,
-      "time": "07:51"
-    }
-  ],
+  "as_of": "2026-05-13T20:12:08",
+  "meals": [],
+  "workouts": [],
+  "supplements": [],
   "water_ml": 0,
   "water_target_ml": 2500
 }
