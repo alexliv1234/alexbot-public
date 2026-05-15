@@ -1,12 +1,17 @@
 {
   "version": 1,
   "phase": {
-    "n": 1,
-    "start": "2026-04-24",
-    "end": "2026-05-08",
-    "next_review": "2026-05-08",
+    "n": 2,
+    "start": "2026-05-15",
+    "end": "2026-06-26",
+    "duration_weeks": "4-6",
+    "next_review": "2026-06-26",
     "coach": "Lior Amran",
-    "coach_phone": "+972544998647"
+    "coach_phone": "+972544998647",
+    "program_name": "reverse pyramid",
+    "source_pdf": "תוכנית_בסיס_שלב_2_מקוצר-פירמידה_הפוכה",
+    "received_at": "2026-05-15T07:20:00+03:00",
+    "previous_phase_backup": "plan-phase-1.json"
   },
   "meals": {
     "breakfast": {
@@ -102,7 +107,7 @@
       "sun": {
         "kind": "strength",
         "time": "07:30",
-        "program": "full-body phase 1"
+        "program": "reverse pyramid phase 2"
       },
       "mon": {
         "kind": "hiit",
@@ -113,7 +118,7 @@
       "tue": {
         "kind": "strength",
         "time": "07:30",
-        "program": "full-body phase 1"
+        "program": "reverse pyramid phase 2"
       },
       "wed": {
         "kind": "hiit",
@@ -124,7 +129,7 @@
       "thu": {
         "kind": "strength",
         "time": "07:30",
-        "program": "full-body phase 1"
+        "program": "reverse pyramid phase 2"
       },
       "fri": {
         "kind": "tabata",
@@ -140,66 +145,94 @@
       }
     },
     "strength_full_body": {
-      "warmup": "stick pass-over 3x10",
+      "warmup": "500 leg switches / jump rope",
+      "session_duration_min": "45-75",
       "exercises": [
         {
-          "name": "Push-ups (knees on floor, nose to floor)",
-          "sets": "1-2",
-          "reps": "12-15",
-          "rest_min": 1
-        },
-        {
-          "name": "Squat bodyweight / dumbbells",
-          "sets": "1-2",
-          "reps": "12-15",
-          "rest_min": 1
-        },
-        {
-          "name": "Hamstring curls on fitball",
+          "name": "Chest press — dumbbells / bar / machine",
           "sets": 1,
-          "reps": "12-15",
-          "rest_min": 1
+          "reps": "6,8 + drop set",
+          "rest_min": "1-2",
+          "drop_set": true
         },
         {
-          "name": "Pull-up hang hold",
-          "sets": 1,
-          "reps": "2 min",
-          "rest_min": 1
-        },
-        {
-          "name": "Dumbbell row",
-          "sets": 1,
-          "reps": "12-15",
-          "rest_min": 1
-        },
-        {
-          "name": "Lateral raise",
-          "sets": 1,
-          "reps": "12-15",
-          "rest_min": 1
-        },
-        {
-          "name": "Dips on chair/machine",
+          "name": "Fly with dumbbells on mat (superset with next)",
           "sets": 2,
-          "reps": "12-15",
+          "reps": "8-10",
+          "rest_min": "1-2",
+          "superset_with_next": true
+        },
+        {
+          "name": "Horizontal raise with dumbbells",
+          "sets": 2,
+          "reps": "8-10",
+          "rest_min": "1-2"
+        },
+        {
+          "name": "Pullover with dumbbells / upper pulley",
+          "sets": 2,
+          "reps": "6,8 + drop set",
+          "rest_min": "1-2",
+          "drop_set": true
+        },
+        {
+          "name": "Row against bar / upper pulley / pull-up",
+          "sets": 2,
+          "reps": "6,8 + drop set",
+          "rest_min": "1-2",
+          "drop_set": true
+        },
+        {
+          "name": "Standing shoulder press",
+          "sets": 2,
+          "reps": "6,8 + drop set",
+          "rest_min": 1,
+          "drop_set": true
+        },
+        {
+          "name": "Lunges",
+          "sets": 2,
+          "reps": "6,8 + drop set",
+          "rest_min": 1,
+          "drop_set": true
+        },
+        {
+          "name": "Deadlift",
+          "sets": 2,
+          "reps": "8-10",
           "rest_min": 1
         },
         {
-          "name": "Static abs lying",
+          "name": "Calves (superset with next)",
           "sets": 1,
-          "reps": "60 sec / side",
+          "reps": "8-10",
+          "rest_min": 1,
+          "superset_with_next": true
+        },
+        {
+          "name": "Traps shrugs with dumbbells",
+          "sets": 1,
+          "reps": "8-10",
           "rest_min": 1
         },
         {
-          "name": "Static oblique abs with twist",
-          "sets": 1,
-          "reps": "10 / side",
-          "rest_min": 1
+          "name": "Ab wheel (against wall)",
+          "sets": 2,
+          "reps": "5-7",
+          "rest_min": 1,
+          "note": "round back hard throughout"
         }
       ],
-      "tempo": "2 sec down / 3 sec up, squeeze on each rep"
+      "cooldown": "5-10 min stretching",
+      "tempo": "3 sec eccentric / 2 sec concentric, reach failure each set",
+      "drop_set_rule": "After 2nd set wait 5 sec, do another set with less weight — first 5 exercises only",
+      "load_progression": "+7-10% weekly on working weights",
+      "load_target": "1.2x bodyweight on deadlift / squat / chest press at 8-10 reps",
+      "duration_weeks": "4-6 only — then reassess",
+      "schedule_note": "Every other day (Sun/Tue/Thu)"
     },
-    "hiit": "10 sec ski/bike at high intensity + 2 min moderate rest, 7 rounds or until exhausted, then 10 min easy walk cooldown"
+    "hiit": "Mon/Wed: 15 min — 10 sec sprint or heavy-bag punching at high intensity, then 1.5 min easy (slow walk / light bag work). Repeat for full 15 min.",
+    "tabata": "Fri/Sat: 4 min tabata. No full rest day."
   },
   "supplements": [
     {
