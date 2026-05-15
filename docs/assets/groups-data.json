@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-05-14",
-  "timestamp": "2026-05-14T17:03Z",
+  "lastUpdated": "2026-05-15",
+  "timestamp": "2026-05-15T02:00Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -12,7 +12,7 @@
     "name": "לומדים עם אלכס הבוט",
     "guides": 17,
     "categories": 6,
-    "dailySummaries": 69,
+    "dailySummaries": 70,
     "qaExchanges": 3
   },
   "intlPlaying": {
@@ -23,7 +23,7 @@
   },
   "intlLearning": {
     "name": "Learning with AlexBot",
-    "tipsGenerated": 59,
+    "tipsGenerated": 60,
     "topicsCovered": 3,
     "topicsPlanned": 40,
     "deliveryFailures": 1
@@ -53,9 +53,9 @@
     }
   ],
   "guideOfTheDay": {
-    "num": 7,
-    "title": "Memory System — The 5-Layer Architecture",
-    "slug": "07-memory-system"
+    "num": 8,
+    "title": "Multi-Agent Architecture — The Team",
+    "slug": "08-multi-agent"
   },
   "communityMilestones": [
     {
