@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-05-17",
-  "timestamp": "2026-05-17T17:01Z",
+  "lastUpdated": "2026-05-18",
+  "timestamp": "2026-05-18T02:00Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -12,7 +12,7 @@
     "name": "לומדים עם אלכס הבוט",
     "guides": 17,
     "categories": 6,
-    "dailySummaries": 72,
+    "dailySummaries": 73,
     "qaExchanges": 3
   },
   "intlPlaying": {
@@ -23,10 +23,10 @@
   },
   "intlLearning": {
     "name": "Learning with AlexBot",
-    "tipsGenerated": 62,
+    "tipsGenerated": 63,
     "topicsCovered": 3,
     "topicsPlanned": 40,
-    "deliveryFailures": 1
+    "deliveryFailures": 2
   },
   "fundraising": {
     "name": "Fundraising with AlexBot",
@@ -53,9 +53,9 @@
     }
   ],
   "guideOfTheDay": {
-    "num": 10,
-    "title": "Cron Automation — 80+ Jobs That Keep AlexBot Alive",
-    "slug": "10-cron-automation"
+    "num": 11,
+    "title": "Social Engineering Patterns — The 7 Deadly Approaches",
+    "slug": "11-social-engineering-patterns"
   },
   "communityMilestones": [
     {
