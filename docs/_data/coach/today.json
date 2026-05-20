@@ -1,30 +1,10 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-05-19T20:02:28",
+  "as_of": "2026-05-20T05:00:22",
   "meals": [],
-  "workouts": [
-    {
-      "kind": "strength",
-      "actual": "אימון כוח (במקום HIIT של היום)",
-      "status": "done",
-      "duration_min": null,
-      "location": null,
-      "time": "08:45"
-    }
-  ],
-  "supplements": [
-    {
-      "name": "morning_water_vinegar",
-      "taken": true,
-      "time": "06:47"
-    },
-    {
-      "name": "pre_workout",
-      "taken": true,
-      "time": "07:04"
-    }
-  ],
+  "workouts": [],
+  "supplements": [],
   "water_ml": 0,
   "water_target_ml": 2500
 }
