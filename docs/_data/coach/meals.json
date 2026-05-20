@@ -387,5 +387,14 @@
     "planned": "3 eggs + ½ avocado or 1 tbsp olive oil + 1 slice whole-grain/sourdough bread + vegetable salad",
     "actual": "ביצה אחת, סלט, לחם, חצי אבוקדו (plan: 3 ביצים — partial על החלבון)",
     "adherence": "partial"
+  },
+  {
+    "date": "2026-05-20",
+    "ts": "2026-05-20T11:06:40+03:00",
+    "type": "meal",
+    "slot": "breakfast",
+    "planned": "3 eggs + ½ avocado or 1 tbsp olive oil + 1 slice whole-grain/sourdough bread + vegetable salad",
+    "actual": "3 ביצים + שמן זית — דיווח 'ארוחת בוקר מלאה'",
+    "adherence": "full"
   }
 ]

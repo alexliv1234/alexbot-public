@@ -1,14 +1,26 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-05-20T11:00:20",
-  "meals": [],
+  "as_of": "2026-05-20T14:00:12",
+  "meals": [
+    {
+      "slot": "breakfast",
+      "actual": "3 ביצים + שמן זית — דיווח 'ארוחת בוקר מלאה'",
+      "adherence": "full",
+      "time": "11:06"
+    }
+  ],
   "workouts": [],
   "supplements": [
     {
       "name": "morning_water_vinegar",
       "taken": true,
       "time": "07:54"
+    },
+    {
+      "name": "d3_k2",
+      "taken": true,
+      "time": "11:06"
     }
   ],
   "water_ml": 0,
