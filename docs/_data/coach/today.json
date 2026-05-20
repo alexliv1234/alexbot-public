@@ -1,10 +1,16 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-05-20T05:00:22",
+  "as_of": "2026-05-20T08:05:05",
   "meals": [],
   "workouts": [],
-  "supplements": [],
+  "supplements": [
+    {
+      "name": "morning_water_vinegar",
+      "taken": true,
+      "time": "07:54"
+    }
+  ],
   "water_ml": 0,
   "water_target_ml": 2500
 }
