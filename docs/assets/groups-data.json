@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-05-20",
-  "timestamp": "2026-05-20T17:01Z",
+  "lastUpdated": "2026-05-21",
+  "timestamp": "2026-05-21T02:00Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -12,7 +12,7 @@
     "name": "לומדים עם אלכס הבוט",
     "guides": 17,
     "categories": 6,
-    "dailySummaries": 75,
+    "dailySummaries": 76,
     "qaExchanges": 3
   },
   "intlPlaying": {
@@ -23,7 +23,7 @@
   },
   "intlLearning": {
     "name": "Learning with AlexBot",
-    "tipsGenerated": 65,
+    "tipsGenerated": 66,
     "topicsCovered": 3,
     "topicsPlanned": 40,
     "deliveryFailures": 2
@@ -53,9 +53,9 @@
     }
   ],
   "guideOfTheDay": {
-    "num": 13,
-    "title": "Security vs. Engagement — The Tightrope",
-    "slug": "13-security-vs-engagement-balance"
+    "num": 14,
+    "title": "Architecture Evolution — From Bot to System",
+    "slug": "14-architecture-evolution"
   },
   "communityMilestones": [
     {
