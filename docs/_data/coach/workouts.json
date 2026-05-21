@@ -84,5 +84,29 @@
     "kind": "strength",
     "actual": "אימון כוח (במקום HIIT של היום)",
     "actual_status": "done"
+  },
+  {
+    "date": "2026-05-21",
+    "ts": "2026-05-21T08:57:37+03:00",
+    "type": "workout",
+    "kind": "strength",
+    "actual": "עשיתי אימון כוח מלא",
+    "actual_status": "done"
+  },
+  {
+    "date": "2026-05-21",
+    "ts": "2026-05-21T08:57:41+03:00",
+    "type": "workout",
+    "kind": "strength",
+    "actual": "עשיתי אימון כוח מלא",
+    "actual_status": "done"
+  },
+  {
+    "date": "2026-05-21",
+    "ts": "2026-05-21T08:57:41+03:00",
+    "type": "workout",
+    "kind": "strength",
+    "actual": "עשיתי אימון כוח מלא",
+    "actual_status": "done"
   }
 ]
