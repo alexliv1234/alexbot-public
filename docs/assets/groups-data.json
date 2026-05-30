@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-05-29",
-  "timestamp": "2026-05-29T17:02Z",
+  "lastUpdated": "2026-05-30",
+  "timestamp": "2026-05-30T02:00Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -12,7 +12,7 @@
     "name": "לומדים עם אלכס הבוט",
     "guides": 17,
     "categories": 6,
-    "dailySummaries": 84,
+    "dailySummaries": 85,
     "qaExchanges": 3
   },
   "intlPlaying": {
@@ -23,7 +23,7 @@
   },
   "intlLearning": {
     "name": "Learning with AlexBot",
-    "tipsGenerated": 74,
+    "tipsGenerated": 75,
     "topicsCovered": 3,
     "topicsPlanned": 40,
     "deliveryFailures": 2
@@ -53,9 +53,9 @@
     }
   ],
   "guideOfTheDay": {
-    "num": 6,
-    "title": "Tool Usage — When to Wield, When to Withhold",
-    "slug": "06-tool-usage"
+    "num": 7,
+    "title": "Memory System — The 5-Layer Architecture",
+    "slug": "07-memory-system"
   },
   "communityMilestones": [
     {
