@@ -396,5 +396,14 @@
     "planned": "3 eggs + ½ avocado or 1 tbsp olive oil + 1 slice whole-grain/sourdough bread + vegetable salad",
     "actual": "3 ביצים + שמן זית — דיווח 'ארוחת בוקר מלאה'",
     "adherence": "full"
+  },
+  {
+    "date": "2026-06-01",
+    "ts": "2026-06-01T13:31:20+03:00",
+    "type": "meal",
+    "slot": "lunch",
+    "planned": "180-200g chicken breast / thighs / fillet steak + 1 cup cooked rice / potato / sweet potato / 4-6 rice crackers + pickled cauliflower / green beans + large salad + 1 tbsp olive oil",
+    "actual": "chicken pieces + cucumber/iceberg salad. No visible carb (rice/potato/sweet potato) and no pickled veg. Photo at 13:30.",
+    "adherence": "partial"
   }
 ]
