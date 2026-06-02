@@ -1,15 +1,8 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-06-01T20:02:16",
-  "meals": [
-    {
-      "slot": "lunch",
-      "actual": "chicken pieces + cucumber/iceberg salad. No visible carb (rice/potato/sweet potato) and no pickled veg. Photo at 13:30.",
-      "adherence": "partial",
-      "time": "13:31"
-    }
-  ],
+  "as_of": "2026-06-02T05:00:13",
+  "meals": [],
   "workouts": [],
   "supplements": [],
   "water_ml": 0,
