@@ -108,5 +108,13 @@
     "kind": "strength",
     "actual": "עשיתי אימון כוח מלא",
     "actual_status": "done"
+  },
+  {
+    "date": "2026-06-02",
+    "ts": "2026-06-02T08:34:13+03:00",
+    "type": "workout",
+    "kind": "strength",
+    "actual": "עשיתי אימון מלא כח",
+    "actual_status": "done"
   }
 ]
