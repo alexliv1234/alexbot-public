@@ -1,30 +1,10 @@
 {
   "next_event": "see schedule below",
   "adherence": "in-progress",
-  "as_of": "2026-06-02T20:03:43",
+  "as_of": "2026-06-03T05:00:14",
   "meals": [],
-  "workouts": [
-    {
-      "kind": "strength",
-      "actual": "עשיתי אימון מלא כח",
-      "status": "done",
-      "duration_min": null,
-      "location": null,
-      "time": "08:34"
-    }
-  ],
-  "supplements": [
-    {
-      "name": "fat_burn_drink",
-      "taken": true,
-      "time": "08:33"
-    },
-    {
-      "name": "wake_water",
-      "taken": true,
-      "time": "08:33"
-    }
-  ],
-  "water_ml": 250,
+  "workouts": [],
+  "supplements": [],
+  "water_ml": 0,
   "water_target_ml": 2500
 }
