@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-06-05",
-  "timestamp": "2026-06-05T02:00Z",
+  "lastUpdated": "2026-07-09",
+  "timestamp": "2026-07-08T21:19Z",
   "hebrewPlaying": {
     "name": "משחקים עם אלכס הבוט",
     "participants": 17,
@@ -53,9 +53,9 @@
     }
   ],
   "guideOfTheDay": {
-    "num": 13,
-    "title": "Security vs. Engagement — The Tightrope",
-    "slug": "13-security-vs-engagement-balance"
+    "num": 15,
+    "title": "Communication & Group Dynamics",
+    "slug": "15-communication-group-dynamics"
   },
   "communityMilestones": [
     {
